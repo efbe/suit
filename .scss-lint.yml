@@ -1,0 +1,28 @@
+linters:
+  FinalNewline:
+    enabled: false
+  HexLength:
+    style: short
+  Indentation:
+    character: tab
+    width: 1
+  LeadingZero:
+    style: include_zero
+  NestingDepth:
+    max_depth: 4
+  PropertySortOrder:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  SelectorDepth:
+    max_depth: 4
+  SingleLinePerSelector:
+    enabled: false
+  SpaceAfterPropertyColon:
+    style: at_least_one_space
+  SpaceBeforeBrace:
+    allow_single_line_padding: true
+  VendorPrefixes:
+    enabled: false
+  ColorVariable:
+    enabled: false
