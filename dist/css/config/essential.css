@@ -1,0 +1,8 @@
+/*
+ * essential.css - collects the essential modules
+ * You can minify these groups later or setup your own package from the existing files as well.
+ * @author eFBe
+ */
+
+@import '../reset.css';
+@import '../generated/core/essential/test.css';

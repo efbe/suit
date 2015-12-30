@@ -1,42 +1,34 @@
-/* global module:false */
 module.exports = function (grunt) {
 	'use strict';
 
-	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		
+
+		// Cleans up the generated part of the dist folder
 		clean: {
-			dist: 'dist/**'
+			dist: 'dist/css/generated/**'
 		},
 
-		copy: {
-			main: {
-				src: 'dev/',
-				dest: 'dist/',
-				filter: 'isFile'
-			}
-		},
-
+		// Generates and copies the CSS files from SCSS files
 		sass: {
 			options: {
-				sourceMap: false
+				sourcemap: 'none'
 			},
 			dist: {
 				files: [{
 					expand: true,
 					cwd: 'dev/scss',
 					src: ['**/*.scss'],
-					dest: 'dist/css',
+					dest: 'dist/css/generated',
 					ext: '.css'
 				}]
 			}
 		},
 
+		// Lint SCSS files
 		scsslint: {
 			allFiles: [
 				'dev/scss/core/**/*.scss'
-				//'dev/theme/**/*.scss'
 			],
 			options: {
 				config: '.scss-lint.yml',
@@ -47,13 +39,11 @@ module.exports = function (grunt) {
 
 	// Dependencies
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-scss-lint');
 
 
-	// Build tasks
-	grunt.registerTask('build-dist', ['scsslint', 'sass', 'copy']);
-	grunt.registerTask('dist-clean', ['clean']);
-
+	// Tasks
+	grunt.registerTask('build-dist', ['scsslint', 'sass']);
+	grunt.registerTask('clean-dist', ['clean']);
 };
