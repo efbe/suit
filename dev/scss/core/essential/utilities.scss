@@ -1,0 +1,31 @@
+// utilities.scss
+// Some useful this & that
+// @author eFBe
+
+@import '../../mixin/_float';
+
+
+.clear {
+	@include clear();
+}
+
+.right {
+	@include float-right();
+}
+
+.left {
+	@include float-left();
+}
+
+.center {
+	@include float-none();
+	@include centerize();
+}
+
+
+// Sorry but has to be higher spec' than an ID
+// scss-lint:disable ImportantRule
+
+.hidden {
+	display: none !important;
+}

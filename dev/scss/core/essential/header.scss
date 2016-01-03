@@ -1,0 +1,12 @@
+// header.scss
+// Dynamic header module
+// @author eFBe
+
+@import '../../theme/tron/app/_header';
+
+
+header {
+	display: block;
+
+	@include header();
+}

@@ -1,0 +1,15 @@
+// _header.scss
+// Header theme example module
+// @author eFBe
+
+@import '../essential/_colors';
+
+
+@mixin header {
+	min-height: 40px;
+	background-color: $black;
+
+	h1 {
+		color: $white;
+	}
+}

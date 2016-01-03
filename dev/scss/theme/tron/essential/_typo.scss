@@ -1,0 +1,54 @@
+// _typo.scss
+// Typograhic elements
+// @author eFBe
+
+// Sizes
+
+$font-size-xsmall:   8px; // I don't think we gonna need this, probably for icons
+$font-size-small:   12px;
+$font-size-default: 14px;
+$font-size-big:     18px;
+$font-size-large:   24px;
+$font-size-xlarge:  30px;
+$font-size-xxlarge: 36px;
+
+
+// Weights
+
+$text-xslim:  200;
+$text-slim:   300;
+$text-normal: 400;
+$text-bold:   600;
+$text-xbold:  700;
+
+
+// Families
+
+$font-opensans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-monospace: 'Menlo', 'Monaco', Courier, monospace;
+
+
+html {
+	font-size: $font-size-default;
+}
+
+body {
+	font-family: $font-opensans;
+}
+
+input,
+textarea {
+	font-family: $font-opensans;
+}
+
+// Won't break lines for 2 characters
+// scss-lint:disable SingleLinePerSelector
+h1, h2, h3, h4, h5, h6 {
+	line-height: 150%;
+}
+
+h1 { font-size: $font-size-xxlarge; }
+h2 { font-size: $font-size-xlarge;  }
+h3 { font-size: $font-size-large;   }
+h4 { font-size: $font-size-big;     }
+h5 { font-size: $font-size-default; }

@@ -1,20 +1,26 @@
-.row {
+.grid-row {
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
   display: block; }
-  .row::after {
+  .grid-row::before,
+  .grid-row::after {
     content: ' ';
-    display: table;
+    display: table; }
+  .grid-row::after {
     clear: both; }
+  @media only screen and (max-width: 639px) {
+    .grid-row [class*=column-] {
+      width: 100%;
+      float: none; } }
 
 .column {
   box-sizing: border-box;
   position: relative;
   display: block;
-  float: left;
   width: 100%;
-  min-height: 1px; }
+  min-height: 1px;
+  float: left; }
 
 .column-1 {
   width: 8.33333%; }
@@ -52,3 +58,6 @@
 .column-12 {
   width: 100%;
   float: none; }
+
+.center {
+  margin: 0 auto; }

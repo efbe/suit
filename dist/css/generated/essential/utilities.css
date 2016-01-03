@@ -1,0 +1,20 @@
+.clear::before,
+.clear::after {
+  content: ' ';
+  display: table; }
+
+.clear::after {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.center {
+  float: none;
+  margin: 0 auto; }
+
+.hidden {
+  display: none !important; }

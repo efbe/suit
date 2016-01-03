@@ -5,4 +5,9 @@
  */
 
 @import '../reset.css';
-@import '../generated/essential/test.css';
+
+/* @min: essential.min.css */
+@import '../generated/essential/typo.css';
+@import '../generated/essential/grid.css';
+@import '../generated/essential/utilities.css';
+@import '../generated/essential/header.css';

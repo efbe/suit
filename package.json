@@ -13,5 +13,7 @@
     "grunt-sass": "^1.0.0",
     "grunt-scss-lint": "^0.3.8"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^0.14.0"
+  }
 }

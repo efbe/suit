@@ -1,16 +1,24 @@
-// (a very simple) grid module
+// grid.scss
+// (a very simple) Grid module
 // @author eFBe
 
-.row {
+@import '../../mixin/_float';
+
+
+.grid-row {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
 	display: block;
 
-	&::after {
-		content: ' ';
-		display: table;
-		clear: both;
+	@include clear();
+
+	// Just a touch of mobile friendliness: grid columns should be full-width under 640px
+	@media only screen and (max-width: 639px) {
+		[class*=column-] {
+			width: 100%;
+			float: none;
+		}
 	}
 }
 
@@ -18,9 +26,10 @@
 	box-sizing: border-box;
 	position: relative;
 	display: block;
-	float: left;
 	width: 100%;
-	min-height: 1px; // don't mess the layout up when empty
+	min-height: 1px; // Don't mess the layout up when empty
+
+	@include float-left();
 }
 
 .column-1  { width:  8.33333%; }
@@ -35,5 +44,9 @@
 .column-10 { width: 83.3333%;  }
 .column-11 { width: 91.6667%;  }
 .column-12 { width: 100%;
-	float: none; // if it's a full width column disable float, so we won't need an extra .clear class
+	float: none; // If it's a full width column disable float, so we won't need an extra .clear class
+}
+
+.center {
+	@include centerize();
 }

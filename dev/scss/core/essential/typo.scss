@@ -1,0 +1,47 @@
+// typo.scss
+// Typography module
+// @author eFBe
+
+@import '../../mixin/_typo';
+@import '../../theme/tron/essential/_typo';
+
+
+// Reset
+
+html {
+	// iOS text-resize reset
+	// scss-lint:disable VendorPrefix
+	-webkit-text-size-adjust: 100%;
+}
+
+body,
+input,
+textarea {
+	@include font-smoothing();
+}
+
+// Won't break lines for 2 characters
+// scss-lint:disable SingleLinePerSelector
+h1, h2, h3, h4, h5, h6 {
+	display: block;
+}
+
+
+// Service classes.
+// TODO: If you don't use it, dump it!
+
+.text-lowercase { text-transform: lowercase; }
+.text-uppercase { text-transform: uppercase; }
+
+.text-left    { text-align: left;    }
+.text-right   { text-align: right;   }
+.text-center  { @include text-center(); }
+.text-justify { text-align: justify; }
+
+.break-word { word-break: break-all; }
+
+.break-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
