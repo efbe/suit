@@ -46,25 +46,30 @@ module.exports = function (grunt) {
 		},
 
 
-		// Minify CSS files - at least group-wise
+		// Minify CSS files according to [config]/*.css
 		// @info https://github.com/gruntjs/grunt-contrib-cssmin
 
 		cssmin: {
 			target: {
 				options: {
-					shorthandCompacting: false,
-					roundingPrecision: -1
+					restructuring: false, // keep them in order
+					shorthandCompacting: false, // do not be smarter than me
+					roundingPrecision: -1,
+					processImport: true // *.* magic *.*
 				},
-				// TODO: Minified packages come here!
-				files: [{
-					'dist/min/essential.min.css': ['dist/css/generated/essential/*']
-				}]
+				// Minified packages come here!
+				files: {
+					'dist/min/essential.min.css': [
+						'dist/css/config/essential.css'
+					]
+				}
 			}
 		}
 	});
 
 
 	// Dependencies
+
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-scss-lint');
@@ -72,6 +77,7 @@ module.exports = function (grunt) {
 
 
 	// Tasks
+
 	grunt.registerTask('build-dist', ['scsslint', 'sass']);
 	grunt.registerTask('clean-dist', ['clean']);
 	grunt.registerTask('min-dist', ['cssmin']);
