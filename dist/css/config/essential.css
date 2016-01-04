@@ -4,9 +4,8 @@
  * @author eFBe
  */
 
-@import '../reset.css';
-
 /* @min: essential.min.css */
+@import '../generated/essential/reset.css';
 @import '../generated/essential/typo.css';
 @import '../generated/essential/grid.css';
 @import '../generated/essential/utilities.css';

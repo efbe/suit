@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		// Cleans up the generated part of the dist folder
-		// https://github.com/gruntjs/grunt-contrib-clean
+		// @info https://github.com/gruntjs/grunt-contrib-clean
 
 		clean: {
 			dist: 'dist/css/generated/**',
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
 
 
 		// Generates and copies the CSS files from SCSS files
-		// info @ https://github.com/gruntjs/grunt-contrib-sass
+		// @info https://github.com/gruntjs/grunt-contrib-sass
 
 		sass: {
 			options: {
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
 
 		// Lint SCSS files
-		// info @ https://github.com/brigade/scss-lint
+		// @info https://github.com/brigade/scss-lint
 
 		scsslint: {
 			allFiles: [
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 
 
 		// Minify CSS files - at least group-wise
-		// info @ https://github.com/gruntjs/grunt-contrib-cssmin
+		// @info https://github.com/gruntjs/grunt-contrib-cssmin
 
 		cssmin: {
 			target: {

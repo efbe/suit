@@ -4,7 +4,7 @@
 
 
 // Micro clear by @necolas
-// http://nicolasgallagher.com/micro-clearfix-hack/
+// @info http://nicolasgallagher.com/micro-clearfix-hack/
 
 @mixin clear {
 	&::before,
@@ -20,7 +20,7 @@
 
 
 // Floats & centerize
-// TODO: If you don't use something more than once pls refactor!
+// TODO: If you don't use something more than once pls dump it!
 
 @mixin float-left {
 	float: left;
