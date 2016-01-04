@@ -7,7 +7,8 @@ textarea {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 150%; }
+  line-height: 150%;
+  font-weight: 400; }
 
 h1 {
   font-size: 48px; }
@@ -47,9 +48,6 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
-
-h1, h2, h3, h4, h5, h6 {
-  display: block; }
 
 .text-lowercase {
   text-transform: lowercase; }

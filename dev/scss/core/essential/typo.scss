@@ -20,12 +20,6 @@ textarea {
 	@include font-smoothing();
 }
 
-// Won't break lines for 2 characters
-// scss-lint:disable SingleLinePerSelector
-h1, h2, h3, h4, h5, h6 {
-	display: block;
-}
-
 
 // Service classes.
 // TODO: If you don't use it, dump it!
