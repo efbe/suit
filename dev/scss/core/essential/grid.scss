@@ -3,15 +3,13 @@
 // @author eFBe
 
 @import '../../mixin/_float';
+@import '../../theme/tron/essential/_grid';
 
 
 .grid-row {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
-	display: block;
-
-	@include clear();
 
 	// Just a touch of mobile friendliness: grid columns should be full-width under 640px
 	@media only screen and (max-width: 639px) {
@@ -20,6 +18,9 @@
 			float: none;
 		}
 	}
+
+	@include clear();
+	@include grid-row();
 }
 
 .column {
