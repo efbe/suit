@@ -14,6 +14,7 @@
   background-color: #61bbe1;
   -webkit-appearance: none; }
   .button:hover {
+    text-decoration: none;
     background-color: #57a8cb; }
   .button:focus,
   .button:active {
@@ -29,11 +30,15 @@
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none; }
-  .button.button-link {
+  .button.block {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .button.link {
     padding-left: 0;
     padding-right: 0;
     background-color: transparent;
     text-decoration: none;
     color: #61bbe1; }
-    .button.button-link:hover {
+    .button.link:hover {
       text-decoration: underline; }

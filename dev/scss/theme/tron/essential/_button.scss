@@ -31,6 +31,7 @@ $disabled-percentage: 0.5;
 	background-color: $led-suit-blue-mid;
 
 	&:hover {
+		text-decoration: none; // anchor reset
 		background-color: shade($led-suit-blue-mid, $shade-percentage-hover);
 	}
 
@@ -56,8 +57,15 @@ $disabled-percentage: 0.5;
 		pointer-events: none;
 	}
 
-	// Don't forget the link styled button!
-	&.button-link {
+	// Full width buttons
+	&.block {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	// Link outfit, button behaviour
+	&.link {
 		padding-left: 0;
 		padding-right: 0;
 		background-color: $transparent;

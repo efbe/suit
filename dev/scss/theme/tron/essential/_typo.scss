@@ -15,6 +15,10 @@ body {
 	font-family: $font-helvetica;
 }
 
+a {
+	@include link();
+}
+
 // Won't break lines for 2 characters, sorry
 // scss-lint:disable SingleLinePerSelector
 h1, h2, h3, h4, h5, h6 {
