@@ -25,7 +25,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: $value-zero;
 	padding: $value-zero;
-	border: $value-zero;
 	vertical-align: baseline;
 }
 
@@ -39,6 +38,7 @@ body {
 	line-height: 1;
 }
 
+// goes to typo module
 ol, ul {
 	list-style: $value-none;
 }
@@ -49,11 +49,10 @@ blockquote, q {
 
 blockquote::before, blockquote::after,
 q::before, q::after {
-	// I wonder why this is duplicated with different values, but assume I won't need this anyway
-	// content: '';
 	content: $value-none;
 }
 
+// goes to table module
 table {
 	border-collapse: collapse;
 	border-spacing: $value-zero;

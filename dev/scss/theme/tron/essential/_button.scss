@@ -1,0 +1,67 @@
+// _header.scss
+// Header theme example module
+// @author eFBe
+
+@import '../../../mixin/_color';
+
+@import '_colors';
+@import '_global-variables';
+@import '_link';
+
+
+// Dimensions & percentages
+
+$default-height: 32px;
+
+$shade-percentage-hover: 10%;
+$shade-percentage-active: 20%;
+
+$disabled-percentage: 0.5;
+
+
+@mixin button {
+	padding: 0 12px;
+	line-height: $default-height;
+	height: $default-height;
+
+	font-size: $font-size-default;
+
+	border: 0; // input reset
+	color: $white;
+	background-color: $led-suit-blue-mid;
+
+	&:hover {
+		background-color: shade($led-suit-blue-mid, $shade-percentage-hover);
+	}
+
+	&:focus,
+	&:active {
+		outline: 0;
+		background-color: shade($led-suit-blue-mid, $shade-percentage-active);
+	}
+
+	// Firefox input padding fix
+	// @info https://davidwalsh.name/firefox-buttons
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+		margin-top: -2px;
+		margin-bottom: -2px;
+	}
+
+	&[disabled],
+	&.disabled {
+		opacity: $disabled-percentage;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	// Don't forget the link styled button!
+	&.button-link {
+		padding-left: 0;
+		padding-right: 0;
+		background-color: $transparent;
+
+		@include link();
+	}
+}

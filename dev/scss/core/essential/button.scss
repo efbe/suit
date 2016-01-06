@@ -1,0 +1,21 @@
+// button.scss
+// Button module
+// @author eFBe
+
+@import '../../theme/tron/essential/_button';
+
+
+.button {
+	box-sizing: border-box;
+	display: inline-block;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+
+	@include button();
+
+	// webkit reset
+	// scss-lint:disable VendorPrefix
+	-webkit-appearance: none;
+}

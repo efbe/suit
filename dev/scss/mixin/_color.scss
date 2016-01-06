@@ -1,0 +1,20 @@
+// _color.scss
+// Mixin collection for colors
+// @author eFBe
+
+
+// Tint & Shade
+// @info https://gist.github.com/benfrain/7545629
+
+$tint-color-base: #fff;
+$shade-color-base: #000;
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+	@return mix($tint-color-base, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+	@return mix($shade-color-base, $color, $percent);
+}

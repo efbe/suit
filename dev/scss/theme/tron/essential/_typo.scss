@@ -2,42 +2,16 @@
 // Typograhic elements
 // @author eFBe
 
-
-// Sizes
-
-$font-size-xsmall:    8px; // I don't think we gonna need this, probably for icons
-$font-size-small:    12px;
-$font-size-default:  14px;
-$font-size-big:      18px;
-$font-size-large:    24px;
-$font-size-xlarge:   30px;
-$font-size-xxlarge:  36px;
-$font-size-xxxlarge: 48px;
-
-$mobile-font-size-multiplier: 0.6;
-
-
-// Weights
-
-$text-slim:   200;
-$text-normal: 400;
-$text-bold:   600;
-$text-xbold:  800;
-
-
-// Families
-
-$font-helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-monospace: 'Menlo', 'Monaco', Courier, monospace;
+@import '_colors';
+@import '_global-variables';
+@import '_link';
 
 
 html {
 	font-size: $font-size-default;
 }
 
-body,
-input,
-textarea {
+body {
 	font-family: $font-helvetica;
 }
 

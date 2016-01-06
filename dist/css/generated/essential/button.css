@@ -1,0 +1,39 @@
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 12px;
+  line-height: 32px;
+  height: 32px;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+  background-color: #61bbe1;
+  -webkit-appearance: none; }
+  .button:hover {
+    background-color: #57a8cb; }
+  .button:focus,
+  .button:active {
+    outline: 0;
+    background-color: #4e96b4; }
+  .button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin-top: -2px;
+    margin-bottom: -2px; }
+  .button[disabled],
+  .button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none; }
+  .button.button-link {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    text-decoration: none;
+    color: #61bbe1; }
+    .button.button-link:hover {
+      text-decoration: underline; }
