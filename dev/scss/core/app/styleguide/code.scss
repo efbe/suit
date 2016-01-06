@@ -1,0 +1,9 @@
+// code.scss
+// Demo code block module
+// @author eFBe
+
+@import '../../../theme/tron/app/styleguide/_code';
+
+.code-panel {
+	@include code();
+}

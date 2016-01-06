@@ -1,0 +1,12 @@
+// _code.scss
+// Header theme example module
+// @author eFBe
+
+@import '../../essential/_colors';
+
+
+@mixin code {
+	p {
+		color: $black
+	}
+}

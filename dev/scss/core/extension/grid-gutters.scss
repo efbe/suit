@@ -1,0 +1,77 @@
+// grid-gutters.scss
+// Gutter extension for grids
+// @requires grid.css
+// @author eFBe
+
+// Might be a good idea to store the gutter size theme-wise
+@import '../../theme/tron/essential/_global-variables';
+
+
+.grid-row {
+	&.gutter {
+		padding-right: round($grid-gutter-width / 2);
+		padding-left: round($grid-gutter-width / 2);
+
+		.column {
+			padding-right: round($grid-gutter-width / 2);
+			padding-left: round($grid-gutter-width / 2);
+
+			// Lovely nesting
+			.gutter {
+				padding-right: 0;
+				padding-left: 0;
+			}
+
+			.column:first-of-type {
+				padding-left: 0;
+			}
+
+			.column:last-of-type {
+				padding-right: 0;
+			}
+		}
+	}
+
+
+	// If you need gutters but not on the sides
+	// Please use it carefully, I'm not sure about nesting at this point
+
+	&.stick-to-left {
+		padding-left: 0;
+
+		.column:first-of-type {
+			padding-left: 0;
+		}
+	}
+
+	&.stick-to-right {
+		padding-right: 0;
+
+		.column:last-of-type {
+			padding-right: 0;
+		}
+	}
+
+
+	// A touch of responsivity: reset everything
+	// Also makes the gutters vertical
+
+	@media only screen and (max-width: 639px) {
+		&.gutter {
+			padding-right: $grid-gutter-width;
+			padding-left: $grid-gutter-width;
+
+			.column {
+				padding: 0 0 $grid-gutter-width;
+
+				.column:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+
+			.gutter {
+				padding: 0;
+			}
+		}
+	}
+}

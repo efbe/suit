@@ -3,6 +3,11 @@
 // @author eFBe
 
 
+// Grid
+
+$grid-gutter-width: 20px;
+
+
 // Typo / Sizes
 
 $font-size-xsmall:    8px; // I don't think we gonna need this, probably for icons
@@ -12,7 +17,7 @@ $font-size-big:      18px;
 $font-size-large:    24px;
 $font-size-xlarge:   30px;
 $font-size-xxlarge:  36px;
-$font-size-xxxlarge: 48px;
+$font-size-xxxlarge: 48px; // neither this
 
 $mobile-font-size-multiplier: 0.6;
 

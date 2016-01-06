@@ -3,7 +3,6 @@
 // @author eFBe
 
 @import '../../mixin/_float';
-@import '../../theme/tron/essential/_grid';
 
 
 .grid-row {
@@ -20,7 +19,6 @@
 	}
 
 	@include clear();
-	@include grid-row();
 }
 
 .column {

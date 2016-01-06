@@ -12,21 +12,6 @@
     display: table; }
   .grid-row::after {
     clear: both; }
-  .grid-row.gutter-20 {
-    padding-right: 10px;
-    padding-left: 10px; }
-    .grid-row.gutter-20 .column {
-      padding-right: 10px;
-      padding-left: 10px; }
-  @media only screen and (min-width: 640px) {
-    .grid-row.stick-to-left {
-      padding-left: 0; }
-      .grid-row.stick-to-left .column:first-of-type {
-        padding-left: 0; }
-    .grid-row.stick-to-right {
-      padding-right: 0; }
-      .grid-row.stick-to-right .column:last-of-type {
-        padding-right: 0; } }
 
 .column {
   box-sizing: border-box;

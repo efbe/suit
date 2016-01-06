@@ -1,10 +1,10 @@
 /*
- * essential.css - collects the essential modules
- * You can minify these groups later or setup your own package from the existing files as well.
+ * essential.css - essential module collector config file
+ * see GruntFile.js / cssmin() for more info
+ * @minified essential.min.css
  * @author eFBe
  */
 
-/* @min: essential.min.css */
 @import '../generated/essential/reset.css';
 @import '../generated/essential/typo.css';
 @import '../generated/essential/utilities.css';

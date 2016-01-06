@@ -37,7 +37,8 @@ module.exports = function (grunt) {
 
 		scsslint: {
 			allFiles: [
-				'dev/scss/core/**/*.scss'
+				'dev/scss/core/**/*.scss',
+				'dev/scss/core/**/**/*.scss'
 			],
 			options: {
 				config: '.scss-lint.yml',
@@ -61,6 +62,10 @@ module.exports = function (grunt) {
 				files: {
 					'dist/min/essential.min.css': [
 						'dist/css/config/essential.css'
+					],
+					'dist/min/styleguide.min.css': [
+						'dist/css/config/essential.css',
+						'dist/css/config/styleguide.css'
 					]
 				}
 			}

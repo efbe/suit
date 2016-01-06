@@ -1,0 +1,12 @@
+/*
+ * styleguide.css - styleguide module collector config file
+ * see GruntFile.js / cssmin() for more info
+ * @minified styleguide.min.css
+ * @author eFBe
+ */
+
+/* extensions */
+@import '../generated/extension/grid-gutters.css';
+
+/* styleguide app */
+@import '../generated/app/styleguide/code.css';
