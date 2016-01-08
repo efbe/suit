@@ -26,11 +26,19 @@ $mobile-font-size-multiplier: 0.6;
 
 $text-slim:   200;
 $text-normal: 400;
-$text-bold:   600;
-$text-xbold:  800;
+$text-bold:   500;
+$text-xbold:  600;
 
 
 // Typo / Families
 
 $font-helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $font-monospace: 'Menlo', 'Monaco', Courier, monospace;
+
+
+// Icon font sizes (might be handy globally)
+
+$icon-small:   18px;
+$icon-default: 24px;
+$icon-big:     36px;
+$icon-large:   48px;

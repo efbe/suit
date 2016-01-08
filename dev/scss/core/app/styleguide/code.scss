@@ -5,5 +5,15 @@
 @import '../../../theme/tron/app/styleguide/_code';
 
 .code-panel {
-	@include code();
+	box-sizing: border-box;
+	overflow: hidden;
+
+	@include code-panel-pre();
+
+	code {
+		tab-size: 2;
+		-webkit-font-smoothing: subpixel-antialiased;
+
+		@include code-panel-code();
+	}
 }

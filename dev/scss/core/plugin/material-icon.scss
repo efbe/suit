@@ -1,0 +1,24 @@
+// material-icon.scss
+// Size & browser support plugin
+// @requires https://github.com/google/material-design-icons official stylesheet
+// @author eFBe
+
+@import '../../theme/tron/essential/_global-variables';
+@import '../../theme/tron/plugin/_material-icon';
+
+
+.material-icons {
+	// Support for Firefox
+	-moz-osx-font-smoothing: grayscale;
+
+	// Support for IE
+	font-feature-settings: 'liga';
+
+	// Sizes (Google recommended classnames)
+	&.md-18 { font-size: $icon-small;   }
+	&.md-24 { font-size: $icon-default; }
+	&.md-36 { font-size: $icon-big;     }
+	&.md-48 { font-size: $icon-large;   }
+
+	@include material-icon();
+}

@@ -2,11 +2,22 @@
 // Header theme example module
 // @author eFBe
 
+@import '../../../../mixin/_color';
 @import '../../essential/_colors';
+@import '../../essential/_global-variables';
+
+$code-tint: 20%; // as long as I use it constantly
 
 
-@mixin code {
-	p {
-		color: $black
-	}
+@mixin code-panel-pre {
+		padding: 14px;
+		background-color: $white;
+		border: 1px solid tint($led-suit-white, $code-tint);
+}
+
+@mixin code-panel-code {
+	line-height: 130%;
+	font-weight: $text-bold;
+	font-family: $font-monospace;
+	color: tint($old-school-black, $code-tint);
 }

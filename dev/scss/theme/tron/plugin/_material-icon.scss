@@ -1,0 +1,14 @@
+// _material-icon.scss
+// Very tiny link mixin for multiple usage
+// @author eFBe
+
+@import '../essential/colors';
+
+
+@mixin material-icon {
+	color: $old-school-black; // default
+
+	//&.some-color-modifier {
+	//	comes: later;
+	//}
+}

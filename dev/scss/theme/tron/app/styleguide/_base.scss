@@ -1,0 +1,13 @@
+// _code.scss
+// Header theme example module
+// @author eFBe
+
+@import '../../essential/_colors';
+@import '../../../../mixin/_color';
+
+
+@mixin base {
+	body {
+		background-color: tint($led-suit-white, 40%);
+	}
+}
