@@ -5,11 +5,12 @@
  * @author eFBe
  */
 
-/* extensions */
-@import '../generated/extension/grid-gutters.css';
-
 /* plugins */
 @import '../generated/plugin/material-icon.css';
+@import '../generated/plugin/pill.css';
+
+/* extensions */
+@import '../generated/extension/grid-gutters.css';
 
 /* styleguide app */
 @import '../generated/app/styleguide/base.css';

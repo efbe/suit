@@ -10,8 +10,10 @@
 
 
 // Dimensions & percentages
+// TODO: move them to global variables
 
-$default-height: 32px;
+$default-block-height: 32px;
+$default-inner-padding: 12px;
 
 $shade-percentage-hover: 10%;
 $shade-percentage-active: 20%;
@@ -20,9 +22,9 @@ $disabled-percentage: 0.5;
 
 
 @mixin button {
-	padding: 0 12px;
-	line-height: $default-height;
-	height: $default-height;
+	padding: 0 $default-inner-padding;
+	line-height: $default-block-height;
+	height: $default-block-height;
 
 	font-size: $font-size-default;
 

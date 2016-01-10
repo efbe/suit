@@ -1,0 +1,22 @@
+// pill.scss
+// Label / Pill / Tag whatever you call them...
+// Quite similar to a small button, but separated from button module
+// TODO: Create a closable version with material close icon
+// @author eFBe
+
+@import '../../theme/tron/plugin/_pill';
+
+
+.pill {
+	box-sizing: border-box;
+	display: inline-block;
+	cursor: default; // non-clickable
+	outline: none;
+
+	// clickable version should be an <a> tag with a href attr
+	&[href] {
+		cursor: pointer;
+	}
+
+	@include pill();
+}

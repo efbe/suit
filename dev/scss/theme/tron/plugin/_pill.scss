@@ -1,0 +1,59 @@
+// _pill.scss
+// Label / Pill / Tag... design layer
+// @author eFBe
+
+//@import '../essential/_global-variables';
+@import '../../../mixin/_color';
+@import '../essential/colors';
+
+
+// Dimensions & percentages
+// TODO: move them to global variables
+
+$small-block-height: 24px;
+$small-block-line-height: 22px;
+
+$large-border-radius: 9px;
+$medium-inner-padding: 9px;
+
+$disabled-percentage: 0.5;
+
+
+@mixin pill {
+	margin-left: 5px;
+	padding: 0 $medium-inner-padding;
+	line-height: $small-block-line-height;
+	height: $small-block-height;
+
+	color: tint($old-school-black, 40%);
+	border: 1px solid tint($old-school-black, 40%);
+	border-radius: $large-border-radius;
+	transition: all 0.1s ease-out;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		color: $old-school-black;
+		border-color: $old-school-black;
+	}
+
+	&:focus {
+		background-color: rgba($white, $disabled-percentage);
+	}
+
+
+	&[disabled],
+	&.disabled {
+		opacity: $disabled-percentage;
+		cursor: not-allowed;
+		pointer-events: none;
+
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+}
