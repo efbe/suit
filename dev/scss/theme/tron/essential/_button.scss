@@ -3,6 +3,7 @@
 // @author eFBe
 
 @import '../../../mixin/_color';
+@import '../../../mixin/_user-select';
 
 @import '_colors';
 @import '_global-variables';
@@ -12,8 +13,13 @@
 // Dimensions & percentages
 // TODO: move them to global variables
 
+$small-block-height: 24px;
 $default-block-height: 32px;
+$large-block-height: 48px;
+
+$small-inner-padding: 8px;
 $default-inner-padding: 12px;
+$large-inner-padding: 16px;
 
 $shade-percentage-hover: 10%;
 $shade-percentage-active: 20%;
@@ -57,6 +63,29 @@ $disabled-percentage: 0.5;
 		opacity: $disabled-percentage;
 		cursor: not-allowed;
 		pointer-events: none;
+		
+		@include user-select(none);
+	}
+
+
+	// Sizes
+
+	&.small {
+		padding-right: $small-inner-padding;
+		padding-left: $small-inner-padding;
+
+		font-size: $font-size-small;
+		height: $small-block-height;
+		line-height: $small-block-height;
+	}
+
+	&.large {
+		padding-right: $large-inner-padding;
+		padding-left: $large-inner-padding;
+
+		font-size: $font-size-big;
+		height: $large-block-height;
+		line-height: $large-block-height;
 	}
 
 	// Full width buttons
@@ -68,10 +97,24 @@ $disabled-percentage: 0.5;
 
 	// Link outfit, button behaviour
 	&.link {
+		margin-right: $default-inner-padding;
+		margin-left: $default-inner-padding;
 		padding-left: 0;
 		padding-right: 0;
+
 		background-color: $transparent;
 
 		@include link();
+
+		// paddings should be outside as margins
+		&.small {
+			margin-right: $small-inner-padding;
+			margin-left: $small-inner-padding;
+		}
+
+		&.large {
+			margin-right: $large-inner-padding;
+			margin-left: $large-inner-padding;
+		}
 	}
 }

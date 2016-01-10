@@ -29,12 +29,29 @@
   .button.disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    pointer-events: none; }
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; }
+  .button.small {
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px; }
+  .button.large {
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 18px;
+    height: 48px;
+    line-height: 48px; }
   .button.block {
     display: block;
     width: 100%;
     text-align: center; }
   .button.link {
+    margin-right: 12px;
+    margin-left: 12px;
     padding-left: 0;
     padding-right: 0;
     background-color: transparent;
@@ -42,3 +59,9 @@
     color: #61bbe1; }
     .button.link:hover {
       text-decoration: underline; }
+    .button.link.small {
+      margin-right: 8px;
+      margin-left: 8px; }
+    .button.link.large {
+      margin-right: 16px;
+      margin-left: 16px; }

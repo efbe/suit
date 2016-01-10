@@ -11,18 +11,19 @@
 // TODO: move them to global variables
 
 $small-block-height: 24px;
-$small-block-line-height: 22px;
+$small-block-line-height-border: 22px;
 
-$large-border-radius: 9px;
-$medium-inner-padding: 9px;
+$large-border-radius: 8px;
+
+$small-inner-padding: 8px;
 
 $disabled-percentage: 0.5;
 
 
 @mixin pill {
 	margin-left: 5px;
-	padding: 0 $medium-inner-padding;
-	line-height: $small-block-line-height;
+	padding: 0 $small-inner-padding;
+	line-height: $small-block-line-height-border;
 	height: $small-block-height;
 
 	color: tint($old-school-black, 40%);

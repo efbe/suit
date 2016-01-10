@@ -4,12 +4,12 @@
   cursor: default;
   outline: none;
   margin-left: 5px;
-  padding: 0 9px;
+  padding: 0 8px;
   line-height: 22px;
   height: 24px;
   color: #7c7c7c;
   border: 1px solid #7c7c7c;
-  border-radius: 9px;
+  border-radius: 8px;
   transition: all 0.1s ease-out; }
   .pill[href] {
     cursor: pointer; }
