@@ -12,6 +12,7 @@
 
 // Dimensions & percentages
 // TODO: move them to global variables
+// TODO: use ONE variable with percentage!
 
 $small-block-height: 24px;
 $default-block-height: 32px;
@@ -63,7 +64,7 @@ $disabled-percentage: 0.5;
 		opacity: $disabled-percentage;
 		cursor: not-allowed;
 		pointer-events: none;
-		
+
 		@include user-select(none);
 	}
 

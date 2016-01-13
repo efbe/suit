@@ -1,22 +1,23 @@
 .pill {
   box-sizing: border-box;
   display: inline-block;
-  cursor: default;
   outline: none;
   margin-left: 5px;
   padding: 0 8px;
   line-height: 22px;
   height: 24px;
-  color: #7c7c7c;
-  border: 1px solid #7c7c7c;
+  border: 1px solid #252525;
   border-radius: 8px;
   transition: all 0.1s ease-out; }
+  .pill:not([href]) {
+    cursor: default; }
   .pill[href] {
-    cursor: pointer; }
+    color: #515151;
+    border-color: #515151; }
   .pill:first-child {
     margin-left: 0; }
-  .pill:focus,
-  .pill:hover {
+  .pill:hover,
+  .pill:focus {
     text-decoration: none;
     color: #252525;
     border-color: #252525; }
@@ -27,6 +28,8 @@
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
+    color: #252525;
+    border-color: #252525;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }

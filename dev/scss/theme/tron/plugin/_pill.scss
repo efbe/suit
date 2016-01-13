@@ -26,17 +26,21 @@ $disabled-percentage: 0.5;
 	line-height: $small-block-line-height-border;
 	height: $small-block-height;
 
-	color: tint($old-school-black, 40%);
-	border: 1px solid tint($old-school-black, 40%);
+	border: 1px solid $old-school-black;
 	border-radius: $large-border-radius;
 	transition: all 0.1s ease-out;
+
+	&[href] {
+		color: tint($old-school-black, 20%);
+		border-color: tint($old-school-black, 20%);
+	}
 
 	&:first-child {
 		margin-left: 0;
 	}
 
-	&:focus,
-	&:hover {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 		color: $old-school-black;
 		border-color: $old-school-black;
@@ -52,6 +56,10 @@ $disabled-percentage: 0.5;
 		opacity: $disabled-percentage;
 		cursor: not-allowed;
 		pointer-events: none;
+
+		// reset
+		color: $old-school-black;
+		border-color: $old-school-black;
 
 		-moz-user-select: none;
 		-webkit-user-select: none;
