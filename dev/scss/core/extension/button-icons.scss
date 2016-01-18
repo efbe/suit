@@ -1,0 +1,11 @@
+// _button-icons.scss
+// Icon extension for buttons
+// @requires button.css
+// @author eFBe
+
+@import '../../theme/tron/extension/_button-icons';
+
+
+.button-icon {
+	@include button-icon();
+}

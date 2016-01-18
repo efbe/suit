@@ -1,0 +1,49 @@
+.button-icon {
+  padding-left: 6px; }
+  .button-icon .material-icons {
+    float: left;
+    line-height: inherit;
+    margin-right: 6px; }
+  .button-icon.icon-after {
+    padding-right: 6px;
+    padding-left: 12px; }
+    .button-icon.icon-after .material-icons {
+      float: right;
+      margin-right: 0;
+      margin-left: 6px; }
+  .button-icon.small {
+    padding-left: 4px; }
+    .button-icon.small .material-icons {
+      margin-right: 4px; }
+    .button-icon.small.icon-after {
+      padding-right: 4px;
+      padding-left: 8px; }
+      .button-icon.small.icon-after .material-icons {
+        margin-right: 0;
+        margin-left: 4px; }
+  .button-icon.large {
+    padding-left: 8px; }
+    .button-icon.large .material-icons {
+      margin-right: 8px; }
+    .button-icon.large.icon-after {
+      padding-right: 8px;
+      padding-left: 16px; }
+      .button-icon.large.icon-after .material-icons {
+        margin-right: 0;
+        margin-left: 8px; }
+  @media only screen and (max-width: 639px) {
+    .button-icon {
+      padding-right: 30px; }
+      .button-icon.icon-after {
+        padding-right: 6px;
+        padding-left: 30px; }
+      .button-icon.small {
+        padding-right: 20px; }
+        .button-icon.small.icon-after {
+          padding-right: 4px;
+          padding-left: 20px; }
+      .button-icon.large {
+        padding-right: 40px; }
+        .button-icon.large.icon-after {
+          padding-right: 8px;
+          padding-left: 40px; } }

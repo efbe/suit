@@ -10,6 +10,7 @@
 @import '../generated/plugin/pill.css';
 
 /* extensions */
+@import '../generated/extension/button-icons.css';
 @import '../generated/extension/grid-gutters.css';
 
 /* styleguide app */

@@ -3,18 +3,20 @@
 // @requires grid.css
 // @author eFBe
 
+
+@import '../../mixin/_splitter';
 // Might be a good idea to store the gutter size theme-wise
 @import '../../theme/tron/essential/_global-variables';
 
 
 .grid-row {
 	&.gutter {
-		padding-right: round($grid-gutter-width / 2);
-		padding-left: round($grid-gutter-width / 2);
+		padding-right: split-half($grid-gutter-width);
+		padding-left: split-half($grid-gutter-width);
 
 		.column {
-			padding-right: round($grid-gutter-width / 2);
-			padding-left: round($grid-gutter-width / 2);
+			padding-right: split-half($grid-gutter-width);
+			padding-left: split-half($grid-gutter-width);
 
 			// Lovely nesting
 			.gutter {
@@ -53,7 +55,7 @@
 	}
 
 
-	// A touch of responsivity: reset everything
+	// A touch of responsiveness: reset everything
 	// Also makes the gutters vertical
 
 	@media only screen and (max-width: 639px) {

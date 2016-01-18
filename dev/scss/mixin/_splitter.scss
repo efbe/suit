@@ -1,0 +1,7 @@
+// _splitter.scss
+// To chop things up
+// @author eFBe
+
+@function split-half($value) {
+  @return round($value / 2);
+}

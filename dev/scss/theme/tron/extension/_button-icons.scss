@@ -1,0 +1,102 @@
+// _button-icons.scss
+// Icon extension for buttons
+// @author eFBe
+// TODO: create icon only buttons
+
+@import '../../../mixin/_splitter';
+@import '../essential/_global-variables';
+
+
+@mixin button-icon {
+	// Default
+	// We split up the paddings
+
+	padding-left: split-half($default-padding);
+
+	.material-icons {
+		float: left;
+		line-height: inherit;
+		margin-right: split-half($default-padding);
+	}
+
+	&.icon-after {
+		padding-right: split-half($default-padding);
+		padding-left: $default-padding;
+
+		.material-icons {
+			float: right;
+			margin-right: 0;
+			margin-left: split-half($default-padding);
+		}
+	}
+
+
+	// Sizes
+
+	&.small {
+		padding-left: split-half($small-padding);
+
+		.material-icons {
+			margin-right: split-half($small-padding);
+		}
+
+		&.icon-after {
+			padding-right: split-half($small-padding);
+			padding-left: $small-padding;
+
+			.material-icons {
+				margin-right: 0;
+				margin-left: split-half($small-padding);
+			}
+		}
+	}
+
+	&.large {
+		padding-left: split-half($large-padding);
+
+		.material-icons {
+			margin-right: split-half($large-padding);
+		}
+
+		&.icon-after {
+			padding-right: split-half($large-padding);
+			padding-left: $large-padding;
+
+			.material-icons {
+				margin-right: 0;
+				margin-left: split-half($large-padding);
+			}
+		}
+	}
+
+
+	// A touch of responsiveness: block behaviour, reset some values
+	// At this point I'm not sure whether we need icons anyways
+
+	@media only screen and (max-width: 639px) {
+		padding-right: round($default-padding * 2 + $default-padding / 2);
+
+		&.icon-after {
+			padding-right: split-half($default-padding);
+			padding-left: round($default-padding * 2 + $default-padding / 2);
+		}
+
+		&.small {
+			padding-right: round($small-padding * 2 + $small-padding / 2);
+
+			&.icon-after {
+				padding-right: split-half($small-padding);
+				padding-left: round($small-padding * 2 + $small-padding / 2);
+			}
+		}
+
+		&.large {
+			padding-right: round($large-padding * 2 + $large-padding / 2);
+
+			&.icon-after {
+				padding-right: split-half($large-padding);
+				padding-left: round($large-padding * 2 + $large-padding / 2);
+			}
+		}
+	}
+}

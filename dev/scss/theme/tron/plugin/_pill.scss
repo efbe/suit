@@ -2,7 +2,7 @@
 // Label / Pill / Tag... design layer
 // @author eFBe
 
-//@import '../essential/_global-variables';
+@import '../essential/_global-variables';
 @import '../../../mixin/_color';
 @import '../essential/colors';
 
@@ -10,20 +10,14 @@
 // Dimensions & percentages
 // TODO: move them to global variables
 
-$small-block-height: 24px;
-$small-block-line-height-border: 22px;
-
 $large-border-radius: 8px;
-
-$small-inner-padding: 8px;
-
 $disabled-percentage: 0.5;
 
 
 @mixin pill {
 	margin-left: 5px;
-	padding: 0 $small-inner-padding;
-	line-height: $small-block-line-height-border;
+	padding: 0 $small-padding;
+	line-height: round($small-block-height - 2); // minus border
 	height: $small-block-height;
 
 	border: 1px solid $old-school-black;
@@ -47,7 +41,7 @@ $disabled-percentage: 0.5;
 	}
 
 	&:focus {
-		background-color: rgba($white, $disabled-percentage);
+		background-color: $white;
 	}
 
 

@@ -8,6 +8,20 @@
 $grid-gutter-width: 20px;
 
 
+// Block heights
+
+$small-block-height:   24px;
+$default-block-height: 32px;
+$large-block-height:   48px;
+
+
+// Paddings
+
+$small-padding:    8px;
+$default-padding: 12px;
+$large-padding:   16px;
+
+
 // Typo / Sizes
 
 $font-size-xsmall:    8px; // I don't think we gonna need this, probably for icons
@@ -38,6 +52,7 @@ $font-monospace: 'Menlo', 'Monaco', Courier, monospace;
 
 // Icon font sizes (might be handy globally)
 
+$icon-tiny:    12px;
 $icon-small:   18px;
 $icon-default: 24px;
 $icon-big:     36px;

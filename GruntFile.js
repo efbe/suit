@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
 
 		// Lint SCSS files
-		// @info https://github.com/brigade/scss-lint
+		// @info https://github.com/ahmednuaman/grunt-scss-lint
 
 		scsslint: {
 			allFiles: [
@@ -76,7 +76,7 @@ module.exports = function (grunt) {
 	// Dependencies
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-scss-lint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 

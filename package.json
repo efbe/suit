@@ -4,16 +4,11 @@
   "description": "dress up framework",
   "author": "eFBe",
   "license": "MIT",
-  "dependencies": {
-    "grunt": "latest",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.1",
-    "grunt-postcss": "^0.6.0",
-    "grunt-sass": "^1.0.0",
-    "grunt-scss-lint": "^0.3.8"
-  },
   "devDependencies": {
-    "grunt-contrib-cssmin": "^0.14.0"
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-scss-lint": "^0.3.8"
   }
 }

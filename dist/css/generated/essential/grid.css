@@ -6,8 +6,7 @@
     .grid-row [class*=column-] {
       width: 100%;
       float: none; } }
-  .grid-row::before,
-  .grid-row::after {
+  .grid-row::before, .grid-row::after {
     content: ' ';
     display: table; }
   .grid-row::after {

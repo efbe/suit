@@ -1,0 +1,9 @@
+// _block.scss
+// Block behaviour mixin
+// @author eFBe
+
+@mixin block {
+	display: block;
+	width: 100%;
+	text-align: center;
+}

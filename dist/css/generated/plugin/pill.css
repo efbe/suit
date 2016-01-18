@@ -16,15 +16,13 @@
     border-color: #515151; }
   .pill:first-child {
     margin-left: 0; }
-  .pill:hover,
-  .pill:focus {
+  .pill:hover, .pill:focus {
     text-decoration: none;
     color: #252525;
     border-color: #252525; }
   .pill:focus {
-    background-color: rgba(255, 255, 255, 0.5); }
-  .pill[disabled],
-  .pill.disabled {
+    background-color: #fff; }
+  .pill[disabled], .pill.disabled {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;
