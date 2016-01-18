@@ -8,10 +8,12 @@
 
 
 // I wonder why Google calls them plural
+// Probably we can get rid of big & large icons
+
 .material-icons {
 
 
-	// Sizes (Google recommended classnames)
+	// Sizes (Google recommended class names)
 
 	&.md-12 { font-size: $icon-tiny;    }
 	&.md-18 { font-size: $icon-small;   }
