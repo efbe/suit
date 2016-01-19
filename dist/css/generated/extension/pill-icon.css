@@ -1,0 +1,19 @@
+.pill-icon {
+  padding-left: 4px;
+  cursor: pointer; }
+  .pill-icon .material-icons {
+    float: left;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+    margin-right: 4px;
+    line-height: 22px; }
+    .pill-icon .material-icons:hover {
+      opacity: 1; }
+  .pill-icon.icon-after {
+    padding-right: 4px;
+    padding-left: 8px; }
+    .pill-icon.icon-after .material-icons {
+      float: right;
+      margin-right: 0;
+      margin-left: 4px; }

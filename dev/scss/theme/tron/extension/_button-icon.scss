@@ -1,4 +1,4 @@
-// _button-icons.scss
+// _button-icon.scss
 // Icon extension for buttons
 // @author eFBe
 // TODO: create icon only buttons
@@ -7,32 +7,33 @@
 @import '../essential/_global-variables';
 
 
+// We split up the paddings
+
 @mixin button-icon {
-	// Default
-	// We split up the paddings
-
 	padding-left: split-half($default-padding);
+}
 
-	.material-icons {
-		float: left;
-		line-height: inherit;
-		margin-right: split-half($default-padding);
-	}
-
-	&.icon-after {
-		padding-right: split-half($default-padding);
-		padding-left: $default-padding;
-
-		.material-icons {
-			float: right;
-			margin-right: 0;
-			margin-left: split-half($default-padding);
-		}
-	}
+@mixin material-icon {
+	margin-right: split-half($default-padding);
+}
 
 
-	// Sizes
+// When the icon is after the text
 
+@mixin icon-after {
+	padding-right: split-half($default-padding);
+	padding-left: $default-padding;
+}
+
+@mixin material-icon-after {
+	margin-right: 0;
+	margin-left: split-half($default-padding);
+}
+
+
+// Sizes
+
+@mixin button-icon-small {
 	&.small {
 		padding-left: split-half($small-padding);
 
@@ -50,7 +51,9 @@
 			}
 		}
 	}
+}
 
+@mixin button-icon-large {
 	&.large {
 		padding-left: split-half($large-padding);
 
@@ -68,11 +71,14 @@
 			}
 		}
 	}
+}
 
 
-	// A touch of responsiveness: block behaviour, reset some values
-	// At this point I'm not sure whether we need icons anyways
+// A touch of responsiveness: block behaviour, reset some values
+// At this point I'm not sure whether we need icons anyways
+// Thinking about a .material-icons { display: none; } for mobile
 
+@mixin button-icon-mobile {
 	@media only screen and (max-width: 639px) {
 		padding-right: round($default-padding * 2 + $default-padding / 2);
 

@@ -11,10 +11,11 @@
 	box-sizing: border-box;
 	display: inline-block;
 	outline: none;
+	cursor: default; // definitely not text
 
 	// if it's not a link default should be instead of text
-	&:not([href]) {
-		cursor: default;
+	&[href] {
+		cursor: pointer;
 	}
 
 	@include pill();

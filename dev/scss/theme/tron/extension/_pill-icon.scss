@@ -1,0 +1,40 @@
+// _pill-icon.scss
+// Icon extension for pills
+// @author eFBe
+
+@import '../../../mixin/_splitter';
+@import '../essential/_global-variables';
+
+
+// The pill itself
+
+@mixin pill-icon {
+	padding-left: split-half($small-padding);
+	cursor: pointer; // let's assume it's selectable, don't forget to add tabindex="-1" for focus
+}
+
+
+// The icon
+
+@mixin material-icon {
+	opacity: $disabled-percentage;
+	margin-right: split-half($small-padding);
+	line-height: round($small-block-height - 2); // minus border width
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+
+// Place the icon after the text
+
+@mixin icon-after {
+	padding-right: split-half($small-padding);
+	padding-left: $small-padding;
+}
+
+@mixin material-icon-after {
+	margin-right: 0;
+	margin-left: split-half($small-padding);
+}

@@ -1,0 +1,37 @@
+// _button-icons.scss
+// Icon extension for buttons
+// @requires essential/button.css
+// @requires plugin/material-icon.css
+// @author eFBe
+
+@import '../../theme/tron/extension/_button-icon';
+
+
+.button-icon {
+	//@include button-icon();
+	@include button-icon();
+
+	.material-icons {
+		float: left;
+		line-height: inherit;
+
+		@include material-icon();
+	}
+
+	&.icon-after {
+		@include icon-after();
+
+		.material-icons {
+			float: right;
+
+			@include material-icon-after();
+		}
+	}
+
+	// Sizes
+	@include button-icon-small();
+	@include button-icon-large();
+
+	// A touch of mobile support
+	@include button-icon-mobile();
+}

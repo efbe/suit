@@ -2,6 +2,7 @@
   box-sizing: border-box;
   display: inline-block;
   outline: none;
+  cursor: default;
   margin-left: 5px;
   padding: 0 8px;
   line-height: 22px;
@@ -9,8 +10,8 @@
   border: 1px solid #252525;
   border-radius: 8px;
   transition: all 0.1s ease-out; }
-  .pill:not([href]) {
-    cursor: default; }
+  .pill[href] {
+    cursor: pointer; }
   .pill[href] {
     color: #515151;
     border-color: #515151; }

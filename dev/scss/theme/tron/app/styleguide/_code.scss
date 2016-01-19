@@ -10,9 +10,9 @@ $code-tint: 20%; // as long as I use it constantly
 
 
 @mixin code-panel-pre {
-		padding: 14px;
-		background-color: $white;
-		border: 1px solid tint($led-suit-white, $code-tint);
+	padding: 14px;
+	background-color: $white;
+	border: 1px solid tint($led-suit-white, $code-tint);
 }
 
 @mixin code-panel-code {

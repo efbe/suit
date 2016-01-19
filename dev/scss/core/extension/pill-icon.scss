@@ -1,0 +1,32 @@
+// _button-icons.scss
+// Icon extension for buttons
+// @requires plugin/pill.css
+// @requires plugin/material-icon.css
+// @author eFBe
+
+@import '../../theme/tron/extension/_pill-icon';
+
+
+.pill-icon {
+	@include pill-icon();
+
+	.material-icons {
+		float: left;
+
+		// reset link behaviour
+		text-decoration: none;
+		color: inherit;
+
+		@include material-icon();
+	}
+
+	&.icon-after {
+		@include icon-after();
+
+		.material-icons {
+			float: right;
+
+			@include material-icon-after();
+		}
+	}
+}

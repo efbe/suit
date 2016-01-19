@@ -8,6 +8,7 @@
 
 	<link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="../../dist/min/styleguide.min.css">
 </head>
 <body>
@@ -31,7 +32,7 @@
 				<section class="column column-6">
 					<div class="code-panel">
 <pre><code>&lt;h1&gt;.h1 headline&lt;/h1&gt;
-	&lt;h2&gt;.h2 headline&lt;/h2&gt;
+&lt;h2&gt;.h2 headline&lt;/h2&gt;
 &lt;h3&gt;.h3 headline&lt;/h3&gt;
 &lt;h4&gt;.h4 headline&lt;/h4&gt;
 &lt;h5&gt;.h5 headline&lt;/h5&gt;
@@ -63,11 +64,33 @@
 					<span class="pill">pill</span>
 					<a href="#" class="pill">selectable</a>
 					<a href="#" class="pill disabled">disabled</a>
+					<span tabindex="-1" class="pill pill-icon">
+						<a href="#" class="material-icons md-12">clear</a>
+						closable
+					</span>
+					<span tabindex="-1" class="pill pill-icon icon-after">
+						icon after
+						<a href="#" class="material-icons md-12">clear</a>
+					</span>
 				</section>
 			</div>
 
 		</section>
 	</div>
+
+<script>
+	// prevent elements with # as href to "work"
+	function preventDefaultLink() {
+		var emptyLinks = document.querySelectorAll('a[href="#"]');
+
+		for (var i = 0; i < emptyLinks.length; i++) {
+		 	emptyLinks[i].addEventListener('click', function(event) {
+				event.preventDefault();
+			});
+		}
+	}
+	preventDefaultLink();
+</script>
 
 </body>
 </html>
