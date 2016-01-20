@@ -12,12 +12,7 @@
 
 
 // Dimensions & percentages
-// TODO: move them to global variables
 // TODO: use ONE variable with percentage!
-
-$shade-percentage-hover: 10%;
-$shade-percentage-active: 20%;
-
 
 @mixin button {
 	padding: 0 $default-padding;
@@ -78,6 +73,36 @@ $shade-percentage-active: 20%;
 		font-size: $font-size-big;
 		height: $large-block-height;
 		line-height: $large-block-height;
+	}
+
+
+	// Color variants
+
+	&.primary { // orange
+		background-color: $led-suit-orange-dark;
+
+		&:hover {
+			background-color: shade($led-suit-orange-dark, $shade-percentage-hover);
+		}
+
+		&:focus,
+		&:active {
+			background-color: shade($led-suit-orange-dark, $shade-percentage-active);
+		}
+	}
+
+	&.secondary { // grey
+		color: $old-school-black;
+		background-color: $led-suit-white;
+
+		&:hover {
+			background-color: shade($led-suit-white, $shade-percentage-hover);
+		}
+
+		&:focus,
+		&:active {
+			background-color: shade($led-suit-white, $shade-percentage-active);
+		}
 	}
 
 

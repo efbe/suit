@@ -14,10 +14,10 @@
   -webkit-appearance: none; }
   .button:hover {
     text-decoration: none;
-    background-color: #57a8cb; }
+    background-color: #5cb2d6; }
   .button:focus, .button:active {
     outline: 0;
-    background-color: #4e96b4; }
+    background-color: #57a8cb; }
   .button::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -42,6 +42,19 @@
     font-size: 18px;
     height: 48px;
     line-height: 48px; }
+  .button.primary {
+    background-color: #eb4c1c; }
+    .button.primary:hover {
+      background-color: #df481b; }
+    .button.primary:focus, .button.primary:active {
+      background-color: #d44419; }
+  .button.secondary {
+    color: #252525;
+    background-color: #e5e3e4; }
+    .button.secondary:hover {
+      background-color: #dad8d9; }
+    .button.secondary:focus, .button.secondary:active {
+      background-color: #cecccd; }
   .button.link {
     margin-right: 12px;
     margin-left: 12px;
