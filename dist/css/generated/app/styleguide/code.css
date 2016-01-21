@@ -1,12 +1,16 @@
 .code-panel {
-  box-sizing: border-box;
-  padding: 14px;
-  background-color: #fff;
-  border: 1px solid #eae9e9; }
+  box-sizing: border-box; }
+  .code-panel pre {
+    padding: 12px;
+    font-family: "Menlo", "Monaco", Courier, monospace;
+    color: #515151;
+    border: 1px solid #eae9e9;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-font-smoothing: subpixel-antialiased; }
   .code-panel code {
     tab-size: 2;
-    -webkit-font-smoothing: subpixel-antialiased;
-    line-height: 130%;
-    font-weight: 500;
-    font-family: "Menlo", "Monaco", Courier, monospace;
-    color: #515151; }
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    line-height: 130%; }

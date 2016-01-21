@@ -1,0 +1,18 @@
+// _code.scss
+// Very tiny code mixin for multiple usage
+// @author eFBe
+
+@import '../../../mixin/_color';
+
+@import '_colors';
+@import '_global-variables';
+
+
+@mixin code {
+	font-family: $font-monospace;
+	color: tint($old-school-black, $code-tint);
+	border: 1px solid tint($led-suit-white, $code-tint);
+	border-radius: $small-border-radius;
+	background-color: $white;
+	-webkit-font-smoothing: subpixel-antialiased;
+}

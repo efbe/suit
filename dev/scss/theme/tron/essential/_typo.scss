@@ -2,6 +2,11 @@
 // Typograhic elements
 // @author eFBe
 
+
+@import '../../../mixin/_color';
+@import '../../../mixin/_splitter';
+
+@import '_code';
 @import '_colors';
 @import '_global-variables';
 @import '_link';
@@ -34,6 +39,12 @@ h6 {
 	font-size: $font-size-default;
 }
 
+code {
+	padding: split-quarter($small-padding) split-half($small-padding);
+	font-size: $font-size-default;
+
+	@include code();
+}
 
 // Just a touch of mobile friendliness: font sizes should be 60 percent under 640px
 @media only screen and (max-width: 639px) {

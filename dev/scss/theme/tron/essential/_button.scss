@@ -1,5 +1,5 @@
-// _header.scss
-// Header theme example module
+// _button.scss
+// Button design layer
 // @author eFBe
 
 @import '../../../mixin/_block';
@@ -12,7 +12,6 @@
 
 
 // Dimensions & percentages
-// TODO: use ONE variable with percentage!
 
 @mixin button {
 	padding: 0 $default-padding;
@@ -56,6 +55,7 @@
 
 
 	// Sizes
+	// TODO: use ONE variable with percentage(?)
 
 	&.small {
 		padding-right: $small-padding;

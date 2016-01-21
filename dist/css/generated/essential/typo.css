@@ -33,6 +33,16 @@ h6 {
   font-weight: 500;
   font-size: 14px; }
 
+code {
+  padding: 2px 4px;
+  font-size: 14px;
+  font-family: "Menlo", "Monaco", Courier, monospace;
+  color: #515151;
+  border: 1px solid #eae9e9;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
 @media only screen and (max-width: 639px) {
   h1 {
     font-size: 29px; }

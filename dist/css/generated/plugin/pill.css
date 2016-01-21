@@ -8,7 +8,7 @@
   line-height: 22px;
   height: 24px;
   border: 1px solid #252525;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: all 0.1s ease-out; }
   .pill[href] {
     cursor: pointer; }
