@@ -1,6 +1,7 @@
 // _button.scss
 // Button design layer
 // @author eFBe
+// TODO: Split this up into Size / Color / etc. mixins
 
 @import '../../../mixin/_block';
 @import '../../../mixin/_color';
@@ -86,7 +87,8 @@
 		}
 
 		&:focus,
-		&:active {
+		&:active,
+		&.active {
 			background-color: shade($led-suit-orange-dark, $shade-percentage-active);
 		}
 	}
@@ -100,7 +102,9 @@
 		}
 
 		&:focus,
-		&:active {
+		&:active,
+		&.active {
+			color: $old-school-black;
 			background-color: shade($led-suit-white, $shade-percentage-active);
 		}
 	}

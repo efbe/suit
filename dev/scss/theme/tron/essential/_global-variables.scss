@@ -59,7 +59,10 @@ $icon-big:     36px;
 $icon-large:   48px;
 
 
-// Border radius
+// Border
+
+$small-border-width:   1px;
+$default-border-width: 2px;
 
 $small-border-radius:   4px;
 $default-border-radius: 8px;
@@ -74,3 +77,5 @@ $shade-percentage-hover: 5%;
 $shade-percentage-active: 10%;
 
 $code-tint: 20%;
+
+$hollow-item-hover: 0.1; // gotta find some proper name for this

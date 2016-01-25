@@ -1,4 +1,4 @@
-// _button-icons.scss
+// button-icon.scss
 // Icon extension for buttons
 // @requires essential/button.css
 // @requires plugin/material-icon.css
@@ -8,7 +8,6 @@
 
 
 .button-icon {
-	//@include button-icon();
 	@include button-icon();
 
 	.material-icons {

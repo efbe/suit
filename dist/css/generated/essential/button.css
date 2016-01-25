@@ -46,14 +46,15 @@
     background-color: #eb4c1c; }
     .button.primary:hover {
       background-color: #df481b; }
-    .button.primary:focus, .button.primary:active {
+    .button.primary:focus, .button.primary:active, .button.primary.active {
       background-color: #d44419; }
   .button.secondary {
     color: #252525;
     background-color: #e5e3e4; }
     .button.secondary:hover {
       background-color: #dad8d9; }
-    .button.secondary:focus, .button.secondary:active {
+    .button.secondary:focus, .button.secondary:active, .button.secondary.active {
+      color: #252525;
       background-color: #cecccd; }
   .button.link {
     margin-right: 12px;

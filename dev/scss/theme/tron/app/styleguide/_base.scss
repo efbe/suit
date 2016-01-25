@@ -2,12 +2,19 @@
 // Header theme example module
 // @author eFBe
 
-@import '../../essential/_colors';
 @import '../../../../mixin/_color';
+@import '../../essential/_colors';
+@import '../../essential/_global-variables';
 
 
 @mixin base {
 	body {
 		background-color: tint($led-suit-white, 40%);
+	}
+
+	// TODO: this should be a "well" module or something
+	.demo-dark {
+		padding: $default-padding;
+		background-color: $old-school-black;
 	}
 }

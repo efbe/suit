@@ -1,0 +1,35 @@
+.hollow {
+  background-color: transparent;
+  line-height: 30px;
+  color: #61bbe1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #61bbe1; }
+  .hollow:hover {
+    background-color: rgba(97, 187, 225, 0.1); }
+  .hollow:focus, .hollow:active, .hollow.active {
+    color: #fff;
+    background-color: #61bbe1; }
+  .hollow.small {
+    line-height: 22px; }
+  .hollow.large {
+    border-width: 2px;
+    line-height: 44px; }
+  .hollow.primary {
+    color: #eb4c1c;
+    background-color: transparent;
+    border-color: #eb4c1c; }
+    .hollow.primary:hover {
+      background-color: rgba(235, 76, 28, 0.1); }
+    .hollow.primary:focus, .hollow.primary:active, .hollow.primary.active {
+      color: #fff;
+      background-color: #eb4c1c; }
+  .hollow.secondary {
+    color: #e5e3e4;
+    background-color: transparent;
+    border-color: #e5e3e4; }
+    .hollow.secondary:hover {
+      background-color: rgba(229, 227, 228, 0.1); }
+    .hollow.secondary:focus, .hollow.secondary:active, .hollow.secondary.active {
+      color: #252525;
+      background-color: #e5e3e4; }
