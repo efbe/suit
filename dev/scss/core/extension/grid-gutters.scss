@@ -18,19 +18,33 @@
 			padding-right: split-half($grid-gutter-width);
 			padding-left: split-half($grid-gutter-width);
 
-			// Lovely nesting
+			// Lovely nesting - this removes gutter redundancy
 			.gutter {
 				padding-right: 0;
-				padding-left: 0;
-			}
-
-			.column:first-of-type {
 				padding-left: 0;
 			}
 
 			.column:last-of-type {
 				padding-right: 0;
 			}
+		}
+	}
+
+
+	// If you want to nest a gutter-less layout into another one with gutters
+
+	&.no-gutter {
+		padding-right: 0;
+		padding-left: 0;
+
+		.column {
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.grid-row {
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 
@@ -66,13 +80,15 @@
 			.column {
 				padding: 0 0 $grid-gutter-width;
 
+				// even reset the nested rows
+				.gutter {
+					padding: 0;
+				}
+
+				// nested last block already has a bottom gutter from its parent
 				.column:last-of-type {
 					padding-bottom: 0;
 				}
-			}
-
-			.gutter {
-				padding: 0;
 			}
 		}
 	}

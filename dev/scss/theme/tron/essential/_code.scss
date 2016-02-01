@@ -10,7 +10,8 @@
 
 @mixin code {
 	font-family: $font-monospace;
-	color: tint($old-school-black, $code-tint);
+	font-size: $code-relative-font-size;
+	color: $led-suit-orange-dark;
 	border: 1px solid tint($led-suit-white, $code-tint);
 	border-radius: $small-border-radius;
 	background-color: $white;

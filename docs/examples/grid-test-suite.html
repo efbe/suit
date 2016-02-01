@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>suit | grid test suite</title>
+
+	<link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../../dist/min/styleguide.min.css">
+</head>
+<body>
+	<header>
+		<div class="grid-row gutter">
+			<section class="column column-12">
+				<h3 class="break-ellipsis">suit | grid test suite</h3>
+			</section>
+		</div>
+	</header>
+
+
+	<div class="grid-row gutter stick-to-left">
+		<section class="column column-2">
+			<p class="break-ellipsis">menu</p>
+		</section>
+		<section class="column column-10">
+
+
+			<!-- Default grid -->
+			<div class="grid-row no-gutter" id="grid-default">
+				<h4>Default grid</h4>
+				<p><strong>suit</strong>
+					has a 12 column grid system which is extendable with a <a href="#grid-gutter">gutter module</a>.</p>
+				<p>In <span class="tooltip" title="screen width under 640px">mobile view</span> all columns have full
+					width and the gutter size becomes the bottom margin of the blocks.</p>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-12">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-11">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-10">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-9">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-8">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-5">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-7">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-6">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-6">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row">
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+			</div>
+			<br><br>
+
+
+			<!-- Grids with gutters -->
+			<div class="grid-row" id="grid-gutter">
+				<h4>Grids with gutters</h4>
+				<p>Add <code>.gutter</code> class to the <code>.grid-row</code> for proper whitespace between columns.
+					The gutter size comes from the <code>_global-variables.scss</code>.</p>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-11">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-10">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-9">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-8">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-5">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-7">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-6">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-6">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-4">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-3">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+					<div class="column column-1">
+						<div class="panel demo-dark rounded"></div>
+					</div>
+				</div>
+				<br>
+			</div>
+			<br><br>
+
+
+			<!-- Nesting grids -->
+			<div class="grid-row" id="grid-nesting">
+				<h4>Nesting grids</h4>
+				<p>Grids with gutter inherit the proper whitespace between columns.</p>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row">
+								<div class="column column-2">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-10">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column column-9">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row">
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br>
+
+				<p>You can also nest layouts without gutters into columns with whitespace using the <code>.no-gutter</code> class.</p>
+				<br>
+
+				<div class="grid-row gutter">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row no-gutter">
+								<div class="column column-2">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-10">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column column-9">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row no-gutter">
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+
+
+			<!-- Sticky grids -->
+			<div class="grid-row" id="sticky-grids">
+				<h4>Sticky grids</h4>
+				<p>The gutter module also has a small <code>.stick-to-[side]</code> feature which might come handy if you
+					want a side menu which sticks onto the side of the viewport but does not mess up layout columns
+					with gutters.</p>
+				<br>
+
+				<div class="grid-row gutter stick-to-left">
+					<div class="column column-3">
+						<div class="panel demo-dark rounded">
+							<p>Panel sticked to the left side.</p>
+						</div>
+					</div>
+					<div class="column column-7">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row no-gutter">
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-4">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row">
+								<div class="column column-6">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-6">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br>
+
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+// code.scss
+// Simple panel module for the styleguide app
+// @author eFBe
+
+@import '../../../theme/tron/app/styleguide/_panel';
+
+.panel {
+	@include panel();
+}

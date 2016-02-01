@@ -1,8 +1,9 @@
-html {
-  font-size: 14px; }
-
 body {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+
+p {
+  font-size: 14px;
+  line-height: 150%; }
 
 a {
   text-decoration: none;
@@ -34,10 +35,12 @@ h6 {
   font-size: 14px; }
 
 code {
+  white-space: nowrap;
   padding: 2px 4px;
   font-size: 14px;
   font-family: "Menlo", "Monaco", Courier, monospace;
-  color: #515151;
+  font-size: 80%;
+  color: #eb4c1c;
   border: 1px solid #eae9e9;
   border-radius: 4px;
   background-color: #fff;

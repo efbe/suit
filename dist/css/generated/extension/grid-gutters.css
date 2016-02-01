@@ -7,10 +7,17 @@
     .grid-row.gutter .column .gutter {
       padding-right: 0;
       padding-left: 0; }
-    .grid-row.gutter .column .column:first-of-type {
-      padding-left: 0; }
     .grid-row.gutter .column .column:last-of-type {
       padding-right: 0; }
+.grid-row.no-gutter {
+  padding-right: 0;
+  padding-left: 0; }
+  .grid-row.no-gutter .column {
+    padding-right: 0;
+    padding-left: 0; }
+  .grid-row.no-gutter .grid-row {
+    padding-right: 0;
+    padding-left: 0; }
 .grid-row.stick-to-left {
   padding-left: 0; }
   .grid-row.stick-to-left .column:first-of-type {
@@ -25,7 +32,7 @@
     padding-left: 20px; }
     .grid-row.gutter .column {
       padding: 0 0 20px; }
+      .grid-row.gutter .column .gutter {
+        padding: 0; }
       .grid-row.gutter .column .column:last-of-type {
-        padding-bottom: 0; }
-    .grid-row.gutter .gutter {
-      padding: 0; } }
+        padding-bottom: 0; } }

@@ -1,6 +1,6 @@
 body {
   background-color: #efeeef; }
 
-.demo-dark {
-  padding: 12px;
-  background-color: #252525; }
+.tooltip {
+  font-style: italic;
+  cursor: help; }

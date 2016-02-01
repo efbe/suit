@@ -18,3 +18,4 @@
 /* styleguide app */
 @import '../generated/app/styleguide/base.css';
 @import '../generated/app/styleguide/code.css';
+@import '../generated/app/styleguide/panel.css';

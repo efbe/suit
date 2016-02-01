@@ -1,0 +1,30 @@
+// _panel.scss
+// Panel module for the styleguide app
+// @author eFBe
+
+@import '../../essential/_colors';
+@import '../../essential/_global-variables';
+
+
+@mixin panel {
+	&.demo-dark {
+		padding: $default-padding;
+		color: $led-suit-white;
+		background-color: $old-school-black;
+	}
+
+	&.demo-light {
+		padding: $default-padding;
+		color: $old-school-black;
+		background-color: $led-suit-white;
+	}
+
+	&.rounded {
+		border-radius: $small-border-radius;
+	}
+
+	&.vertical-padding {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}

@@ -12,9 +12,9 @@
 		background-color: tint($led-suit-white, 40%);
 	}
 
-	// TODO: this should be a "well" module or something
-	.demo-dark {
-		padding: $default-padding;
-		background-color: $old-school-black;
+	// poor man's tooltip module
+	.tooltip {
+		font-style: italic;
+		cursor: help;
 	}
 }
