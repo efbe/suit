@@ -1,8 +1,6 @@
 // grid.scss
 // (a very simple) Grid module
 // @author eFBe
-// TODO: create grid test suite
-// TODO: check nested columns - inner columns shouldn't inherit paddings - see button test suite
 
 @import '../../mixin/_float';
 
@@ -26,27 +24,26 @@
 .column {
 	box-sizing: border-box;
 	position: relative;
-	display: block;
+	display: block; // do not stick with block level elements
 	width: 100%;
 	min-height: 1px; // Don't mess the layout up when empty
 
 	@include float-left();
 }
 
-.column-1  { width:  8.33333%; }
-.column-2  { width: 16.6667%;  }
-.column-3  { width: 25%;       }
-.column-4  { width: 33.3333%;  }
-.column-5  { width: 41.6667%;  }
-.column-6  { width: 50%;       }
-.column-7  { width: 58.3333%;  }
-.column-8  { width: 66.6667%;  }
-.column-9  { width: 75%;       }
-.column-10 { width: 83.3333%;  }
-.column-11 { width: 91.6667%;  }
-.column-12 { width: 100%;
-	float: none; // If it's a full width column disable float, so we won't need an extra .clear class
-}
+.column-1  { width: percentage(1 / 12); }
+.column-2  { width: percentage(2 / 12); }
+.column-3  { width: percentage(3 / 12); }
+.column-4  { width: percentage(4 / 12); }
+.column-5  { width: percentage(5 / 12); }
+.column-6  { width: percentage(6 / 12); }
+.column-7  { width: percentage(7 / 12); }
+.column-8  { width: percentage(8 / 12); }
+.column-9  { width: percentage(9 / 12); }
+.column-10 { width: percentage(10 / 12); }
+.column-11 { width: percentage(11 / 12); }
+// If it's a full width column disable float, so we won't need an extra .clear class
+.column-12 { float: none; }
 
 .center {
 	@include centerize();

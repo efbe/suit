@@ -23,10 +23,6 @@
 				padding-right: 0;
 				padding-left: 0;
 			}
-
-			.column:last-of-type {
-				padding-right: 0;
-			}
 		}
 	}
 
@@ -53,18 +49,21 @@
 	// Please use it carefully, I'm not sure about nesting at this point
 
 	&.stick-to-left {
+		padding-right: 0;
 		padding-left: 0;
 
 		.column:first-of-type {
-			padding-left: 0;
+			margin-left: -(split-half($grid-gutter-width));
 		}
-	}
 
-	&.stick-to-right {
-		padding-right: 0;
+		.grid-row {
+			.column:first-of-type {
+				margin-left: 0;
+			}
 
-		.column:last-of-type {
-			padding-right: 0;
+			.grid-row {
+			//
+			}
 		}
 	}
 
