@@ -4,14 +4,14 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  -webkit-appearance: none;
   padding: 0 12px;
   line-height: 32px;
   height: 32px;
   font-size: 14px;
   border: 0;
   color: #fff;
-  background-color: #61bbe1;
-  -webkit-appearance: none; }
+  background-color: #61bbe1; }
   .button:hover {
     text-decoration: none;
     background-color: #5cb2d6; }

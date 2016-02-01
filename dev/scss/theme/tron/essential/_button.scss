@@ -44,7 +44,12 @@
 		margin-top: -2px;
 		margin-bottom: -2px;
 	}
+}
 
+
+// Disabled
+
+@mixin button-disabled {
 	&[disabled],
 	&.disabled {
 		opacity: $disabled-percentage;
@@ -53,11 +58,13 @@
 
 		@include user-select(none);
 	}
+}
 
 
-	// Sizes
-	// TODO: use ONE variable with percentage(?)
+// Sizes
+// TODO: use ONE variable with percentage(?)
 
+@mixin button-sizes {
 	&.small {
 		padding-right: $small-padding;
 		padding-left: $small-padding;
@@ -75,10 +82,11 @@
 		height: $large-block-height;
 		line-height: $large-block-height;
 	}
+}
 
+// Color variants
 
-	// Color variants
-
+@mixin button-colors {
 	&.primary { // orange
 		background-color: $led-suit-orange-dark;
 
@@ -108,10 +116,12 @@
 			background-color: shade($led-suit-white, $shade-percentage-active);
 		}
 	}
+}
 
 
-	// Link outfit, button behaviour
+// Link outfit, button behaviour
 
+@mixin button-link {
 	&.link {
 		margin-right: $default-padding;
 		margin-left: $default-padding;

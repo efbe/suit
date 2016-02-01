@@ -1,6 +1,8 @@
 // grid.scss
 // (a very simple) Grid module
 // @author eFBe
+// TODO: create grid test suite
+// TODO: check nested columns - inner columns shouldn't inherit paddings - see button test suite
 
 @import '../../mixin/_float';
 

@@ -15,11 +15,15 @@
 	text-decoration: none;
 	cursor: pointer;
 
-	@include button();
-
 	// webkit reset
 	// scss-lint:disable VendorPrefix
 	-webkit-appearance: none;
+
+	@include button();
+	@include button-disabled();
+	@include button-sizes();
+	@include button-colors();
+	@include button-link();
 
 
 	// Full width buttons
