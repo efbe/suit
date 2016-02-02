@@ -2,6 +2,7 @@
 // Panel module for the styleguide app
 // @author eFBe
 
+@import '../../../../mixin/_color';
 @import '../../essential/_colors';
 @import '../../essential/_global-variables';
 
@@ -17,6 +18,16 @@
 		padding: $default-padding;
 		color: $old-school-black;
 		background-color: $led-suit-white;
+	}
+
+	&.demo-highlight {
+		box-sizing: border-box;
+		padding: $default-padding;
+
+		// same as the <code> module
+		border: 1px solid tint($led-suit-white, $code-tint);
+		border-radius: $small-border-radius;
+		background-color: $white;
 	}
 
 	&.rounded {

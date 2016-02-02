@@ -6,6 +6,12 @@
   padding: 12px;
   color: #252525;
   background-color: #e5e3e4; }
+.panel.demo-highlight {
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #eae9e9;
+  border-radius: 4px;
+  background-color: #fff; }
 .panel.rounded {
   border-radius: 4px; }
 .panel.vertical-padding {

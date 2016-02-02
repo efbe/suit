@@ -17,17 +17,11 @@
 		.column {
 			padding-right: split-half($grid-gutter-width);
 			padding-left: split-half($grid-gutter-width);
-
-			// Lovely nesting - this removes gutter redundancy
-			.gutter {
-				padding-right: 0;
-				padding-left: 0;
-			}
 		}
 	}
 
 
-	// If you want to nest a gutter-less layout into another one with gutters
+	// Nesting is fun...
 
 	&.no-gutter {
 		padding-right: 0;
@@ -42,27 +36,21 @@
 			padding-right: 0;
 			padding-left: 0;
 		}
-	}
 
+		// ...and redundant
+		.gutter {
+			padding-right: split-half($grid-gutter-width);
+			padding-left: split-half($grid-gutter-width);
 
-	// If you need gutters but not on the sides
-	// Please use it carefully, I'm not sure about nesting at this point
-
-	&.stick-to-left {
-		padding-right: 0;
-		padding-left: 0;
-
-		.column:first-of-type {
-			margin-left: -(split-half($grid-gutter-width));
-		}
-
-		.grid-row {
-			.column:first-of-type {
-				margin-left: 0;
+			.column {
+				padding-right: split-half($grid-gutter-width);
+				padding-left: split-half($grid-gutter-width);
 			}
 
-			.grid-row {
-			//
+			// ...and redundant
+			.no-gutter .column {
+				padding-right: 0;
+				padding-left: 0;
 			}
 		}
 	}
@@ -70,23 +58,25 @@
 
 	// A touch of responsiveness: reset everything
 	// Also makes the gutters vertical
+	// And because I don't want to play with nesting again everything is !important
+	// scss-lint:disable ImportantRule
 
 	@media only screen and (max-width: 639px) {
 		&.gutter {
-			padding-right: $grid-gutter-width;
-			padding-left: $grid-gutter-width;
+			padding-right: $grid-gutter-width !important;
+			padding-left: $grid-gutter-width !important;
 
 			.column {
-				padding: 0 0 $grid-gutter-width;
+				padding: 0 0 $grid-gutter-width !important;
 
 				// even reset the nested rows
 				.gutter {
-					padding: 0;
+					padding: 0 !important;
 				}
 
 				// nested last block already has a bottom gutter from its parent
 				.column:last-of-type {
-					padding-bottom: 0;
+					padding-bottom: 0 !important;
 				}
 			}
 		}

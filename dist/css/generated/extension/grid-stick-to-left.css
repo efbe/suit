@@ -1,0 +1,15 @@
+.grid-row.stick-to-left {
+  padding-right: 0;
+  padding-left: 0; }
+  .grid-row.stick-to-left > .column {
+    padding-right: 10px;
+    padding-left: 10px; }
+  .grid-row.stick-to-left > .column:first-of-type {
+    margin-left: -10px; }
+  .grid-row.stick-to-left .grid-row .column:first-of-type {
+    margin-left: 0; }
+  .grid-row.stick-to-left .grid-row.stick-to-left .column:first-of-type {
+    margin-left: -10px; }
+@media only screen and (max-width: 639px) {
+  .grid-row .column:first-of-type {
+    margin-left: 0 !important; } }
