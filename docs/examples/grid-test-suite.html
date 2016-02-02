@@ -405,7 +405,47 @@
 				</div>
 				<br><br>
 
-				<p>Grids with gutter will <strong>always inherit</strong> the proper whitespace between columns.</p>
+				<p>If you want to keep the initial gutters even when you are nesting consider using mixed <code>.grid-row</code>-s
+					until you get what you want.</p>
+				<br>
+				<div class="grid-row">
+					<div class="column column-4">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row gutter">
+								<div class="column column-2">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-10">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column column-2">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row">
+								<div class="column column-12">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column column-6">
+						<div class="panel demo-dark rounded vertical-padding">
+							<div class="grid-row gutter">
+								<div class="column column-2">
+									<div class="panel demo-light rounded"></div>
+								</div>
+								<div class="column column-10">
+									<div class="panel demo-light rounded"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br><br>
+
+				<p>Nested grids with gutter will <strong>always inherit</strong> the proper whitespace between columns.</p>
 				<br>
 
 				<div class="panel demo-highlight vertical-padding">
