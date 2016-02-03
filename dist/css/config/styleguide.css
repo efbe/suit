@@ -16,7 +16,10 @@
 @import '../generated/extension/grid-stick-to-left.css';
 @import '../generated/extension/pill-icon.css';
 
-/* styleguide app */
+/* header */
+@import '../generated/app/header.css';
+
+/* styleguide */
 @import '../generated/app/styleguide/base.css';
 @import '../generated/app/styleguide/code.css';
 @import '../generated/app/styleguide/panel.css';

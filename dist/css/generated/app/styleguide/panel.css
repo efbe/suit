@@ -1,7 +1,7 @@
 .panel.demo-dark {
   padding: 12px;
   color: #e5e3e4;
-  background-color: #252525; }
+  background-color: #22252a; }
 .panel.demo-light {
   padding: 12px;
   color: #252525;
@@ -9,6 +9,7 @@
 .panel.demo-highlight {
   box-sizing: border-box;
   padding: 12px;
+  color: #252525;
   border: 1px solid #eae9e9;
   border-radius: 4px;
   background-color: #fff; }

@@ -50,7 +50,7 @@
 @mixin button-hollow-primary {
 	&.primary { // orange
 		color: $led-suit-orange-dark;
-		background-color: transparent;
+		background-color: $transparent;
 		border-color: $led-suit-orange-dark;
 
 		&:hover {
@@ -69,7 +69,7 @@
 @mixin button-hollow-secondary {
 	&.secondary { // grey
 		color: $led-suit-white;
-		background-color: transparent;
+		background-color: $transparent;
 		border-color: $led-suit-white;
 
 		&:hover {

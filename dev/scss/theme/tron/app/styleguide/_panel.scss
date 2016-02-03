@@ -11,7 +11,7 @@
 	&.demo-dark {
 		padding: $default-padding;
 		color: $led-suit-white;
-		background-color: $old-school-black;
+		background-color: $silky-black;
 	}
 
 	&.demo-light {
@@ -23,6 +23,7 @@
 	&.demo-highlight {
 		box-sizing: border-box;
 		padding: $default-padding;
+		color: $old-school-black;
 
 		// same as the <code> module
 		border: 1px solid tint($led-suit-white, $code-tint);

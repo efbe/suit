@@ -1,5 +1,6 @@
 header {
   min-height: 40px;
-  background-color: #252525; }
+  background-color: #22252a;
+  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14); }
   header h3 {
     color: #fff; }
