@@ -8,15 +8,15 @@
 
 @mixin button-hollow {
 	line-height: round($default-block-height - 2 * $small-border-width);
-	color: $led-suit-blue-mid;
+	color: $led-suit-blue-dark;
 
 	// I separate properties so won't be overwritten every time
 	border-width: 1px;
 	border-style: solid;
-	border-color: $led-suit-blue-mid;
+	border-color: $led-suit-blue-dark;
 
 	&:hover {
-		background-color: change-color($led-suit-blue-mid, $alpha: $hollow-item-hover);
+		background-color: change-color($led-suit-blue-dark, $alpha: $hollow-item-hover);
 	}
 
 	// Reset to default colors
@@ -24,7 +24,7 @@
 	&:active,
 	&.active {
 		color: $white;
-		background-color: $led-suit-blue-mid;
+		background-color: $led-suit-blue-dark;
 	}
 }
 

@@ -23,17 +23,17 @@
 
 	border: 0; // input reset
 	color: $white;
-	background-color: $led-suit-blue-mid;
+	background-color: $led-suit-blue-dark;
 
 	&:hover {
 		text-decoration: none; // anchor reset
-		background-color: shade($led-suit-blue-mid, $shade-percentage-hover);
+		background-color: shade($led-suit-blue-dark, $shade-percentage-hover);
 	}
 
 	&:focus,
 	&:active {
 		outline: 0;
-		background-color: shade($led-suit-blue-mid, $shade-percentage-active);
+		background-color: shade($led-suit-blue-dark, $shade-percentage-active);
 	}
 
 	// Firefox input padding fix

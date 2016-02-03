@@ -7,7 +7,7 @@
 
 @mixin link {
 	text-decoration: none;
-	color: $led-suit-blue-mid; // should be blue-dark when I discover that
+	color: $led-suit-blue-dark; // should be blue-dark when I discover that
 
 	&:hover {
 		text-decoration: underline;

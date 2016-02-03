@@ -2,13 +2,13 @@
 // Material icon design layer
 // @author eFBe
 
-@import '../essential/colors';
+@import '../essential/_global-variables';
 
 
 @mixin material-icon {
-	//color: $old-school-black; // default
+	// Sizes (Google recommended class names)
 
-	//&.some-color-modifier {
-	//	comes: later;
-	//}
+	&.md-12 { font-size: $icon-small;   }
+	&.md-18 { font-size: $icon-default; }
+	&.md-24 { font-size: $icon-large;   }
 }

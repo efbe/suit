@@ -11,15 +11,5 @@
 // Probably we can get rid of big & large icons
 
 .material-icons {
-
-
-	// Sizes (Google recommended class names)
-
-	&.md-12 { font-size: $icon-tiny;    }
-	&.md-18 { font-size: $icon-small;   }
-	&.md-24 { font-size: $icon-default; }
-	&.md-36 { font-size: $icon-big;     }
-	&.md-48 { font-size: $icon-large;   }
-
 	@include material-icon();
 }

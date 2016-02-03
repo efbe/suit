@@ -11,13 +11,13 @@
   font-size: 14px;
   border: 0;
   color: #fff;
-  background-color: #61bbe1; }
+  background-color: #30abdf; }
   .button:hover {
     text-decoration: none;
-    background-color: #5cb2d6; }
+    background-color: #2ea2d4; }
   .button:focus, .button:active {
     outline: 0;
-    background-color: #57a8cb; }
+    background-color: #2b9ac9; }
   .button::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -63,7 +63,7 @@
     padding-right: 0;
     background-color: transparent;
     text-decoration: none;
-    color: #61bbe1; }
+    color: #30abdf; }
     .button.link:hover {
       text-decoration: underline; }
     .button.link.small {
