@@ -1,0 +1,43 @@
+// side-menu.scss
+// Side menu for table of contents
+// @author eFBe
+
+@import '../../../theme/tron/app/styleguide/_side-menu';
+
+.side-menu {
+	position: fixed;
+	top: 0;
+	bottom: 0; // this stretches the element height to 100%
+	box-sizing: border-box;
+	width: inherit; // need this for an explicit width dimension on the fixed position element
+
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	@include side-menu();
+
+	h3 {
+		@include side-menu-title();
+	}
+
+	// The ordered list
+	.menu-list {
+
+		@include side-menu-list();
+
+		.menu-item {
+			display: block;
+			box-sizing: border-box;
+
+			@include side-menu-item();
+		}
+	}
+}
+
+// A touch of responsiveness
+
+@media only screen and (max-width: 639px) {
+	.side-menu {
+		// TODO: shouldn't be fixed in mobile view
+	}
+}

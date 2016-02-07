@@ -37,11 +37,6 @@ body {
 	line-height: 1;
 }
 
-// goes to typo module
-ol, ul {
-	list-style: $value-none;
-}
-
 blockquote, q {
 	quotes: $value-none;
 }

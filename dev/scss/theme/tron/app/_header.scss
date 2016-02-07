@@ -6,11 +6,7 @@
 
 
 @mixin header {
-	min-height: 40px;
+	min-height: 70px;
 	background-color: $silky-black;
 	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14);
-
-	h3 {
-		color: $white;
-	}
 }

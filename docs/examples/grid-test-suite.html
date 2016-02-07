@@ -13,17 +13,40 @@
 </head>
 <body>
 	<header>
-		<div class="grid-row gutter">
-			<section class="column column-12">
-				<h3 class="break-ellipsis">suit | grid</h3>
-			</section>
+		<div class="grid-row">
+			<section class="column column-2"></section>
+			<section class="column column-10"></section>
 		</div>
 	</header>
 
 
 	<div class="grid-row gutter stick-to-left">
 		<section class="column column-2">
-			<p class="break-ellipsis">menu</p>
+			<div class="side-menu">
+				<h3>suit</h3>
+				<ul class="menu-list">
+					<li><a class="menu-item category active">Essential</a>
+						<ul>
+							<li><a class="menu-item" href="button-test-suite.html">Button</a></li>
+							<li><a class="menu-item active" href="#">Grid</a></li>
+							<li><a class="menu-item" href="#">Typography</a></li>
+						</ul>
+					</li>
+					<li><a class="menu-item category">Plugin</a>
+						<ul>
+							<li><a class="menu-item" href="icon-test-suite.html">Material icon</a></li>
+							<li><a class="menu-item" href="#">Pill</a></li>
+						</ul>
+					</li>
+					<li><a class="menu-item category">Extension</a>
+						<ul>
+							<li><a class="menu-item" href="button-test-suite.html#hollow">Hollow button</a></li>
+							<li><a class="menu-item" href="button-test-suite.html#icon">Icon in button</a></li>
+							<li><a class="menu-item" href="#">Pill with icon</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<section class="column column-10">
 
@@ -554,5 +577,18 @@
 	</div>
 
 
+	<script>
+		// prevent elements with # as href to "work"
+		function preventDefaultLink() {
+			var emptyLinks = document.querySelectorAll('a[href="#"]');
+
+			for (var i = 0; i < emptyLinks.length; i++) {
+				emptyLinks[i].addEventListener('click', function(event) {
+					event.preventDefault();
+				});
+			}
+		}
+		preventDefaultLink();
+	</script>
 </body>
 </html>

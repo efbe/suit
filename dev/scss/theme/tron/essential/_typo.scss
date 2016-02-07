@@ -25,6 +25,12 @@ a {
 	@include link();
 }
 
+ol, ul {
+	list-style: none;
+	font-size: $font-size-default;
+	line-height: $relative-line-height-percentage;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	line-height: $relative-line-height-percentage;
 	font-weight: $text-normal;

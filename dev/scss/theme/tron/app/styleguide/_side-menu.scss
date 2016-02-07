@@ -1,0 +1,61 @@
+// _side-menu.scss
+// Header theme example module
+// @author eFBe
+
+@import '../../../../mixin/_color';
+//@import '../../../../mixin/_splitter';
+@import '../../essential/_colors';
+@import '../../essential/_global-variables';
+
+
+@mixin side-menu {
+	left: -($grid-gutter-width);
+	padding-left: $grid-gutter-width;
+	background-color: $silky-black;
+}
+
+@mixin side-menu-title {
+	padding: $default-padding $grid-gutter-width;
+	color: $white;
+}
+
+@mixin side-menu-list {
+	box-shadow: 4px 2px 2px -2px rgba(0, 0, 0, 0.14);
+}
+
+@mixin side-menu-item {
+	padding: $default-padding $grid-gutter-width;
+	text-decoration: none;
+
+	&.category {
+		cursor: default;
+		color: $led-suit-white;
+		box-sizing: border-box;
+		border-left: $default-border-width solid $transparent;
+
+		&.active {
+			color: $led-suit-white;
+			border-left-color: $led-suit-white;
+			background-color: $transparent;
+
+			&:hover {
+				color: $led-suit-white;
+			}
+		}
+	}
+
+	+ ul .menu-item {
+		padding-left: round($grid-gutter-width + $default-padding);
+		font-size: $font-size-small;
+
+		&:hover {
+			background-color: shade($silky-black, $active-item-shade);
+		}
+
+		&.active {
+			cursor: default;
+			background-color: shade($silky-black, $active-item-shade);
+			color: $white;
+		}
+	}
+}
