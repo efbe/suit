@@ -8,23 +8,20 @@
 
 
 .button-icon {
-	@include button-icon();
-
 	.material-icons {
-		float: left;
 		line-height: inherit;
+	}
 
-		@include material-icon();
+	&.icon-before {
+		@include icon-before();
 	}
 
 	&.icon-after {
 		@include icon-after();
+	}
 
-		.material-icons {
-			float: right;
-
-			@include material-icon-after();
-		}
+	&.icon-only {
+		@include icon-only();
 	}
 
 	// Sizes

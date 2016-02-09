@@ -17,7 +17,7 @@
     background-color: #2ea2d4; }
   .button:focus, .button:active {
     outline: 0;
-    background-color: #2b9ac9; }
+    background-color: #2991be; }
   .button::-moz-focus-inner {
     border: 0;
     padding: 0;
@@ -47,7 +47,7 @@
     .button.primary:hover {
       background-color: #df481b; }
     .button.primary:focus, .button.primary:active, .button.primary.active {
-      background-color: #d44419; }
+      background-color: #c84118; }
   .button.secondary {
     color: #252525;
     background-color: #e5e3e4; }
@@ -55,7 +55,7 @@
       background-color: #dad8d9; }
     .button.secondary:focus, .button.secondary:active, .button.secondary.active {
       color: #252525;
-      background-color: #cecccd; }
+      background-color: #c3c1c2; }
   .button.link {
     margin-right: 12px;
     margin-left: 12px;

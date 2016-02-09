@@ -6,7 +6,7 @@
   border-style: solid;
   border-color: #30abdf; }
   .hollow:hover {
-    background-color: rgba(48, 171, 223, 0.1); }
+    background-color: rgba(48, 171, 223, 0.2); }
   .hollow:focus, .hollow:active, .hollow.active {
     color: #fff;
     background-color: #30abdf; }
@@ -20,7 +20,7 @@
     background-color: transparent;
     border-color: #eb4c1c; }
     .hollow.primary:hover {
-      background-color: rgba(235, 76, 28, 0.1); }
+      background-color: rgba(235, 76, 28, 0.2); }
     .hollow.primary:focus, .hollow.primary:active, .hollow.primary.active {
       color: #fff;
       background-color: #eb4c1c; }
@@ -29,7 +29,7 @@
     background-color: transparent;
     border-color: #e5e3e4; }
     .hollow.secondary:hover {
-      background-color: rgba(229, 227, 228, 0.1); }
+      background-color: rgba(229, 227, 228, 0.2); }
     .hollow.secondary:focus, .hollow.secondary:active, .hollow.secondary.active {
       color: #252525;
       background-color: #e5e3e4; }

@@ -53,13 +53,13 @@ code {
 
 @media only screen and (max-width: 639px) {
   h1 {
-    font-size: 29px; }
+    font-size: 38px; }
 
   h2 {
-    font-size: 22px; }
+    font-size: 29px; }
 
   h3 {
-    font-size: 18px; }
+    font-size: 24px; }
 
   h4, h5, h6 {
     font-weight: 500;
