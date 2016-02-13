@@ -19,3 +19,11 @@
 
 .all-caps {
   text-transform: uppercase; }
+
+.button-group .button {
+  float: left; }
+.button-group::before, .button-group::after {
+  content: ' ';
+  display: table; }
+.button-group::after {
+  clear: both; }

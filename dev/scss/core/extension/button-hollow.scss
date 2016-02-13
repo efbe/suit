@@ -20,3 +20,8 @@
 	@include button-hollow-primary();
 	@include button-hollow-secondary();
 }
+
+
+// Button group
+
+@include button-hollow-group();

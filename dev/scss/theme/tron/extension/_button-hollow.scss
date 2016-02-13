@@ -84,3 +84,24 @@
 		}
 	}
 }
+
+
+// In group
+
+@mixin button-hollow-group {
+	.button-group {
+		.button.hollow {
+			border-right-width: 0;
+
+			&:last-child {
+				border-right-width: $small-border-width;
+			}
+
+			&.large {
+				&:last-child {
+					border-right-width: $default-border-width;
+				}
+			}
+		}
+	}
+}

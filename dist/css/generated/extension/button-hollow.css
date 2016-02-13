@@ -33,3 +33,10 @@
     .hollow.secondary:focus, .hollow.secondary:active, .hollow.secondary.active {
       color: #252525;
       background-color: #e5e3e4; }
+
+.button-group .button.hollow {
+  border-right-width: 0; }
+  .button-group .button.hollow:last-child {
+    border-right-width: 1px; }
+  .button-group .button.hollow.large:last-child {
+    border-right-width: 2px; }

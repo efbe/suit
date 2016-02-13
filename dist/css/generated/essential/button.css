@@ -6,10 +6,10 @@
   cursor: pointer;
   -webkit-appearance: none;
   padding: 0 12px;
-  line-height: 32px;
+  line-height: 30px;
   height: 32px;
   font-size: 14px;
-  border: 0;
+  border: 1px solid transparent;
   color: #fff;
   background-color: #30abdf; }
   .button:hover {
@@ -35,13 +35,14 @@
     padding-left: 8px;
     font-size: 12px;
     height: 24px;
-    line-height: 24px; }
+    line-height: 22px; }
   .button.large {
     padding-right: 16px;
     padding-left: 16px;
     font-size: 18px;
     height: 48px;
-    line-height: 48px; }
+    line-height: 44px;
+    border-width: 2px; }
   .button.primary {
     background-color: #eb4c1c; }
     .button.primary:hover {
@@ -88,3 +89,10 @@
   @media only screen and (min-width: 640px) {
     .button.mobile-reference {
       display: none; } }
+
+.button-group .button {
+  border-right-width: 0; }
+  .button-group .button:last-child {
+    border-right-width: 1px; }
+  .button-group .button.large:last-child {
+    border-right-width: 2px; }

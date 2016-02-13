@@ -36,3 +36,14 @@
 .all-caps {
 	text-transform: uppercase;
 }
+
+
+// Form helpers
+
+.button-group {
+	.button {
+		@include float-left();
+	}
+
+	@include clear();
+}

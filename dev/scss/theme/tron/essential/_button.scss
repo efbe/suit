@@ -16,12 +16,12 @@
 
 @mixin button {
 	padding: 0 $default-padding;
-	line-height: $default-block-height;
+	line-height: round($default-block-height - 2 * $small-border-width);
 	height: $default-block-height;
 
 	font-size: $font-size-default;
 
-	border: 0; // input reset
+	border: $small-border-width solid $transparent; // input reset
 	color: $white;
 	background-color: $led-suit-blue-dark;
 
@@ -71,7 +71,7 @@
 
 		font-size: $font-size-small;
 		height: $small-block-height;
-		line-height: $small-block-height;
+		line-height: round($small-block-height - 2 * $small-border-width);
 	}
 
 	&.large {
@@ -80,7 +80,8 @@
 
 		font-size: $font-size-big;
 		height: $large-block-height;
-		line-height: $large-block-height;
+		line-height: round($large-block-height - 2 * $default-border-width);
+		border-width: $default-border-width;
 	}
 }
 
@@ -141,6 +142,27 @@
 		&.large {
 			margin-right: $large-padding;
 			margin-left: $large-padding;
+		}
+	}
+}
+
+
+// In group
+
+@mixin button-group {
+	.button-group {
+		.button {
+			border-right-width: 0;
+
+			&:last-child {
+				border-right-width: $small-border-width;
+			}
+
+			&.large {
+				&:last-child {
+					border-right-width: $default-border-width;
+				}
+			}
 		}
 	}
 }
