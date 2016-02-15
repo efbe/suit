@@ -21,7 +21,7 @@
 
 	font-size: $font-size-default;
 
-	border: $small-border-width solid $transparent; // input reset
+	border: $small-border-width solid $transparent; // this grants the equal width whether border is applied or not
 	color: $white;
 	background-color: $led-suit-blue-dark;
 
