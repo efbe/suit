@@ -41,6 +41,16 @@
 		box-sizing: border-box;
 		border-left: $default-border-width solid $transparent;
 
+		// Sometimes the parent element is a real <a>
+		&[href] {
+			cursor: pointer;
+			color: $led-suit-blue-dark;
+
+			&:hover {
+				background-color: shade($silky-black, $active-item-shade);
+			}
+		}
+
 		&.active {
 			color: $led-suit-white;
 			border-left-color: $led-suit-white;

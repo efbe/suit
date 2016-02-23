@@ -16,6 +16,7 @@
 
 	@include side-menu();
 
+	// The "logo"
 	h3 {
 		@include side-menu-title();
 	}
