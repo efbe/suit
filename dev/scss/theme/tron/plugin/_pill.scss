@@ -1,6 +1,7 @@
 // _pill.scss
 // Label / Pill / Tag... design layer
 // @author eFBe
+// TODO: add pill stack (pills inside a stack have a bottom margin)
 
 @import '../essential/_global-variables';
 @import '../../../mixin/_color';
@@ -15,6 +16,10 @@
 	line-height: round($small-block-height - 2); // minus border
 	height: $small-block-height;
 
+	font-size: $font-size-default;
+	color: $old-school-black;
+
+	background-color: $led-suit-white;
 	border: 1px solid $old-school-black;
 	border-radius: $large-border-radius;
 	transition: all 0.1s ease-out;
@@ -31,8 +36,8 @@
 	&:hover,
 	&:focus {
 		text-decoration: none;
-		color: $old-school-black;
-		border-color: $old-school-black;
+		color: $black;
+		border-color: $black;
 	}
 
 	&:focus {

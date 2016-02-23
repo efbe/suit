@@ -12,6 +12,10 @@
   .side-menu h3 {
     padding: 12px 20px;
     color: #fff; }
+    .side-menu h3 a {
+      color: #fff; }
+      .side-menu h3 a:hover {
+        text-decoration: none; }
   .side-menu .menu-list {
     box-shadow: 4px 2px 2px -2px rgba(0, 0, 0, 0.14); }
     .side-menu .menu-list .menu-item {

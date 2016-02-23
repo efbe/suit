@@ -7,12 +7,12 @@
 @import '../../essential/_global-variables';
 
 
-@mixin base {
-	body {
-		background-color: tint($led-suit-white, 40%);
-	}
+@mixin body {
+	background-color: tint($led-suit-white, 40%);
+}
 
-	// poor man's tooltip module
+// poor man's tooltip module
+@mixin tooltip {
 	.tooltip {
 		font-style: italic;
 		cursor: help;

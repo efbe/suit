@@ -1,6 +1,7 @@
 // _pill-icon.scss
 // Icon extension for pills
 // @author eFBe
+// TODO: separate .icon-before like @ buttons
 
 @import '../../../mixin/_splitter';
 @import '../essential/_global-variables';
@@ -20,6 +21,7 @@
 	opacity: $disabled-percentage;
 	margin-right: split-half($small-padding);
 	line-height: round($small-block-height - 2); // minus border width
+	color: inherit;
 
 	&:hover {
 		opacity: 1;

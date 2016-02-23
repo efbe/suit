@@ -7,6 +7,9 @@
   padding: 0 8px;
   line-height: 22px;
   height: 24px;
+  font-size: 14px;
+  color: #252525;
+  background-color: #e5e3e4;
   border: 1px solid #252525;
   border-radius: 12px;
   transition: all 0.1s ease-out; }
@@ -19,12 +22,12 @@
     margin-left: 0; }
   .pill:hover, .pill:focus {
     text-decoration: none;
-    color: #252525;
-    border-color: #252525; }
+    color: #000;
+    border-color: #000; }
   .pill:focus {
     background-color: #fff; }
   .pill[disabled], .pill.disabled {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: not-allowed;
     pointer-events: none;
     color: #252525;

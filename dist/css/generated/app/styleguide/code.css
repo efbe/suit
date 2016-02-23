@@ -14,4 +14,6 @@
     padding: 0;
     border: none;
     box-shadow: none;
-    line-height: 130%; }
+    white-space: pre-wrap;
+    line-height: 130%;
+    font-size: 14px; }

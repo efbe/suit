@@ -17,6 +17,14 @@
 @mixin side-menu-title {
 	padding: $default-padding $grid-gutter-width;
 	color: $white;
+
+	a {
+		color: $white;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 @mixin side-menu-list {

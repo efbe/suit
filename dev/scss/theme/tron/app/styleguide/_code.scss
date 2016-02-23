@@ -2,9 +2,7 @@
 // Code module for the styleguide app
 // @author eFBe
 
-@import '../../../../mixin/_color';
 @import '../../essential/_code';
-@import '../../essential/_colors';
 @import '../../essential/_global-variables';
 
 
@@ -19,6 +17,8 @@
 	padding: 0;
 	border: none;
 	box-shadow: none;
+	white-space: pre-wrap;
 
 	line-height: 130%;
+	font-size: $font-size-default;
 }
