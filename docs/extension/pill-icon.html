@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>suit | pill</title>
+	<title>suit | pill with icon</title>
 
 	<link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
 
@@ -31,55 +31,46 @@
 							<li><a class="menu-item" href="../essential/typography.html">Typography</a></li>
 						</ul>
 					</li>
-					<li><a class="menu-item category active">Plugin</a>
+					<li><a class="menu-item category">Plugin</a>
 						<ul>
 							<li><a class="menu-item" href="../plugin/icon.html">Material icon</a></li>
-							<li><a class="menu-item active" href="#">Pill</a></li>
+							<li><a class="menu-item" href="../plugin/pill.html">Pill</a></li>
 						</ul>
 					</li>
-					<li><a class="menu-item category">Extension</a>
+					<li><a class="menu-item category active">Extension</a>
 						<ul>
 							<li><a class="menu-item" href="../extension/button-hollow.html">Hollow button</a></li>
 							<li><a class="menu-item" href="../extension/button-icon.html">Icon in button</a></li>
-							<li><a class="menu-item" href="../extension/pill-icon.html">Pill with icon</a></li>
+							<li><a class="menu-item active" href="#">Pill with icon</a></li>
 						</ul>
 					</li>
 				</ul>
 			</div>
 		</section>
 		<section class="column column-10">
-			<h4>Pill</h4>
+			<h4>Pill with icon</h4>
 			<article>
 				<div class="code-panel">
-<pre><code>&lt;span class="pill"&gt;pill&lt;/span&gt;
-&lt;a href="#" class="pill"&gt;selectable&lt;/a&gt;
-&lt;a href="#" class="pill disabled"&gt;disabled&lt;/a&gt;
-</code></pre>
-				</div>
-
-				<div class="panel demo-dark rounded">
-					<span class="pill">pill</span>
-					<a href="#" class="pill">selectable</a>
-					<a href="#" class="pill disabled">disabled</a>
-				</div>
-				<br><br>
-
-				<h5>Pill within text node</h5>
-				<div class="code-panel">
-<pre><code>&lt;p&gt;These are &lt;span class="pill"&gt;pills&lt;/span&gt; inside
-&lt;span tabindex="-1" class="pill pill-icon"&gt;
-	&lt;a href="#" class="material-icons md-12"&gt;clear&lt;/a&gt;
-	text
+<pre><code>&lt;span tabindex="-1" class="pill pill-icon icon-before"&gt;
+	&lt;a href="#" class="material-icons md-12">clear&lt;/a&gt;
+	closable
 &lt;/span&gt;
-nodes.&lt;/p&gt;
+&lt;span tabindex="-1" class="pill pill-icon icon-after"&gt;
+	icon after
+	&lt;a href="#" class="material-icons md-12"&gt;clear&lt;/a&gt;
+&lt;/span&gt;
 </code></pre>
 				</div>
+
 				<div class="panel demo-dark rounded">
-					<p>These are <span class="pill">pills</span> inside <span tabindex="-1" class="pill pill-icon">
+					<span tabindex="-1" class="pill pill-icon icon-before">
 						<a href="#" class="material-icons md-12">clear</a>
-						text
+						closable
 					</span>
-					nodes.</p>
+					<span tabindex="-1" class="pill pill-icon icon-after">
+						icon after
+						<a href="#" class="material-icons md-12">clear</a>
+					</span>
 				</div>
 			</article>
 
