@@ -29,6 +29,13 @@
 	min-height: 1px; // Don't mess the layout up when empty
 
 	@include float-left();
+
+	// spec. must be high to overwrite different layout types
+	// scss-lint:disable ImportantRule
+	&.center {
+		float: none;
+		margin: 0 auto !important;
+	}
 }
 
 .column-1  { width: percentage(1 / 12); }
@@ -44,7 +51,3 @@
 .column-11 { width: percentage(11 / 12); }
 // If it's a full width column disable float, so we won't need an extra .clear class
 .column-12 { float: none; }
-
-.center {
-	@include centerize();
-}

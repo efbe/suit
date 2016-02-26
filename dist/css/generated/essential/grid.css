@@ -19,6 +19,9 @@
   width: 100%;
   min-height: 1px;
   float: left; }
+  .column.center {
+    float: none;
+    margin: 0 auto !important; }
 
 .column-1 {
   width: 8.33333%; }
@@ -55,6 +58,3 @@
 
 .column-12 {
   float: none; }
-
-.center {
-  margin: 0 auto; }

@@ -3,10 +3,28 @@
 // @author eFBe
 
 @import '../essential/_colors';
+@import '../essential/_global-variables';
 
+
+$header-height: 70px;
 
 @mixin header {
-	min-height: 70px;
+	min-height: $header-height;
 	background-color: $silky-black;
 	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14);
+}
+
+@mixin header-typo {
+	h3 {
+		padding: $default-padding $large-padding;
+		color: $white;
+	}
+
+	@media only screen and (max-width: 639px) {
+		h3 {
+			padding-top: 0;
+			padding-bottom: 0;
+			line-height: $header-height;
+		}
+	}
 }

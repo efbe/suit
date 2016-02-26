@@ -7,4 +7,5 @@
 
 header {
 	@include header();
+	@include header-typo();
 }
