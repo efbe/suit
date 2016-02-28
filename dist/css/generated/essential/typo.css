@@ -7,7 +7,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #30abdf; }
+  color: #299ecf; }
   a:hover {
     text-decoration: underline; }
 
@@ -42,9 +42,8 @@ h6 {
 code {
   white-space: nowrap;
   padding: 2px 4px;
-  font-size: 14px;
   font-family: "Menlo", "Monaco", Courier, monospace;
-  font-size: 80%;
+  font-size: 12px;
   color: #eb4c1c;
   border: 1px solid #eae9e9;
   border-radius: 4px;
@@ -61,7 +60,7 @@ code {
   h3 {
     font-size: 24px; }
 
-  h4, h5, h6 {
+  h6 {
     font-weight: 500;
     font-size: 14px; } }
 html {

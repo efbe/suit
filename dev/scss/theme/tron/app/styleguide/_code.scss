@@ -9,7 +9,7 @@
 @mixin code-panel-pre {
 	padding: $default-padding;
 
-	@include code();
+	@include pre();
 }
 
 @mixin code-panel-code {
@@ -20,5 +20,5 @@
 	white-space: pre-wrap;
 
 	line-height: 130%;
-	font-size: $font-size-default;
+	font-size: $font-size-small;
 }

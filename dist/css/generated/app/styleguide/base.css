@@ -1,6 +1,12 @@
 body {
   background-color: #efeeef; }
 
-.tooltip {
-  font-style: italic;
-  cursor: help; }
+main {
+  padding-top: 32px; }
+  main .grid-row.category {
+    margin-bottom: 32px; }
+  main article {
+    margin-bottom: 32px; }
+  @media only screen and (max-width: 639px) {
+    main .grid-row.category {
+      margin-bottom: 0; } }

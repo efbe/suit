@@ -7,10 +7,15 @@
 @import '_colors';
 @import '_global-variables';
 
+@mixin pre {
+	border: 1px solid tint($led-suit-white, $code-tint);
+	border-radius: $small-border-radius;
+	background-color: $white;
+}
 
 @mixin code {
 	font-family: $font-monospace;
-	font-size: $code-relative-font-size;
+	font-size: $font-size-small;
 	color: $led-suit-orange-dark;
 	border: 1px solid tint($led-suit-white, $code-tint);
 	border-radius: $small-border-radius;

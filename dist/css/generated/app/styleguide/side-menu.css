@@ -30,7 +30,7 @@
         border-left: 2px solid transparent; }
         .side-menu .menu-list .menu-item.category[href] {
           cursor: pointer;
-          color: #30abdf; }
+          color: #299ecf; }
           .side-menu .menu-list .menu-item.category[href]:hover {
             background-color: #181a1d; }
         .side-menu .menu-list .menu-item.category.active {

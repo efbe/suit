@@ -16,15 +16,8 @@ $header-height: 70px;
 
 @mixin header-typo {
 	h3 {
-		padding: $default-padding $large-padding;
+		padding: 0 $large-padding;
+		line-height: $header-height;
 		color: $white;
-	}
-
-	@media only screen and (max-width: 639px) {
-		h3 {
-			padding-top: 0;
-			padding-bottom: 0;
-			line-height: $header-height;
-		}
 	}
 }

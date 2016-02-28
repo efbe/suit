@@ -1,0 +1,12 @@
+// typo.scss
+// Styleguide typographic elements
+// @author eFBe
+
+@import '../../../theme/tron/app/styleguide/_typo';
+
+
+main {
+	@include typo();
+	@include tooltip();
+	@include typo-mobile();
+}

@@ -66,6 +66,9 @@ module.exports = function (grunt) {
 					'dist/min/styleguide.min.css': [
 						'dist/css/config/essential.css',
 						'dist/css/config/styleguide.css'
+					],
+					'dist/min/datasheet.min.css': [
+						'dist/css/config/datasheet.css'
 					]
 				}
 			}

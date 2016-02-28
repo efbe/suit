@@ -1,0 +1,72 @@
+// _typo.scss
+// typo design layer for styleguide app
+// @author eFBe
+
+@import '../../../../mixin/_color';
+@import '../../essential/_colors';
+@import '../../essential/_global-variables';
+
+
+@mixin typo {
+	h4 {
+		margin-bottom: $default-padding;
+	}
+
+	h5 {
+		margin-bottom: $small-padding;
+
+		& + .sub-note {
+			margin-top: -$small-padding;
+		}
+	}
+
+	li {
+		.material-icons {
+			float: left;
+			margin-right: $small-padding;
+			color: tint($silky-black, $code-tint);
+		}
+	}
+
+	.link-highlight {
+		color: $led-suit-orange-dark;
+	}
+
+	.category {
+		p {
+			padding-bottom: $default-padding;
+
+			&:last-child {
+				padding-bottom: 0;
+			}
+
+			&.sub-note {
+				font-size: $font-size-small;
+			}
+		}
+	}
+}
+
+@mixin typo-mobile {
+	@media only screen and (max-width: 639px) {
+		h4 {
+			margin-bottom: $small-padding;
+		}
+		h5 {
+			margin-bottom: $xsmall-padding;
+
+			& + .sub-note {
+				margin-top: -$xsmall-padding;
+			}
+		}
+	}
+}
+
+
+// poor man's tooltip module
+@mixin tooltip {
+	.tooltip {
+		font-style: italic;
+		cursor: help;
+	}
+}

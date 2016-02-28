@@ -2,13 +2,9 @@
   box-sizing: border-box; }
   .code-panel pre {
     padding: 12px;
-    font-family: "Menlo", "Monaco", Courier, monospace;
-    font-size: 80%;
-    color: #eb4c1c;
     border: 1px solid #eae9e9;
     border-radius: 4px;
-    background-color: #fff;
-    -webkit-font-smoothing: subpixel-antialiased; }
+    background-color: #fff; }
   .code-panel code {
     tab-size: 2;
     padding: 0;
@@ -16,4 +12,4 @@
     box-shadow: none;
     white-space: pre-wrap;
     line-height: 130%;
-    font-size: 14px; }
+    font-size: 12px; }

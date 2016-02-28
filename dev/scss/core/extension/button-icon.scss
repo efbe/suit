@@ -8,10 +8,6 @@
 
 
 .button-icon {
-	.material-icons {
-		line-height: inherit;
-	}
-
 	&.icon-before {
 		@include icon-before();
 	}

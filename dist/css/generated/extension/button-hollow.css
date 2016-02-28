@@ -1,15 +1,15 @@
 .hollow {
   background-color: transparent;
   line-height: 30px;
-  color: #30abdf;
+  color: #299ecf;
   border-width: 1px;
   border-style: solid;
-  border-color: #30abdf; }
+  border-color: #299ecf; }
   .hollow:hover {
-    background-color: rgba(48, 171, 223, 0.2); }
+    background-color: rgba(41, 158, 207, 0.2); }
   .hollow:focus, .hollow:active, .hollow.active {
     color: #fff;
-    background-color: #30abdf; }
+    background-color: #299ecf; }
   .hollow.small {
     line-height: 22px; }
   .hollow.large {

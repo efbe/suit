@@ -49,7 +49,6 @@ h6 {
 code {
 	white-space: nowrap;
 	padding: split-quarter($small-padding) split-half($small-padding);
-	font-size: $font-size-default;
 
 	@include code();
 }
@@ -60,8 +59,7 @@ code {
 	h2 { font-size: round($font-size-xxlarge * $mobile-font-size-multiplier); }
 	h3 { font-size: round($font-size-xlarge * $mobile-font-size-multiplier); }
 
-	// 4 levels should be enough on this resolution, Dude!
-	h4, h5, h6 {
+	h6 {
 		font-weight: $text-bold;
 		font-size: $font-size-default;
 	}

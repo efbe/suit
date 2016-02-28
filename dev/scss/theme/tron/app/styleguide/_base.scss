@@ -8,13 +8,27 @@
 
 
 @mixin body {
-	background-color: tint($led-suit-white, 40%);
+	body {
+		background-color: tint($led-suit-white, 40%);
+	}
 }
 
-// poor man's tooltip module
-@mixin tooltip {
-	.tooltip {
-		font-style: italic;
-		cursor: help;
+@mixin main {
+	padding-top: $xlarge-padding;
+
+	.grid-row.category {
+		margin-bottom: $xlarge-padding;
+	}
+
+	article {
+		margin-bottom: $xlarge-padding;
+	}
+}
+
+@mixin main-mobile {
+	@media only screen and (max-width: 639px) {
+		.grid-row.category {
+			margin-bottom: 0;
+		}
 	}
 }
