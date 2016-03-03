@@ -54,6 +54,7 @@ code {
 }
 
 // Just a touch of mobile friendliness: font sizes should be 60 percent under 640px
+// TODO: put media query breakpoint into _global-variables
 @media only screen and (max-width: 639px) {
 	h1 { font-size: round($font-size-xxxlarge * $mobile-font-size-multiplier); }
 	h2 { font-size: round($font-size-xxlarge * $mobile-font-size-multiplier); }

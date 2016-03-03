@@ -1,0 +1,6 @@
+.pill-inside .pill {
+  font-size: 12px;
+  background-color: #6cdc22; }
+.pill-inside.small .pill {
+  font-size: 12px;
+  background-color: #e8ec50; }

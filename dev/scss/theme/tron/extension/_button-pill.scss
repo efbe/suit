@@ -1,0 +1,25 @@
+// _button-pill.scss
+// Pull extension for buttons
+// @author eFBe
+
+@import '../essential/_global-variables';
+@import '../essential/_colors';
+
+
+// Sizes
+
+@mixin button-pill-default {
+	.pill {
+		font-size: $font-size-small;
+		background-color: $end-of-line-cocktail-green;
+	}
+}
+
+@mixin button-pill-small {
+	&.small {
+		.pill {
+			font-size: $font-size-small;
+			background-color: $led-suit-yellow;
+		}
+	}
+}

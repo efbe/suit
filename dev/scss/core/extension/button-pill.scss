@@ -1,0 +1,14 @@
+// button-pill.scss
+// Pill extension for buttons
+// @requires essential/button.css
+// @requires plugin/pill.css
+// @author eFBe
+
+@import '../../theme/tron/extension/_button-pill';
+
+
+.pill-inside {
+	// Sizes
+	@include button-pill-default();
+	@include button-pill-small();
+}

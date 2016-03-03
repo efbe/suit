@@ -47,6 +47,7 @@
 	}
 }
 
+// TODO: put media query breakpoint into _global-variables
 @mixin typo-mobile {
 	@media only screen and (max-width: 639px) {
 		h4 {

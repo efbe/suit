@@ -11,6 +11,7 @@
 	margin: 0 auto;
 
 	// Just a touch of mobile friendliness: grid columns should be full-width under 640px
+	// TODO: put media query breakpoint into _global-variables
 	@media only screen and (max-width: 639px) {
 		[class*=column-] {
 			width: 100%;

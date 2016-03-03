@@ -25,6 +25,7 @@
 	}
 }
 
+// TODO: put media query breakpoint into _global-variables
 @mixin main-mobile {
 	@media only screen and (max-width: 639px) {
 		.grid-row.category {
