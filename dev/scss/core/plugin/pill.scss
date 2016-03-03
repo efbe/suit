@@ -2,7 +2,6 @@
 // Label / Pill / Tag whatever you call them...
 // Quite similar to a small button, but separated from button module
 // TODO: Create pill-stacks (without text nodes)
-// TODO: Move pill examples into its own page
 // @author eFBe
 
 @import '../../theme/tron/plugin/_pill';
@@ -12,6 +11,7 @@
 	box-sizing: border-box;
 	display: inline-block;
 	outline: none;
+	vertical-align: middle; // standard & pill-icon should be vertically aligned
 	cursor: default; // definitely not text
 
 	// if it's not a link default should be instead of text

@@ -10,7 +10,11 @@
 // The pill itself
 
 @mixin pill-icon {
-	cursor: pointer; // let's assume it's selectable, don't forget to add tabindex="-1" for focus
+	// link or selectable
+	&[href],
+	&[tabindex] {
+		cursor: pointer;
+	}
 }
 
 
@@ -45,4 +49,29 @@
 
 @mixin icon-after {
 	margin-left: split-half($small-padding);
+}
+
+
+// Icon before the text
+
+@mixin pill-icon-before {
+	padding-left: split-half($small-padding);
+}
+
+@mixin icon-before {
+	margin-right: split-half($small-padding);
+}
+
+
+// Icon only
+
+@mixin pill-icon-only {
+	padding-left: split-half($small-padding);
+	padding-right: split-half($small-padding);
+}
+
+@mixin icon-only {
+	margin-left: split-half($small-padding);
+	margin-right: split-half($small-padding);
+	opacity: 1;
 }

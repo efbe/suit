@@ -37,4 +37,12 @@
 			@include icon-after();
 		}
 	}
+
+	&.icon-only {
+		@include pill-icon-only();
+
+		.material-icons {
+			@include icon-only();
+		}
+	}
 }

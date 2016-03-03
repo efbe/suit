@@ -1,20 +1,27 @@
-.pill-icon {
+.pill-icon[href], .pill-icon[tabindex] {
   cursor: pointer; }
-  .pill-icon .material-icons {
-    text-decoration: none;
-    color: inherit;
-    opacity: 0.6;
-    line-height: 22px;
-    color: inherit; }
-    .pill-icon .material-icons:hover {
-      opacity: 1; }
-  .pill-icon.icon-before {
-    padding-left: 4px; }
-    .pill-icon.icon-before .material-icons {
-      float: left;
-      margin-right: 4px; }
-  .pill-icon.icon-after {
-    padding-right: 4px; }
-    .pill-icon.icon-after .material-icons {
-      float: right;
-      margin-left: 4px; }
+.pill-icon .material-icons {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.6;
+  line-height: 22px;
+  color: inherit; }
+  .pill-icon .material-icons:hover {
+    opacity: 1; }
+.pill-icon.icon-before {
+  padding-left: 4px; }
+  .pill-icon.icon-before .material-icons {
+    float: left;
+    margin-right: 4px; }
+.pill-icon.icon-after {
+  padding-right: 4px; }
+  .pill-icon.icon-after .material-icons {
+    float: right;
+    margin-left: 4px; }
+.pill-icon.icon-only {
+  padding-left: 4px;
+  padding-right: 4px; }
+  .pill-icon.icon-only .material-icons {
+    margin-left: 4px;
+    margin-right: 4px;
+    opacity: 1; }
