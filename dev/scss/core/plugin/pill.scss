@@ -16,7 +16,8 @@
 	cursor: default; // definitely not text
 
 	// if it's not a link default should be instead of text
-	&[href] {
+	&[href],
+	&[tabindex] {
 		cursor: pointer;
 	}
 

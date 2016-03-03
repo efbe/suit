@@ -7,17 +7,6 @@
 @import '../essential/_global-variables';
 
 
-// The pill itself
-
-@mixin pill-icon {
-	// link or selectable
-	&[href],
-	&[tabindex] {
-		cursor: pointer;
-	}
-}
-
-
 // The icon
 
 @mixin material-icon {

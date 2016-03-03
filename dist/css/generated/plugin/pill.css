@@ -13,7 +13,7 @@
   border: 1px solid #252525;
   border-radius: 12px;
   transition: all 0.1s ease-out; }
-  .pill[href] {
+  .pill[href], .pill[tabindex] {
     cursor: pointer; }
   .pill[href] {
     color: #515151;

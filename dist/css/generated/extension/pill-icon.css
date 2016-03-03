@@ -1,5 +1,3 @@
-.pill-icon[href], .pill-icon[tabindex] {
-  cursor: pointer; }
 .pill-icon .material-icons {
   text-decoration: none;
   color: inherit;
