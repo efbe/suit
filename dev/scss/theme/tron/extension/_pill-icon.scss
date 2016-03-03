@@ -10,7 +10,6 @@
 // The pill itself
 
 @mixin pill-icon {
-	padding-left: split-half($small-padding);
 	cursor: pointer; // let's assume it's selectable, don't forget to add tabindex="-1" for focus
 }
 
@@ -19,7 +18,6 @@
 
 @mixin material-icon {
 	opacity: $disabled-percentage;
-	margin-right: split-half($small-padding);
 	line-height: round($small-block-height - 2); // minus border width
 	color: inherit;
 
@@ -28,15 +26,23 @@
 	}
 }
 
+// Icon before the text
 
-// Place the icon after the text
-
-@mixin icon-after {
-	padding-right: split-half($small-padding);
-	padding-left: $small-padding;
+@mixin pill-icon-before {
+	padding-left: split-half($small-padding);
 }
 
-@mixin material-icon-after {
-	margin-right: 0;
+@mixin icon-before {
+	margin-right: split-half($small-padding);
+}
+
+
+// Icon after the text
+
+@mixin pill-icon-after {
+	padding-right: split-half($small-padding);
+}
+
+@mixin icon-after {
 	margin-left: split-half($small-padding);
 }
