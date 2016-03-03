@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,12 +48,15 @@
 			</div>
 		</section>
 		<section class="column column-10">
-			<h4>Pill</h4>
-			<article>
-				<div class="code-panel">
+			<article id="pill">
+				<h4>Pill</h4>
+					<div class="code-panel">
 <pre><code>&lt;span class="pill"&gt;pill&lt;/span&gt;
 &lt;a href="#" class="pill"&gt;selectable&lt;/a&gt;
 &lt;a href="#" class="pill disabled"&gt;disabled&lt;/a&gt;
+&lt;span class="pill pill-icon icon-only"&gt;
+	&lt;i class="material-icons md-12"&gt;ac_unit&lt;/i&gt;
+&lt;/span&gt;
 </code></pre>
 				</div>
 
@@ -65,8 +68,9 @@
 						<i class="material-icons md-12">ac_unit</i>
 					</span>
 				</div>
-				<br><br>
+			</article>
 
+			<article id="pill-text-node">
 				<h5>Pill within text node</h5>
 				<div class="code-panel">
 <pre><code>&lt;p&gt;
@@ -88,7 +92,37 @@
 				</div>
 			</article>
 
-			<br><br>
+			<article id="pill-stack">
+				<h5>Stacked pills</h5>
+				<div class="code-panel">
+<pre><code>&lt;div class="pill-stack"&gt;
+	&lt;span class="pill"&gt;echidna&lt;/span&gt;
+	&lt;span class="pill"&gt;emu&lt;/span&gt;
+	&lt;span class="pill"&gt;dingo&lt;/span&gt;
+	&lt;span class="pill"&gt;kangaroo&lt;/span&gt;
+	&lt;span class="pill"&gt;kiwi&lt;/span&gt;
+	&lt;span class="pill"&gt;koala&lt;/span&gt;
+	&lt;span class="pill"&gt;platypus&lt;/span&gt;
+	&lt;span class="pill"&gt;tasmanian devil&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+				</div>
+				<div class="panel demo-dark rounded grid-row no-gutter">
+					<div class="column column-4">
+						<div class="pill-stack">
+							<span class="pill">echidna</span>
+							<span class="pill">emu</span>
+							<span class="pill">dingo</span>
+							<span class="pill">kangaroo</span>
+							<span class="pill">kiwi</span>
+							<span class="pill">koala</span>
+							<span class="pill">platypus</span>
+							<span class="pill">tasmanian devil</span>
+						</div>
+					</div>
+					<div class="column column-8"></div>
+				</div>
+			</article>
 		</section>
 	</main>
 

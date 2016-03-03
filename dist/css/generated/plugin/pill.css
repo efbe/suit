@@ -4,7 +4,6 @@
   outline: none;
   vertical-align: middle;
   cursor: default;
-  margin-left: 5px;
   padding: 0 8px;
   line-height: 22px;
   height: 24px;
@@ -19,8 +18,6 @@
   .pill[href] {
     color: #515151;
     border-color: #515151; }
-  .pill:first-child {
-    margin-left: 0; }
   .pill:hover, .pill:focus {
     text-decoration: none;
     color: #000;
@@ -36,3 +33,15 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none; }
+
+.pill-stack {
+  margin-bottom: -8px; }
+  .pill-stack::before, .pill-stack::after {
+    content: ' ';
+    display: table; }
+  .pill-stack::after {
+    clear: both; }
+  .pill-stack .pill {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px; }

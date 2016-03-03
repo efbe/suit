@@ -1,9 +1,10 @@
 // pill.scss
 // Label / Pill / Tag whatever you call them...
 // Quite similar to a small button, but separated from button module
-// TODO: Create pill-stacks (without text nodes)
+// TODO: Pills in buttons!
 // @author eFBe
 
+@import '../../mixin/_float';
 @import '../../theme/tron/plugin/_pill';
 
 
@@ -20,4 +21,10 @@
 	}
 
 	@include pill();
+}
+
+// when pills are stacked
+.pill-stack {
+	@include clear();
+	@include pill-stacked();
 }

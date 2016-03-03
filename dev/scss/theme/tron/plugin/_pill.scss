@@ -1,7 +1,6 @@
 // _pill.scss
 // Label / Pill / Tag... design layer
 // @author eFBe
-// TODO: add pill stack (pills inside a stack have a bottom margin)
 
 @import '../essential/_global-variables';
 @import '../../../mixin/_color';
@@ -11,7 +10,6 @@
 // Dimensions & percentages
 
 @mixin pill {
-	margin-left: 5px;
 	padding: 0 $small-padding;
 	line-height: round($small-block-height - 2); // minus border
 	height: $small-block-height;
@@ -20,17 +18,13 @@
 	color: $old-school-black;
 
 	background-color: $led-suit-white;
-	border: 1px solid $old-school-black;
+	border: $small-border-width solid $old-school-black;
 	border-radius: $large-border-radius;
 	transition: all 0.1s ease-out;
 
 	&[href] {
 		color: tint($old-school-black, 20%);
 		border-color: tint($old-school-black, 20%);
-	}
-
-	&:first-child {
-		margin-left: 0;
 	}
 
 	&:hover,
@@ -58,5 +52,15 @@
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		-ms-user-select: none;
+	}
+}
+
+@mixin pill-stacked {
+	margin-bottom: round(-$small-padding); // reset last rows' items bottom padding (except in firefox)
+
+	.pill {
+		float: left;
+		margin-right: $small-padding;
+		margin-bottom: $small-padding;
 	}
 }
