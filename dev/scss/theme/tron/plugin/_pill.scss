@@ -11,14 +11,13 @@
 
 @mixin pill {
 	padding: 0 $small-padding;
-	line-height: round($small-block-height - 2); // minus border
+	line-height: $small-block-height;
 	height: $small-block-height;
 
 	font-size: $font-size-default;
 	color: $old-school-black;
 
-	background-color: $led-suit-white;
-	border: $small-border-width solid $old-school-black;
+	background-color: $led-suit-blue-mid;
 	border-radius: $large-border-radius;
 	transition: all 0.1s ease-out;
 
@@ -31,11 +30,10 @@
 	&:focus {
 		text-decoration: none;
 		color: $black;
-		border-color: $black;
 	}
 
 	&:focus {
-		background-color: $white;
+		background-color: $led-suit-blue-light;
 	}
 
 

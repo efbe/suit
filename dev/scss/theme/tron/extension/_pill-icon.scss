@@ -11,7 +11,7 @@
 
 @mixin material-icon {
 	opacity: $disabled-percentage;
-	line-height: round($small-block-height - 2); // minus border width
+	line-height: inherit;
 	color: inherit;
 
 	&:hover {

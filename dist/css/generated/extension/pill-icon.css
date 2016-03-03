@@ -2,7 +2,7 @@
   text-decoration: none;
   color: inherit;
   opacity: 0.6;
-  line-height: 22px;
+  line-height: inherit;
   color: inherit; }
   .pill-icon .material-icons:hover {
     opacity: 1; }
