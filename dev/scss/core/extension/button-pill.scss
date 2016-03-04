@@ -8,7 +8,16 @@
 
 
 .pill-inside {
+	.pill {
+		cursor: pointer;
+
+		@include button-pill();
+	}
+
 	// Sizes
-	@include button-pill-default();
 	@include button-pill-small();
+	@include button-pill-large();
+
+	// Hollow
+	@include button-pill-hollow();
 }
