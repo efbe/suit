@@ -47,9 +47,8 @@
 	}
 }
 
-// TODO: put media query breakpoint into _global-variables
 @mixin typo-mobile {
-	@media only screen and (max-width: 639px) {
+	@media only screen and (max-width: $breakpoint-mobile) {
 		h4 {
 			margin-bottom: $small-padding;
 		}
@@ -62,7 +61,6 @@
 		}
 	}
 }
-
 
 // poor man's tooltip module
 @mixin tooltip {

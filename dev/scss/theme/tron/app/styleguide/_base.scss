@@ -9,7 +9,7 @@
 
 @mixin body {
 	body {
-		background-color: tint($led-suit-white, 40%);
+		background-color: tint($led-suit-white, 40%); // TODO: percentage should come from global vars
 	}
 }
 
@@ -25,9 +25,8 @@
 	}
 }
 
-// TODO: put media query breakpoint into _global-variables
 @mixin main-mobile {
-	@media only screen and (max-width: 639px) {
+	@media only screen and (max-width: $breakpoint-mobile) {
 		.grid-row.category {
 			margin-bottom: 0;
 		}

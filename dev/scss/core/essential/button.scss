@@ -34,8 +34,7 @@
 
 	// A touch of responsiveness: block behaviour, reset some values
 
-	// TODO: put media query breakpoint into _global-variables
-	@media only screen and (max-width: 639px) {
+	@media only screen and (max-width: $breakpoint-mobile) {
 		@include block();
 
 		margin-bottom: $grid-gutter-width;
@@ -50,7 +49,6 @@
 
 
 	// Mobile reference button for text center test purposes
-	// TODO: put media query breakpoint into _global-variables
 	@media only screen and (min-width: 640px) {
 		&.mobile-reference {
 			display: none;

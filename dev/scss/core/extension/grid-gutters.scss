@@ -56,13 +56,12 @@
 	}
 
 
-	// TODO: put media query breakpoint into _global-variables
 	// A touch of responsiveness: reset everything
 	// Also makes the gutters vertical
 	// And because I don't want to play with nesting again everything is !important
 	// scss-lint:disable ImportantRule
 
-	@media only screen and (max-width: 639px) {
+	@media only screen and (max-width: $breakpoint-mobile) {
 		&.gutter {
 			padding-right: $grid-gutter-width !important;
 			padding-left: $grid-gutter-width !important;

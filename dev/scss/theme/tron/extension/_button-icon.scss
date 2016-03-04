@@ -97,9 +97,8 @@
 // At this point I'm not sure whether we need icons anyways
 // Thinking about a .material-icons { display: none; } for mobile 'cause this is ain't proper center
 
-// TODO: put media query breakpoint into _global-variables
 @mixin button-icon-mobile {
-	@media only screen and (max-width: 639px) {
+	@media only screen and (max-width: $breakpoint-mobile) {
 
 		// Default
 		&.icon-before {
