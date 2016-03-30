@@ -41,11 +41,12 @@ $mobile-font-size-multiplier: 0.8;
 
 
 // Typo / Weights
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
 
-$text-slim:   200;
-$text-normal: 400;
-$text-bold:   500;
-$text-xbold:  600;
+$text-extra-light: 200;
+$text-normal:      400;
+$text-medium:      500;
+$text-semi-bold:   600;
 
 
 // Typo / Families

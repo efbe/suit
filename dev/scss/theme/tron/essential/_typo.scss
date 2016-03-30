@@ -42,7 +42,7 @@ h3 { font-size: $font-size-xlarge;   }
 h4 { font-size: $font-size-large;    }
 h5 { font-size: $font-size-big;      }
 h6 {
-	font-weight: $text-bold;
+	font-weight: $text-medium;
 	font-size: $font-size-default;
 }
 
@@ -61,7 +61,7 @@ code {
 	h3 { font-size: round($font-size-xlarge * $mobile-font-size-multiplier); }
 
 	h6 {
-		font-weight: $text-bold;
+		font-weight: $text-medium;
 		font-size: $font-size-default;
 	}
 }
