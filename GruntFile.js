@@ -90,6 +90,4 @@ module.exports = function (grunt) {
 	grunt.registerTask('clean-dist', ['clean']);
 	grunt.registerTask('min-dist', ['cssmin']);
 	grunt.registerTask('build-min', ['scsslint', 'sass', 'cssmin']);
-
-    // test
 };
