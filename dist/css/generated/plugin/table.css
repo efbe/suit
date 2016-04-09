@@ -1,0 +1,16 @@
+.table-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px; }
+  .table-list thead th {
+    padding: 12px;
+    color: #000;
+    background-color: #efeeef;
+    text-align: left; }
+  .table-list tbody td {
+    padding: 8px 12px;
+    color: #22252a;
+    border-bottom: 1px solid #e5e3e4;
+    background-color: #fff; }
+  .table-list.striped tr:nth-of-type(even) td {
+    background-color: #f5f4f4; }

@@ -1,0 +1,32 @@
+// table.scss
+// Very simple table module
+// @requires essential/grid.scss
+// @author eFBe
+
+@import '../../theme/tron/plugin/_table';
+
+
+.table-list {
+	width: 100%;
+	border-collapse: collapse;
+
+	@include table();
+
+	thead {
+		th {
+			@include thead();
+
+			text-align: left;
+		}
+	}
+
+	tbody {
+		td {
+			@include table-cell();
+		}
+	}
+
+	&.striped {
+		@include table-striped();
+	}
+}

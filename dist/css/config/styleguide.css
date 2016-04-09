@@ -8,6 +8,7 @@
 /* plugins */
 @import '../generated/plugin/material-icon.css';
 @import '../generated/plugin/pill.css';
+@import '../generated/plugin/table.css';
 
 /* extensions */
 @import '../generated/extension/button-hollow.css';
