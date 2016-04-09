@@ -14,14 +14,20 @@
 
 	thead {
 		th {
-			@include thead();
-
 			text-align: left;
+
+			@include table-head-cell();
 		}
 	}
 
 	tbody {
+		tr {
+			@include table-row();
+		}
+
 		td {
+			vertical-align: middle;
+
 			@include table-cell();
 		}
 	}
