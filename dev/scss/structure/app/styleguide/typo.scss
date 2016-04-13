@@ -6,7 +6,13 @@
 
 
 main {
-	@include typo();
+	// basic + extended typo
+	@include typo-basic();
+	@include typo-extended();
+
+	// article specific elements
+	@include typo-article();
+
 	@include tooltip();
 	@include typo-mobile();
 }

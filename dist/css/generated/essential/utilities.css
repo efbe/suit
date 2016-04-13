@@ -27,3 +27,6 @@
   display: table; }
 .button-group::after {
   clear: both; }
+
+.rounded {
+  border-radius: 4px; }

@@ -2,6 +2,7 @@
 // Some useful this & that
 // @author eFBe
 
+@import '../../theme/tron/essential/_global-variables';
 @import '../../mixin/_float';
 
 
@@ -46,4 +47,11 @@
 	}
 
 	@include clear();
+}
+
+
+// Design helpers
+
+.rounded {
+	border-radius: $small-border-radius;
 }

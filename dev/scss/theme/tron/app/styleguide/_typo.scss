@@ -7,19 +7,10 @@
 @import '../../essential/_global-variables';
 
 
-@mixin typo {
-	// basic typo
+// basic typo
+@mixin typo-basic {
 	strong {
 		font-weight: $text-medium;
-	}
-
-	// extended typo
-	article p {
-		padding-bottom: $xlarge-padding;
-
-		&:last-of-type {
-			padding-bottom: 0;
-		}
 	}
 
 	// headings
@@ -32,10 +23,12 @@
 
 		& + .sub-note {
 			margin-top: -$small-padding;
+			padding-bottom: $default-padding;
+			font-size: $font-size-small;
 		}
 	}
 
-	// lists
+	// icons in lists
 	li {
 		.material-icons {
 			float: left;
@@ -43,26 +36,38 @@
 			color: tint($silky-black, $code-tint);
 		}
 	}
+}
+
+// some commonly used(?) modifiers
+@mixin typo-extended {
+	.text-example {
+		display: block;
+		margin: $small-padding 0;
+		padding: $xsmall-padding $small-padding;
+		font-style: normal; // em reset
+		color: $silky-black;
+		background-color: shade($led-suit-white, $shade-percentage-lighten);
+	}
 
 	.link-highlight {
 		color: $led-suit-orange-dark;
 	}
+}
 
-	.category {
+// article specific typo
+@mixin typo-article {
+	article {
 		p {
-			padding-bottom: $default-padding;
+			padding-bottom: $large-padding;
 
-			&:last-child {
+			&:last-of-type {
 				padding-bottom: 0;
-			}
-
-			&.sub-note {
-				font-size: $font-size-small;
 			}
 		}
 	}
 }
 
+// some mobile support
 @mixin typo-mobile {
 	@media only screen and (max-width: $breakpoint-mobile) {
 		h4 {

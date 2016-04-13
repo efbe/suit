@@ -1,27 +1,30 @@
 main strong {
   font-weight: 500; }
-main article p {
-  padding-bottom: 32px; }
-  main article p:last-of-type {
-    padding-bottom: 0; }
 main h4 {
   margin-bottom: 12px; }
 main h5 {
   margin-bottom: 8px; }
   main h5 + .sub-note {
-    margin-top: -8px; }
+    margin-top: -8px;
+    padding-bottom: 12px;
+    font-size: 12px; }
 main li .material-icons {
   float: left;
   margin-right: 8px;
   color: #4e5155; }
+main .text-example {
+  display: block;
+  margin: 8px 0;
+  padding: 4px 8px;
+  font-style: normal;
+  color: #22252a;
+  background-color: #e3e1e2; }
 main .link-highlight {
   color: #eb4c1c; }
-main .category p {
-  padding-bottom: 12px; }
-  main .category p:last-child {
+main article p {
+  padding-bottom: 16px; }
+  main article p:last-of-type {
     padding-bottom: 0; }
-  main .category p.sub-note {
-    font-size: 12px; }
 main .tooltip {
   font-style: italic;
   cursor: help; }
