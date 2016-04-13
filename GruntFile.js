@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'dev/scss/core',
+					cwd: 'dev/scss/structure',
 					src: ['**/*.scss'],
 					dest: 'dist/css/generated',
 					ext: '.css'
@@ -37,8 +37,8 @@ module.exports = function (grunt) {
 
 		scsslint: {
 			allFiles: [
-				'dev/scss/core/**/*.scss',
-				'dev/scss/core/**/**/*.scss'
+				'dev/scss/structure/**/*.scss',
+				'dev/scss/structure/**/**/*.scss'
 			],
 			options: {
 				config: '.scss-lint.yml',
@@ -89,5 +89,5 @@ module.exports = function (grunt) {
 	grunt.registerTask('build-dist', ['scsslint', 'sass']);
 	grunt.registerTask('clean-dist', ['clean']);
 	grunt.registerTask('min-dist', ['cssmin']);
-	grunt.registerTask('build-min', ['scsslint', 'sass', 'cssmin']);
+	grunt.registerTask('build', ['scsslint', 'sass', 'cssmin']);
 };

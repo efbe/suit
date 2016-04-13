@@ -8,6 +8,21 @@
 
 
 @mixin typo {
+	// basic typo
+	strong {
+		font-weight: $text-medium;
+	}
+
+	// extended typo
+	article p {
+		padding-bottom: $xlarge-padding;
+
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	// headings
 	h4 {
 		margin-bottom: $default-padding;
 	}
@@ -20,6 +35,7 @@
 		}
 	}
 
+	// lists
 	li {
 		.material-icons {
 			float: left;

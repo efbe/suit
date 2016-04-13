@@ -4,7 +4,7 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>suit | introduction</title>
+	<title>suit</title>
 
 	<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
@@ -57,7 +57,16 @@
 		<section class="column column-10">
 			<div class="grid-row">
 				<article>
-					<p>hello.</p>
+					<p><strong>Suit</strong> is a two-layered, modular UI library where the structure part resets, sets
+						up and positions the elements while the theme part handles the design related CSS rules from
+						gutters to block heights and from colors to border sizes declared in a config file thus you can
+						create custom themed elements by keeping the core properties and reduce the divergence among UI
+						units.</p>
+
+					<p>The layers are in separated <a href="http://sass-lang.com/">SASS</a> files collected in the
+					<code>structure</code> and <code>theme</code> folders. Each structure file has a matching theme file
+					and includes it with the SASS <code>@import</code> rule. There's a <a href="http://gruntjs.com/">Grunt</a>
+					task which is responsible for merging these two layers into one CSS file.</p>
 				</article>
 			</div>
 		</section>

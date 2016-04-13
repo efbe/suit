@@ -14,7 +14,7 @@
 }
 
 @mixin main {
-	padding-top: $xlarge-padding;
+	padding-top: round($grid-gutter-width * 2);
 
 	.grid-row.category {
 		margin-bottom: $xlarge-padding;

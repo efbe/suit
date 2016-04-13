@@ -1,3 +1,9 @@
+main strong {
+  font-weight: 500; }
+main article p {
+  padding-bottom: 32px; }
+  main article p:last-of-type {
+    padding-bottom: 0; }
 main h4 {
   margin-bottom: 12px; }
 main h5 {
