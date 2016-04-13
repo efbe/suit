@@ -6,12 +6,13 @@ main h5 {
   margin-bottom: 8px; }
   main h5 + .sub-note {
     margin-top: -8px;
-    padding-bottom: 12px;
-    font-size: 12px; }
+    padding-bottom: 12px; }
 main li .material-icons {
   float: left;
   margin-right: 8px;
   color: #4e5155; }
+main .note {
+  font-size: 12px; }
 main .text-example {
   display: block;
   margin: 8px 0;
@@ -22,7 +23,7 @@ main .text-example {
 main .link-highlight {
   color: #eb4c1c; }
 main article p {
-  padding-bottom: 16px; }
+  padding-bottom: 24px; }
   main article p:last-of-type {
     padding-bottom: 0; }
 main .tooltip {

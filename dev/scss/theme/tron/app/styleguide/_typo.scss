@@ -24,7 +24,6 @@
 		& + .sub-note {
 			margin-top: -$small-padding;
 			padding-bottom: $default-padding;
-			font-size: $font-size-small;
 		}
 	}
 
@@ -40,10 +39,15 @@
 
 // some commonly used(?) modifiers
 @mixin typo-extended {
+	.note {
+		font-size: $font-size-small;
+	}
+
 	.text-example {
 		display: block;
 		margin: $small-padding 0;
 		padding: $xsmall-padding $small-padding;
+
 		font-style: normal; // em reset
 		color: $silky-black;
 		background-color: shade($led-suit-white, $shade-percentage-lighten);
@@ -58,7 +62,7 @@
 @mixin typo-article {
 	article {
 		p {
-			padding-bottom: $large-padding;
+			padding-bottom: $xlarge-padding;
 
 			&:last-of-type {
 				padding-bottom: 0;
