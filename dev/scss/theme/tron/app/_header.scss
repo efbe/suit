@@ -9,9 +9,10 @@
 $header-height: 70px;
 
 @mixin header {
+	position: relative;
 	min-height: $header-height;
 	background-color: $white;
-	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14);
+	box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 @mixin header-typo {
@@ -19,5 +20,18 @@ $header-height: 70px;
 		padding: 0 $large-padding;
 		line-height: $header-height;
 		color: $silky-black;
+	}
+}
+
+@mixin header-button {
+	.button {
+		position: absolute;
+		top: 50%;
+		right: $xxlarge-padding;
+		margin-top: -($default-block-height / 2);
+
+		&.small {
+			margin-top: -($small-block-height / 2);
+		}
 	}
 }

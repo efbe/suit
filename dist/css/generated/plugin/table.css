@@ -1,6 +1,7 @@
 .table-list {
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
   font-size: 14px; }
   .table-list thead th {
     text-align: left;

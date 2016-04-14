@@ -13,10 +13,11 @@
 </head>
 <body>
 	<header>
-		<div class="grid-row">
+		<div class="grid-row gutter stick-to-left">
 			<section class="column column-2"></section>
 			<section class="column column-10">
-				<h3>Introduction</h3>
+				<h3 class="left">Introduction</h3>
+				<a class="button secondary" href="https://github.com/efbe/suit"><strong>suit</strong> on github</a>
 			</section>
 		</div>
 	</header>
@@ -24,14 +25,16 @@
 	<main class="grid-row gutter stick-to-left">
 		<section class="column column-2">
 			<div class="side-menu">
-				<h3><a href="#">s<span>ui</span>t</a></h3>
+				<h3><a href="#">suit</a></h3>
 				<ul class="menu-list">
 					<li><a class="menu-item category active">Introduction</a></li>
+					<li><a href="get-started.html" class="menu-item category">Get started</a></li>
 					<li><a class="menu-item category">Essential</a>
 						<ul>
 							<li><a class="menu-item" href="essential/button.html">Button</a></li>
 							<li><a class="menu-item" href="essential/grid.html">Grid</a></li>
 							<li><a class="menu-item" href="essential/typography.html">Typography</a></li>
+							<li><a class="menu-item" href="essential/utilities.html">Utilities</a></li>
 						</ul>
 					</li>
 					<li><a class="menu-item category">Plugin</a>
@@ -57,24 +60,28 @@
 		<section class="column column-10">
 			<div class="grid-row">
 				<article>
-					<p><strong>Suit</strong> is a two-layered, modular UI library.</p>
+					<h2><strong>suit</strong> is a two-layered, modular UI library.</h2>
 
+					<h4>Structure apart from design</h4>
 					<p>While the structure part resets, sets
-						up and positions the elements or controls core units like the gutter width. The theme layer
+						up and positions the elements or controls core units like the gutter width; the theme layer
 						handles the design related CSS properties like block heights, colors or border sizes. This way
 						you can easily redesign elements by keeping the basic rules in order and reduce the
 						divergence among UI units.</p>
 
-					<p>The layers are in separated <a href="http://sass-lang.com/">SASS</a> files collected in the
-						<code>structure</code> and <code>theme</code> folders. Each structure file has a matching theme
-						file and includes it with the SASS <code>@import</code> rule. There's a <a href="http://gruntjs.com/">Grunt</a>
-						task which is responsible for merging these two layers into one CSS file.
-						<em class="note text-example rounded">For instance <code>dog.scss</code> that contains the structural
-						part and imports <code>_dog.scss</code> with the design layer compiles into <code>dog.css</code>.</em></p>
+					<a class="button hollow" href="get-started.html#structure-and-design">More about layers</a>
+				</article>
+				<br><br>
 
-					<p>The unit variables are stored in the <code>_global-variables.scss</code> which is equally used by
-						both layers. The colors are stored in the <code>_colors.scss</code> that is only accessible from
-						the design layer. Therefor you can easily redesign all of your UI elements through these two config files.</p>
+				<article>
+					<h4>Blasted into modules</h4>
+					<p>Modularity in <strong>suit</strong> means each and every component has its own compiled CSS. Building
+						from small standalone bricks like a single button to complex apps like an entire styleguide
+						<strong>suit</strong> allows you to only include what your page needs. You can also compile all
+						of the selected elements into one file which is available throughout your entire web page if you
+						are more of a cache fan.</p>
+
+					<a class="button hollow" href="get-started.html#modularity">More about modules</a>
 				</article>
 			</div>
 		</section>

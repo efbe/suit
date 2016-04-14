@@ -1,5 +1,5 @@
-// _code.scss
-// Header theme example module
+// _base.scss
+// Styleguide basic design
 // @author eFBe
 
 @import '../../../../mixin/_color';
@@ -8,6 +8,7 @@
 
 
 @mixin body {
+	html, // when you scroll behind <body>
 	body {
 		background-color: tint($led-suit-white, 40%); // TODO: percentage should come from global vars
 	}
@@ -15,6 +16,7 @@
 
 @mixin main {
 	padding-top: round($grid-gutter-width * 2);
+	padding-bottom: $small-padding; // let's assume <article> is the last element which has a 32 bottom margin
 
 	.grid-row.category {
 		margin-bottom: $xxlarge-padding;

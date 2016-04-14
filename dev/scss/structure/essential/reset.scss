@@ -45,9 +45,3 @@ blockquote::before, blockquote::after,
 q::before, q::after {
 	content: $value-none;
 }
-
-// goes to table module
-table {
-	border-collapse: collapse;
-	border-spacing: $value-zero;
-}

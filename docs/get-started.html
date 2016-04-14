@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>suit | get started</title>
+
+	<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="../dist/min/styleguide.min.css">
+</head>
+<body>
+<header>
+	<div class="grid-row gutter stick-to-left">
+		<section class="column column-2"></section>
+		<section class="column column-10">
+			<h3 class="left">Get started</h3>
+			<a class="button secondary" href="https://github.com/efbe/suit"><strong>suit</strong> on github</a>
+		</section>
+	</div>
+</header>
+
+	<main class="grid-row gutter stick-to-left">
+		<section class="column column-2">
+			<div class="side-menu">
+				<h3><a href="#">s<span>ui</span>t</a></h3>
+				<ul class="menu-list">
+					<li><a href="index.html" class="menu-item category">Introduction</a></li>
+					<li><a class="menu-item category active">Get started</a></li>
+					<li><a class="menu-item category">Essential</a>
+						<ul>
+							<li><a class="menu-item" href="essential/button.html">Button</a></li>
+							<li><a class="menu-item" href="essential/grid.html">Grid</a></li>
+							<li><a class="menu-item" href="essential/typography.html">Typography</a></li>
+							<li><a class="menu-item" href="essential/utilities.html">Utilities</a></li>
+						</ul>
+					</li>
+					<li><a class="menu-item category">Plugin</a>
+						<ul>
+							<li><a class="menu-item" href="plugin/icon.html">Material icon</a></li>
+							<li><a class="menu-item" href="plugin/pill.html">Pill</a></li>
+							<li><a class="menu-item" href="plugin/table.html">Table</a></li>
+						</ul>
+					</li>
+					<li><a class="menu-item category">Extension</a>
+						<ul>
+							<li><a class="menu-item" href="extension/button-hollow.html">Hollow button</a></li>
+							<li><a class="menu-item" href="extension/button-icon.html">Icon in button</a></li>
+							<li><a class="menu-item" href="extension/pill-icon.html">Pill with icon</a></li>
+							<li><a class="menu-item" href="extension/button-pill.html">Pill in button</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- this is the main content -->
+		<section class="column column-10">
+			<div class="grid-row">
+				<article id="structure-and-design">
+					<h4>Structure &amp; design</h4>
+
+					<p>The layers are in separated <a href="http://sass-lang.com/">SASS</a> files collected in the
+						<em>structure</em> and <em>theme</em> folders. Each structure file has a matching theme
+						file and includes it with the <code>@import</code> rule. There's a <a href="http://gruntjs.com/">Grunt</a>
+						task which is responsible for merging these two layers into one CSS file.
+						<em class="note text-example rounded">For instance <code>dog.scss</code> that contains the structural
+						part and imports <code>_dog.scss</code> with the design layer compiles into <code>dog.css</code>.</em></p>
+
+					<p>The unit variables are stored in the <code>_global-variables.scss</code> which is equally used by
+						both layers. The colors are stored in the <code>_colors.scss</code> that is only accessible by the
+						the design layer. Therefor you can easily redesign all of your UI elements through these two config files.</p>
+
+					<p>...</p>
+				</article>
+
+				<article id="modularity">
+					<h4>Pick your module</h4>
+					<p><strong>suit</strong> has four folders as building block categories: The <em>essential</em> folder
+						contains the core modules like the <code>reset.css</code> or the grid system. The <em>plugin</em>
+						folder collects all the components you need to build a simple application: icons, tables, form
+						components etc... <em>Extensions</em> are here to upgrade existing modules: for instance you can
+						easily merge the essential button module and icon plugin with <code>button-pill.css</code> thus you
+						can place icons into buttons by adding a single class and the icon itself. The forth level is the
+						<em>app</em> folder which is the place for "organisms" (as Brad Frost calls it in his
+						<a href="http://patternlab.io/about.html">Atomic Design</a> methodology) like the above mentioned
+						styleguide or a complex header with search an lists.</p>
+
+					<p>...</p>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<script>
+		// prevent elements with # as href to "work"
+		function preventDefaultLink() {
+			var emptyLinks = document.querySelectorAll('a[href="#"]');
+
+			for (var i = 0; i < emptyLinks.length; i++) {
+				emptyLinks[i].addEventListener('click', function(event) {
+					event.preventDefault();
+				});
+			}
+		}
+		preventDefaultLink();
+	</script>
+
+</body>
+</html>

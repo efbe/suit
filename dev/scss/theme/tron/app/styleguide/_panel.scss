@@ -10,7 +10,7 @@
 @mixin panel {
 	&.demo-dark {
 		padding: $default-padding;
-		color: $led-suit-white;
+		color: $white;
 		background-color: $silky-black;
 	}
 

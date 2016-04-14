@@ -1,7 +1,7 @@
 main strong {
   font-weight: 500; }
-main h4 {
-  margin-bottom: 12px; }
+main h2, main h4 {
+  margin-bottom: 24px; }
 main h5 {
   margin-bottom: 8px; }
   main h5 + .sub-note {
@@ -24,7 +24,7 @@ main .link-highlight {
   color: #eb4c1c; }
 main article p {
   padding-bottom: 24px; }
-  main article p:last-of-type {
+  main article p:last-child {
     padding-bottom: 0; }
 main .tooltip {
   font-style: italic;

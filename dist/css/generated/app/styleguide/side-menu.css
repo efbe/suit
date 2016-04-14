@@ -11,40 +11,38 @@
   background-color: #22252a; }
   .side-menu h3 {
     padding: 12px 20px;
-    color: #fff; }
+    font-weight: 400; }
     .side-menu h3 a {
       color: #fff; }
       .side-menu h3 a:hover {
         text-decoration: none; }
-  .side-menu .menu-list {
-    box-shadow: 4px 2px 2px -2px rgba(0, 0, 0, 0.14); }
-    .side-menu .menu-list .menu-item {
-      display: block;
+  .side-menu .menu-list .menu-item {
+    display: block;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    text-decoration: none; }
+    .side-menu .menu-list .menu-item.category {
+      cursor: default;
+      color: #e5e3e4;
       box-sizing: border-box;
-      padding: 12px 20px;
-      text-decoration: none; }
-      .side-menu .menu-list .menu-item.category {
-        cursor: default;
-        color: #e5e3e4;
-        box-sizing: border-box;
-        border-left: 2px solid transparent; }
-        .side-menu .menu-list .menu-item.category[href] {
-          cursor: pointer;
-          color: #299ecf; }
-          .side-menu .menu-list .menu-item.category[href]:hover {
-            background-color: #181a1d; }
-        .side-menu .menu-list .menu-item.category.active {
-          color: #e5e3e4;
-          border-left-color: #e5e3e4;
-          background-color: transparent; }
-          .side-menu .menu-list .menu-item.category.active:hover {
-            color: #e5e3e4; }
-      .side-menu .menu-list .menu-item + ul .menu-item {
-        padding-left: 32px;
-        font-size: 12px; }
-        .side-menu .menu-list .menu-item + ul .menu-item:hover {
+      border-left: 2px solid transparent; }
+      .side-menu .menu-list .menu-item.category[href] {
+        cursor: pointer;
+        color: #299ecf; }
+        .side-menu .menu-list .menu-item.category[href]:hover {
           background-color: #181a1d; }
-        .side-menu .menu-list .menu-item + ul .menu-item.active {
-          cursor: default;
-          background-color: #181a1d;
-          color: #fff; }
+      .side-menu .menu-list .menu-item.category.active {
+        color: #e5e3e4;
+        border-left-color: #e5e3e4;
+        background-color: transparent; }
+        .side-menu .menu-list .menu-item.category.active:hover {
+          color: #e5e3e4; }
+    .side-menu .menu-list .menu-item + ul .menu-item {
+      padding-left: 32px;
+      font-size: 12px; }
+      .side-menu .menu-list .menu-item + ul .menu-item:hover {
+        background-color: #181a1d; }
+      .side-menu .menu-list .menu-item + ul .menu-item.active {
+        cursor: default;
+        background-color: #181a1d;
+        color: #fff; }

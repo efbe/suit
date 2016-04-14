@@ -15,7 +15,7 @@
 
 @mixin side-menu-title {
 	padding: $default-padding $grid-gutter-width;
-	color: $white;
+	font-weight: $text-normal;
 
 	a {
 		color: $white;
@@ -24,10 +24,6 @@
 			text-decoration: none;
 		}
 	}
-}
-
-@mixin side-menu-list {
-	box-shadow: 4px 2px 2px -2px rgba(0, 0, 0, 0.14);
 }
 
 @mixin side-menu-item {
@@ -61,6 +57,7 @@
 		}
 	}
 
+	// Sub-menu
 	+ ul .menu-item {
 		padding-left: round($grid-gutter-width + $default-padding);
 		font-size: $font-size-small;

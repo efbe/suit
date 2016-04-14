@@ -1,8 +1,16 @@
 header {
+  position: relative;
   min-height: 70px;
   background-color: #fff;
-  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.14); }
+  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.1); }
   header h3 {
     padding: 0 16px;
     line-height: 70px;
     color: #22252a; }
+  header .button {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    margin-top: -16px; }
+    header .button.small {
+      margin-top: -12px; }

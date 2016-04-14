@@ -14,8 +14,8 @@
 	}
 
 	// headings
-	h4 {
-		margin-bottom: $default-padding;
+	h2, h4 {
+		margin-bottom: $xlarge-padding;
 	}
 
 	h5 {
@@ -64,7 +64,7 @@
 		p {
 			padding-bottom: $xlarge-padding;
 
-			&:last-of-type {
+			&:last-child {
 				padding-bottom: 0;
 			}
 		}
