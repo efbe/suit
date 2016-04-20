@@ -27,7 +27,7 @@
 }
 
 @mixin side-menu-item {
-	padding: $default-padding $grid-gutter-width;
+	padding: $small-padding $grid-gutter-width;
 	text-decoration: none;
 
 	&.category {
