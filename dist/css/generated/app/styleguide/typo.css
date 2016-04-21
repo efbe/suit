@@ -3,14 +3,10 @@ main strong {
 main h2, main h4 {
   margin-bottom: 24px; }
 main h5 {
-  margin-bottom: 8px; }
+  margin-bottom: 16px; }
   main h5 + .sub-note {
-    margin-top: -8px;
+    margin-top: -16px;
     padding-bottom: 12px; }
-main li .material-icons {
-  float: left;
-  margin-right: 8px;
-  color: #4e5155; }
 main .note {
   font-size: 12px; }
 main .text-example {
@@ -22,10 +18,28 @@ main .text-example {
   background-color: #e3e1e2; }
 main .link-highlight {
   color: #eb4c1c; }
+main .icon-list {
+  padding-left: 0;
+  list-style-type: none; }
+  main .icon-list li .material-icons {
+    float: left;
+    margin-right: 8px;
+    color: #4e5155; }
 main article p {
   padding-bottom: 24px; }
   main article p:last-child {
     padding-bottom: 0; }
+main article ul {
+  padding-left: 24px;
+  list-style-type: square; }
+main article ul li {
+  margin-bottom: 8px; }
+main article p + ul {
+  margin-top: -12px; }
+main article p + h5 {
+  margin-top: 12px; }
+main article .code-panel {
+  margin-bottom: 24px; }
 main .tooltip {
   font-style: italic;
   cursor: help; }

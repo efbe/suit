@@ -16,5 +16,6 @@
 		tab-size: 2;
 
 		@include code-panel-code();
+		@include code-panel-comment();
 	}
 }

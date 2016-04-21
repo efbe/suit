@@ -4,6 +4,7 @@
 
 @import '../../essential/_code';
 @import '../../essential/_global-variables';
+@import '../../essential/_colors';
 
 
 @mixin code-panel-pre {
@@ -21,4 +22,10 @@
 
 	line-height: 130%;
 	font-size: $font-size-small;
+}
+
+@mixin code-panel-comment {
+	.comment {
+		color: shade($led-suit-white, $code-tint);
+	}
 }

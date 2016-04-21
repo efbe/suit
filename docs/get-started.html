@@ -64,29 +64,103 @@
 
 					<p>The layers are in separated <a href="http://sass-lang.com/">SASS</a> files collected in the
 						<em>structure</em> and <em>theme</em> folders. Each structure file has a matching theme
-						file and includes it with the <code>@import</code> rule. There's a <a href="http://gruntjs.com/">Grunt</a>
-						task which is responsible for merging these two layers into one CSS file.
+						file and includes its main components with the <code>@import</code> rule. A <a href="http://gruntjs.com/">Grunt</a>
+						task is responsible for merging these two layers into one CSS file.
 						<em class="note text-example rounded">For instance <code>dog.scss</code> that contains the structural
 						part and imports <code>_dog.scss</code> with the design layer compiles into <code>dog.css</code>.</em></p>
 
 					<p>The unit variables are stored in the <code>_global-variables.scss</code> which is equally used by
-						both layers. The colors are stored in the <code>_colors.scss</code> that is only accessible by the
-						the design layer. Therefor you can easily redesign all of your UI elements through these two config files.</p>
+						both layers. Color variables are stored in the <code>_colors.scss</code> that is only accessible by the
+						the design layer. You can easily customize all of your UI elements by editing these two config files.</p>
 
-					<p>...</p>
+
+					<h5>Detachable styles</h5>
+
+					<p>I kept modularity in mind when setting up the design layers, so each and every standalone styling has its own mixin
+						included by the structure file.<br>
+						Let's take a look at the <em>button</em> module:
+					</p>
+
+					<div class="grid-row gutter stick-to-left">
+						<div class="column column-4">
+							<p>After setting up the structural rules it includes the button mixins one by one style-wise.</p>
+						</div>
+						<div class="column column-8">
+							<div class="code-panel">
+<pre><code>@import '../../theme/tron/essential/_button';
+
+.button {
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+
+	<span class="comment">// webkit reset</span>
+	<span class="comment">// scss-lint:disable VendorPrefix</span>
+	-webkit-appearance: none;
+
+	@include button();
+	@include button-disabled();
+	@include button-sizes();
+	@include button-colors();
+	@include button-link();
+	...
+</code></pre>
+							</div>
+						</div>
+					</div>
+					<div class="grid-row gutter stick-to-left">
+						<div class="column column-4">
+							<p>While the relevant code snippet of <code>_button.scss</code> looks something like this:</p>
+						</div>
+						<div class="column column-8">
+							<div class="code-panel">
+<pre><code><span class="comment">// Disabled</span>
+
+@mixin button-disabled {
+	&[disabled],
+	&.disabled {
+		opacity: $disabled-percentage;
+		cursor: not-allowed;
+		pointer-events: none;
+
+		@include user-select(none);
+	}
+}
+
+
+<span class="comment">// Sizes</span>
+
+@mixin button-sizes {
+	&.small {
+		padding-right: $small-padding;
+		padding-left: $small-padding;
+		...
+</code></pre>
+							</div>
+						</div>
+					</div>
+
+					<p>So if you want to ged rid of any of the unused button versions you just have to remove the inclusion from
+						<code>button.scss</code> and the mixin from <code>_button.scss</code>.
+					</p>
 				</article>
 
 				<article id="modularity">
 					<h4>Pick your module</h4>
-					<p><strong>suit</strong> has four folders as building block categories: The <em>essential</em> folder
-						contains the core modules like the <code>reset.css</code> or the grid system. The <em>plugin</em>
-						folder collects all the components you need to build a simple application: icons, tables, form
-						components etc... <em>Extensions</em> are here to upgrade existing modules: for instance you can
-						easily merge the essential button module and icon plugin with <code>button-pill.css</code> thus you
-						can place icons into buttons by adding a single class and the icon itself. The forth level is the
-						<em>app</em> folder which is the place for "organisms" (as Brad Frost calls it in his
-						<a href="http://patternlab.io/about.html">Atomic Design</a> methodology) like the above mentioned
-						styleguide or a complex header with search an lists.</p>
+					<p><strong>Suit</strong> has four folders as building block categories:</p>
+					<ul>
+						<li>The <strong>essential</strong> folder contains the core modules like the <code>reset.css</code> or the grid system.</li>
+						<li>The <strong>plugin</strong> folder collects all the components you need to build a simple application: icons, tables, form components, etc...</li>
+						<li><strong>Extensions</strong> are meant to upgrade or connect existing modules: for instance you can
+							easily merge the essential button module and icon plugin with <code>button-icon.css</code> thus you
+							can place icons into buttons by adding a single class and the icon itself.</li>
+						<li>The forth level is the
+							<strong>app</strong> folder which is the place for "organisms" (as Brad Frost calls it in his
+							<a href="http://patternlab.io/about.html">Atomic Design</a> methodology) like the above mentioned
+							styleguide or a complex header with search field and menu items.</li>
+					</ul>
 
 					<p>...</p>
 				</article>

@@ -18,21 +18,15 @@
 		margin-bottom: $xlarge-padding;
 	}
 
+
+
 	h5 {
-		margin-bottom: $small-padding;
+		margin-bottom: $large-padding;
 
+		// some note under h5
 		& + .sub-note {
-			margin-top: -$small-padding;
+			margin-top: -$large-padding;
 			padding-bottom: $default-padding;
-		}
-	}
-
-	// icons in lists
-	li {
-		.material-icons {
-			float: left;
-			margin-right: $small-padding;
-			color: tint($silky-black, $code-tint);
 		}
 	}
 }
@@ -56,6 +50,20 @@
 	.link-highlight {
 		color: $led-suit-orange-dark;
 	}
+
+	// when the list-style-type is a custom icon
+	.icon-list {
+		padding-left: 0;
+		list-style-type: none;
+
+		li {
+			.material-icons {
+				float: left;
+				margin-right: $small-padding;
+				color: tint($silky-black, $code-tint);
+			}
+		}
+	}
 }
 
 // article specific typo
@@ -68,6 +76,27 @@
 				padding-bottom: 0;
 			}
 		}
+
+		ul {
+			padding-left: $xlarge-padding;
+			list-style-type: square;
+		}
+
+		ul li {
+			margin-bottom: $small-padding;
+		}
+
+		p + ul {
+			margin-top: -$default-padding;
+		}
+
+		p + h5 {
+			margin-top: $default-padding;
+		}
+
+		.code-panel {
+			margin-bottom: $xlarge-padding;
+		}
 	}
 }
 
@@ -77,6 +106,7 @@
 		h4 {
 			margin-bottom: $small-padding;
 		}
+
 		h5 {
 			margin-bottom: $xsmall-padding;
 
