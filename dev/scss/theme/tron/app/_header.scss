@@ -28,6 +28,8 @@ $header-height: 70px;
 		position: absolute;
 		top: 50%;
 		right: $xxlarge-padding;
+
+		// TODO: upgrade to translate-wise vertical positioning
 		margin-top: -($default-block-height / 2);
 
 		&.small {
