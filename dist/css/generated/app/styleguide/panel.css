@@ -1,7 +1,8 @@
 .panel.demo-dark {
   padding: 12px;
-  color: #fff;
   background-color: #22252a; }
+  .panel.demo-dark p {
+    color: #fff; }
 .panel.demo-light {
   padding: 12px;
   color: #252525;
