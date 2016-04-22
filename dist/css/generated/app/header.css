@@ -9,8 +9,8 @@ header {
     color: #22252a; }
   header .button {
     position: absolute;
+    right: 32px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 32px; }
+    transform: translateY(-50%); }
