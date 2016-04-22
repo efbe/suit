@@ -53,10 +53,10 @@ module.exports = function (grunt) {
 		cssmin: {
 			target: {
 				options: {
-					restructuring: false, // keep them in order
+					restructuring: false, // keep the grouped files in cascading order
 					shorthandCompacting: false, // do not be smarter than me
 					roundingPrecision: -1,
-					processImport: true // *.* magic *.*
+					processImport: true // allows you to import from an external source
 				},
 				// Minified packages come here!
 				files: {

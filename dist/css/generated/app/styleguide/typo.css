@@ -36,8 +36,6 @@ main article ul li {
   margin-bottom: 8px; }
 main article p + ul {
   margin-top: -12px; }
-main article p + h5 {
-  margin-top: 12px; }
 main article .code-panel {
   margin-bottom: 24px; }
 main .tooltip {
