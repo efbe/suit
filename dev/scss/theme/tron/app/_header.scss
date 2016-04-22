@@ -2,6 +2,7 @@
 // Header theme example module
 // @author eFBe
 
+@import '../../../mixin/_vertical-center';
 @import '../essential/_colors';
 @import '../essential/_global-variables';
 
@@ -25,15 +26,7 @@ $header-height: 70px;
 
 @mixin header-button {
 	.button {
-		position: absolute;
-		top: 50%;
+		@include vertical-center(absolute);
 		right: $xxlarge-padding;
-
-		// TODO: upgrade to translate-wise vertical positioning
-		margin-top: -($default-block-height / 2);
-
-		&.small {
-			margin-top: -($small-block-height / 2);
-		}
 	}
 }
