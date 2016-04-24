@@ -1,8 +1,7 @@
 /**
- * Standard require js module list
+ * Require js module list
  */
 
-/*global require*/
 'use strict';
 
 require.config({

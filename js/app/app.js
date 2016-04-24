@@ -1,18 +1,16 @@
 define([
     'backbone',
-    //'routes/router',
-    'view/menu'
+    'routes/router',
+    'view/page'
 ], function (
     Backbone,
-    //Router,
-    MenuView
+    Router,
+    PageView
 ) {
     var App = Backbone.View.extend({
         initialize: function () {
-            var menuView = new MenuView();
-
-            // Router
-            // var router = new Router();
+            var router   = new Router(),
+                pageView = new PageView();
         }
     });
 
