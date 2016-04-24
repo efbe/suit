@@ -28,12 +28,45 @@ define([
          * @param {String} page
          */
         showPage: function(page) {
-            $('.page').addClass('hidden');
+            $('.js-page').addClass('hidden');
             $(page).removeClass('hidden');
         },
 
+        /**
+         * Sets the route according to the active pageId
+         * @method setUrl
+         * @param {String} page
+         */
         setUrl: function(page) {
             router.navigate(page, true);
+        },
+
+        /**
+         * Simply updates the page title
+         * @method updatePageTitle
+         * @param {String} title
+         */
+        updatePageTitle: function(title) {
+            $('.js-page-title').text(title);
+        },
+
+        /**
+         * If we wanna set a custom title we can store it in the "data-title" attr
+         * Otherwise we fallback to the text
+         * @method getTitle
+         * @param {Object} target
+         * @returns {String} title
+         */
+        getTitle: function (target) {
+            var title;
+
+            if (target.is('[data-title]')) {
+                title = target.attr('data-title')
+            } else {
+                title = target.text();
+            }
+
+            return title;
         },
 
         /**
@@ -44,11 +77,16 @@ define([
         onMenuItemClick: function(e) {
             e.preventDefault();
 
-            var menuItem = $(e.target).attr('data-menu-name');
+            var target = $(e.target),
+                url = target.attr('rel'),
+                title;
 
-            // menu item data should match with ".page" id!
-            this.showPage('#' + menuItem);
-            this.setUrl(menuItem)
+            title = this.getTitle(target);
+
+            this.updatePageTitle(title);
+            this.showPage('#' + url); // menu item data should match with ".js-page" id!
+            // TODO: updateMenu
+            this.setUrl(url);
         }
     });
 
