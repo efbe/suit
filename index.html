@@ -93,19 +93,7 @@
 		</section>
 	</main>
 
-	<script>
-		// prevent elements with # as href to "work"
-		function preventDefaultLink() {
-			var emptyLinks = document.querySelectorAll('a[href="#"]');
-
-			for (var i = 0; i < emptyLinks.length; i++) {
-				emptyLinks[i].addEventListener('click', function(event) {
-					event.preventDefault();
-				});
-			}
-		}
-		preventDefaultLink();
-	</script>
+	<script data-main="js/main" src="node_modules/requirejs/require.js"></script>
 
 </body>
 </html>
