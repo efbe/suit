@@ -12,7 +12,7 @@ define([
         el: 'body',
 
         events: {
-            'click .js-menu-item': 'onMenuItemClick'
+            'click .js-link': 'onMenuItemClick'
         },
 
         /**
