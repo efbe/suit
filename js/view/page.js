@@ -2,8 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    '../model/page',
     '../routes/router'
-], function ($, _, Backbone, router) {
+], function ($, _, Backbone, PageModel, Router) {
     'use strict';
 
     var PageView = Backbone.View.extend({
@@ -19,6 +20,9 @@ define([
          * @method initialize
          */
         initialize: function() {
+            this.pageModel = new PageModel();
+            this.router = new Router();
+
             this.showPage('#home'); // init test
         },
 
@@ -38,7 +42,7 @@ define([
          * @param {String} page
          */
         setUrl: function(page) {
-            router.navigate(page, true);
+            this.router.navigate(page, true);
         },
 
         /**
@@ -51,25 +55,6 @@ define([
         },
 
         /**
-         * If we wanna set a custom title we can store it in the "data-title" attr
-         * Otherwise we fallback to the text
-         * @method getTitle
-         * @param {Object} target
-         * @returns {String} title
-         */
-        getTitle: function (target) {
-            var title;
-
-            if (target.is('[data-title]')) {
-                title = target.attr('data-title')
-            } else {
-                title = target.text();
-            }
-
-            return title;
-        },
-
-        /**
          * Fetches the selected pageId and passes it to showPage()
          * @method onMenuItemClick
          * @param {Object} e
@@ -78,10 +63,10 @@ define([
             e.preventDefault();
 
             var target = $(e.target),
-                url = target.attr('rel'),
+                url = target.attr('href'),
                 title;
 
-            title = this.getTitle(target);
+            title = this.pageModel.getTitle(target);
 
             this.updatePageTitle(title);
             this.showPage('#' + url); // menu item data should match with ".js-page" id!

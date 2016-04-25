@@ -15,7 +15,6 @@
 }
 
 @mixin main {
-	padding-top: round($grid-gutter-width * 2);
 	padding-bottom: $small-padding; // let's assume <article> is the last element which has a 32 bottom margin
 
 	.grid-row.category {

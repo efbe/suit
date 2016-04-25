@@ -12,94 +12,97 @@
 	<link rel="stylesheet" href="dist/min/styleguide.min.css">
 </head>
 <body>
-	<header>
+
+	<main>
+		<header>
+			<div class="grid-row gutter stick-to-left">
+				<section class="column column-2"></section>
+				<section class="column column-10">
+					<h3 class="js-page-title">Introduction</h3>
+					<a class="button secondary" href="https://github.com/efbe/suit"><strong>suit</strong> on github</a>
+				</section>
+			</div>
+		</header>
+
 		<div class="grid-row gutter stick-to-left">
-			<section class="column column-2"></section>
-			<section class="column column-10">
-				<h3 class="js-page-title">Introduction</h3>
-				<a class="button secondary" href="https://github.com/efbe/suit"><strong>suit</strong> on github</a>
+			<section class="column column-2">
+				<div class="side-menu">
+					<h3><a data-title="Introduction" class="js-menu-item" href="home">suit</a></h3>
+					<ul class="menu-list">
+						<li><a class="menu-item category js-category active">Introduction</a></li>
+						<li><a href="get-started" class="menu-item category js-category js-menu-item">Get started</a></li>
+						<li><a class="menu-item category js-category">Essential</a>
+							<ul>
+								<li><a class="menu-item" href="docs/essential/button.html">Button</a></li>
+								<li><a class="menu-item" href="docs/essential/grid.html">Grid</a></li>
+								<li><a class="menu-item" href="docs/essential/typography.html">Typography</a></li>
+								<!--
+								<li><a class="menu-item" href="docs/essential/utilities.html">Utilities</a></li>
+								-->
+							</ul>
+						</li>
+						<li><a class="menu-item category">Plugin</a>
+							<ul>
+								<li><a class="menu-item" href="docs/plugin/icon.html">Material icon</a></li>
+								<li><a class="menu-item" href="docs/plugin/pill.html">Pill</a></li>
+								<li><a class="menu-item" href="docs/plugin/table.html">Table</a></li>
+							</ul>
+						</li>
+						<li><a class="menu-item category">Extension</a>
+							<ul>
+								<li><a class="menu-item" href="docs/extension/button-hollow.html">Hollow button</a></li>
+								<li><a class="menu-item" href="docs/extension/button-icon.html">Icon in button</a></li>
+								<li><a class="menu-item" href="docs/extension/pill-icon.html">Pill with icon</a></li>
+								<li><a class="menu-item" href="docs/extension/button-pill.html">Pill in button</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- this is the main content -->
+			<section class="column column-10 js-page hidden" id="home">
+				<div class="grid-row">
+					<article>
+						<h2><strong>suit</strong> is a two-layered, modular UI library.</h2>
+
+						<h4>Structure apart from design</h4>
+						<p>While the structure part resets, sets
+							up and positions the elements or controls core units like the gutter width; the theme layer
+							handles the design related CSS properties like block heights, colors or border sizes. This way
+							you can easily redesign elements by keeping the basic rules in order and reduce the
+							divergence among UI units. The main reason behind the design layer nested into structure and not
+							laying on the top of it is to avoid rules getting overridden. The motto of <strong>suit</strong>
+							is <em>Extend, not overwrite</em>.
+						</p>
+
+						<a class="button hollow" href="docs/get-started.html#structure-and-design">More about layers</a>
+					</article>
+					<br><br>
+
+					<article>
+						<h4>Blasted into modules</h4>
+						<p>Modularity in <strong>suit</strong> means each and every component has its own compiled CSS. Building
+							from small standalone bricks like a single button to complex apps like an entire styleguide
+							<strong>suit</strong> allows you to only include what your page needs. However you can compile all
+							of the selected elements into one file as well which is available throughout your entire web page if you
+							are more of a cache fan.
+						</p>
+
+						<a class="button hollow" href="docs/get-started.html#pick-your-module">More about modules</a>
+					</article>
+				</div>
+			</section>
+
+			<!-- test page -->
+			<section class="column column-10 js-page hidden" id="get-started">
+				<div class="grid-row">
+					<article>
+						<p>harcikutya</p>
+					</article>
+				</div>
 			</section>
 		</div>
-	</header>
-
-	<main class="grid-row gutter stick-to-left">
-		<section class="column column-2">
-			<div class="side-menu">
-				<h3><a data-title="Introduction" class="js-menu-item" rel="home" href="#">suit</a></h3>
-				<ul class="menu-list">
-					<li><a class="menu-item category js-category active">Introduction</a></li>
-					<li><a rel="get-started" href="#" class="menu-item category js-category js-menu-item">Get started</a></li>
-					<li><a class="menu-item category js-category">Essential</a>
-						<ul>
-							<li><a class="menu-item" href="docs/essential/button.html">Button</a></li>
-							<li><a class="menu-item" href="docs/essential/grid.html">Grid</a></li>
-							<li><a class="menu-item" href="docs/essential/typography.html">Typography</a></li>
-							<!--
-							<li><a class="menu-item" href="docs/essential/utilities.html">Utilities</a></li>
-							-->
-						</ul>
-					</li>
-					<li><a class="menu-item category">Plugin</a>
-						<ul>
-							<li><a class="menu-item" href="docs/plugin/icon.html">Material icon</a></li>
-							<li><a class="menu-item" href="docs/plugin/pill.html">Pill</a></li>
-							<li><a class="menu-item" href="docs/plugin/table.html">Table</a></li>
-						</ul>
-					</li>
-					<li><a class="menu-item category">Extension</a>
-						<ul>
-							<li><a class="menu-item" href="docs/extension/button-hollow.html">Hollow button</a></li>
-							<li><a class="menu-item" href="docs/extension/button-icon.html">Icon in button</a></li>
-							<li><a class="menu-item" href="docs/extension/pill-icon.html">Pill with icon</a></li>
-							<li><a class="menu-item" href="docs/extension/button-pill.html">Pill in button</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<!-- this is the main content -->
-		<section class="column column-10 js-page hidden" id="home">
-			<div class="grid-row">
-				<article>
-					<h2><strong>suit</strong> is a two-layered, modular UI library.</h2>
-
-					<h4>Structure apart from design</h4>
-					<p>While the structure part resets, sets
-						up and positions the elements or controls core units like the gutter width; the theme layer
-						handles the design related CSS properties like block heights, colors or border sizes. This way
-						you can easily redesign elements by keeping the basic rules in order and reduce the
-						divergence among UI units. The main reason behind the design layer nested into structure and not
-						laying on the top of it is to avoid rules getting overridden. The motto of <strong>suit</strong>
-						is <em>Extend, not overwrite</em>.
-					</p>
-
-					<a class="button hollow" href="docs/get-started.html#structure-and-design">More about layers</a>
-				</article>
-				<br><br>
-
-				<article>
-					<h4>Blasted into modules</h4>
-					<p>Modularity in <strong>suit</strong> means each and every component has its own compiled CSS. Building
-						from small standalone bricks like a single button to complex apps like an entire styleguide
-						<strong>suit</strong> allows you to only include what your page needs. However you can compile all
-						of the selected elements into one file as well which is available throughout your entire web page if you
-						are more of a cache fan.
-					</p>
-
-					<a class="button hollow" href="docs/get-started.html#pick-your-module">More about modules</a>
-				</article>
-			</div>
-		</section>
-
-		<!-- test page -->
-		<section class="column column-10 js-page hidden" id="get-started">
-			<div class="grid-row">
-				<article>
-					<p>harcikutya</p>
-				</article>
-			</div>
-		</section>
 	</main>
 
 	<script data-main="js/main" src="node_modules/requirejs/require.js"></script>

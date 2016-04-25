@@ -13,7 +13,10 @@ define([
 
         initialize: function () {
             Backbone.history.start();
-        }
+        },
+
+        showHome: function () {},
+        getStarted: function () {}
     });
 
     return router;
