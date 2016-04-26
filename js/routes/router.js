@@ -1,23 +1,45 @@
 define([
+    'jquery',
     'backbone'
-], function (Backbone) {
+], function ($, Backbone) {
     'use strict';
 
-    var router = Backbone.Router.extend({
-
+    var AppRouter = Backbone.Router.extend({
         routes: {
             '': 'showHome',
             'home': 'showHome',
             'get-started': 'getStarted'
         },
 
-        initialize: function () {
-            Backbone.history.start();
+        /**
+         * Hide all pages, show the active one
+         * method showPage
+         * @param {String} page
+         */
+        showPage: function(page) {
+            $('.js-page').addClass('hidden');
+            $(page).removeClass('hidden');
         },
 
-        showHome: function () {},
-        getStarted: function () {}
+        /**
+         * Simply updates the page title
+         * @method updatePageTitle
+         * @param {String} title
+         */
+        updatePageTitle: function(title) {
+            $('.js-page-title').text(title);
+        },
+
+        showHome: function () {
+            this.showPage('#home');
+            this.updatePageTitle('Introduction');
+        },
+
+        getStarted: function () {
+            this.showPage('#get-started');
+            this.updatePageTitle('Get started');
+        }
     });
 
-    return router;
+    return AppRouter;
 });
