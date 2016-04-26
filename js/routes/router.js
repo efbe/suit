@@ -30,11 +30,19 @@ define([
             $('.js-page-title').text(title);
         },
 
+        /**
+         * Show home page content, set page title
+         * @method showHome
+         */
         showHome: function () {
             this.showPage('#home');
             this.updatePageTitle('Introduction');
         },
 
+        /**
+         * Show get started page content, set page title
+         * @method getStarted
+         */
         getStarted: function () {
             this.showPage('#get-started');
             this.updatePageTitle('Get started');

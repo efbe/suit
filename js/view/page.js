@@ -4,7 +4,8 @@ define([
     'underscore',
     'backbone',
     'routes/router',
-    '../model/page'
+    '../model/page',
+    '../libs/tipr-min'// Jquery plugin test with require
 ], function ($, _, Backbone, AppRouter, PageModel) {
     'use strict';
 
@@ -19,6 +20,9 @@ define([
         initialize: function () {
             this.router = new AppRouter();
             this.pageModel = new PageModel();
+
+            // init tooltip
+            $('.tip').tipr();
         },
 
         /**
