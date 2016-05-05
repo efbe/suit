@@ -1,0 +1,27 @@
+html,
+body {
+  background-color: #eee; }
+
+main {
+  border-top: 1px solid #fff; }
+
+section {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box; }
+
+.list-content {
+  margin-top: -102px;
+  background-color: #fff; }
+
+.visible {
+  display: block !important; }
+
+@media only screen and (max-width: 640px) {
+  section {
+    max-width: 320px; }
+
+  .list-content {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f8f8f8; } }

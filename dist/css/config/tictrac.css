@@ -1,0 +1,14 @@
+/*
+ * tictrac.css - Tictrac Recruitment Test config
+ * See GruntFile.js / cssmin() for more info
+ * @output tictrac.min.css
+ * @author eFBe
+ */
+
+
+@import '../generated/essential/reset.css';
+
+/* tweet list app */
+@import '../generated/app/tweetlist/base.css';
+@import '../generated/app/tweetlist/header.css';
+@import '../generated/app/tweetlist/list.css';

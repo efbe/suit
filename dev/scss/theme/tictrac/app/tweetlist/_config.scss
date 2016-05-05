@@ -1,0 +1,53 @@
+// _config.scss
+// Tweet list config file for design related elements
+// @author eFBe
+
+
+// Gutters
+
+$default-gutter-width: 20px;
+$menu-item-gutter: 6px;
+
+
+// Block heights & widths
+
+$large-block-height: 52px; // mobile menu items
+$header-height: 200px;
+
+$content-width: 600px;
+$mobile-content-width: 320px;
+
+$logo-height: 34px;
+$hamburger-width: 30px;
+$hamburger-height: 18px;
+
+$tweet-width: 502px;
+$tweet-width-mobile: 220px;
+
+
+// Colors
+
+$username-black: #222 !default;
+$text-gray: #555 !default;
+$item-title-gray: #777 !default;
+$background-gray: #eee !default;
+$border-gray: #efefef !default;
+$border-light-gray: #f8f8f8 !default;
+$white: #fff !default;
+$tictrac-blue: #1cade9 !default;
+$header-border-blue: #1293c9 !default;
+$nav-blue: #199bd1 !default;
+$menu-item-blue-active: #168aba !default;
+
+
+// Typo
+
+$default-line-height: 150%;
+$font-arial: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$font-verdana: Verdana, Geneva, sans-serif;
+
+
+// Misc
+
+$border-width: 1px;
+$mobile-breakpoint: 640px;

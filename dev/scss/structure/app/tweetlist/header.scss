@@ -1,0 +1,128 @@
+// header.scss
+// Tweet list header elements
+// @author eFBe
+
+@import '../../../mixin/_float';
+@import '../../../theme/tictrac/app/tweetlist/_config';
+@import '_hamburger';
+
+
+header {
+	height: $header-height;
+
+	background-color: $tictrac-blue;
+	border-bottom: $border-width solid $header-border-blue;
+
+	@include clear();
+}
+
+// logo + nav
+.header-bar {
+	height: round($header-height / 2);
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		display: block;
+		width: 133px;
+		height: $logo-height;
+		margin-top: -($logo-height / 2);
+		overflow: hidden;
+		text-indent: -999px;
+
+		background: no-repeat url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIUAAAAiEAQAAACLWg6iAAAG0UlEQVR42u1cbVBUVRjGdcVVEQ0IkWojZlWaUSRSaxwy2tShJhFxIlpNSZOMYEOHFDZjRpkdrJEvv2B1Cn9EpliOGcGKM8U4aQwwhuQoozN+os7kZyui4vL046qXu+e99+4HI5fmvjPnz57nfc7Zc549957zvmf9gHlXfStvrvLrZYD2GI2bqvFz04CwMGB+BJAXAhQVATYbsHkSsK4GMJmAcanivgkJwPpC30pYGM8XHy+P/2INkGUGjEYgMNDPSwM+WCTexhtG7zinTwcqyoHWVuDfW0CPE7hyGWhuAqxWYEIU4WSz+Vby84V8w4bTuKUfyX+BIZncwJQ3yreboQUCAliOwkL4bJOieb7cXM98H3QD+/cDr7zq+QT+3SbO++03nnE9pwd+rZHvb3c3UFoCaLWKEwXnZ0nwrO21a4GRp5UlikfmdAJ5FvcnUafjJkjMWlrc5zIYgI4Oz/q7dy8wWKswUSzt8a79zExliuKRvW9ybyJfniLNc7dL8GsW5RmsBZqavOtrbq5iRAHo66Tb2HxEuv7FUuWK4uYNIChIfjKXLJHnmjhRnsdkkua4d0+87k4n8FSQH/BaNluW/0UP/vwIFhtb4bsoUgy0jzkOeDqUwwTmiPfr420817RpQHq6sHyWTQ9CYyOLTU/vPYnionjrbSAykluqZ8zgXtrudtHY7Gz5ySwrkxfFgoXyPAfstO/WLUBICDBIw61K7e00zmyWeIOnBt9gkO+UN6JYE8rit3wIDJ8hxA2dDmxwsNjiBsBvmzj/qNH0AFRVyX8fMVHwqwmPfTeFxh6sl2/n99/kRfH1V9IcWi3Q2cn6tbcDGo0QOymabuPnfQoRBfV4sCTQ2LQHNH+Ipb9FweHPnKEeIfLt3Lgh9GluYpf6A3ZpjvBwuq/bbDT+xAkWe/GCQkRB4bN0NHZOOI2PvKkMUezcSeNHBoq3ERHB4isrgTaXLeqVy9J9Ffv1FxbS+NpaatekYFEIdxW+9O3JimLrFhqv14u3kZjI4lfnAnuq2c/5gzXfRfHLfgqtiqLPRbGxzHNR5Oez+DmJQEEB+3lCgioKBjt+A32MHjxbGaLYvp3Gi29L6RVh3HhgwUL281Wr+k4UaWnUkfqAE4V35/9PUhTULuJO5+PTQtLn1Cn2LEGrBWJjWa7vq/pKFB4OoioK77akzzwL3CcOh5qbxPlHBnJBqt7W1sbVjQhg644fV0UxQETBbQcbGmis1SodxXS16mq+/tw5NoA1bLgqCkWKwm4Hdu8Camq4WINYMKu7W/olOCOD9Sko4OvriG3jlCmqKBQpCnetuEia32ZjfUwmvr60hK2nx1IVxYAQxe5dgL+/NP+fR1i/2Fi+fvlytn5jmSqKASmKnBxgkEY+zH3bIfTrcQIjAnjM6/Esd0ODKgpFisLpBK5fAy5eoMPRK1bKc0+IYv3OnhFixoS5G0tRRaGg3Qf3mHC1Q4fkuVOIqGpdLYu7fo3FvRCpiuIxNng2EHWHLcO+6z9RLE6jV5Kx4dLcVivr19EB1NcLi8PB4uYm+X6iGRMDzJzpWtTYR5+IIjSUE4GrfZIhzU3HHtwzYcabGhBTYECM3kXU10tzX7zgvSh++lEVheJF8SUR6bx/TywQxqXG+WKnT6miULwoqOAVAKSl0bxGo2+i6HG6Ju78z0RBpePl7aGx85Jpfn1d/4pikIa+a7FvH827ciWLPfwHl1RLlVu3WHxcHBt/8SQd72A9i73tUIgo3Evc5bArTrLY8kZAZ+7/KCmVS9HVRd9k21HJYivKxftx9CiL/9TlzotWy4XpXe3kCTZxd6gOuPqP25eOnrwoxFL8s3YAwec5jL8/MOssjbOcV0boPCmJxqakuDfJn0sk0FBnIewKQP/6AWDzJiA4hMMEBXE5oJSVlChEFM8nS1/22bQJqIB4fXyOMkQREEDf/fhhpxA3xJ/Ou0hOFu/H+kLq3gqLo7K1hI8H6feUmBhFiILzW9bs3Q01ay0wJFMJouDwduIyjsMB6HQ8ZnIMzRkdLTE+6Sy+k8no4h4hLS3evbzyeRwKEYU3F4yLG6QSYvtHFGYzjU9M5DGLFtEY9t2D94mPp32ioliswQBc8vCCcVub5PXG/hDFw/eGHcDiiUDFMnlBWM4DY/KVknnV61EYQeMrK3lMURFbf6lDuh96Pc37Xqo43m53TxB7qoFRo2UGwvOM6V7LVx/8acnYd4C567gJKS15uMN4iXtULD4MTN4qdU2Q5dPp6D8CSU2V9xX70xKp+xd5Fha/Ole4UrjWZ5ml+6HR0P0wGqX94uK4e6qtrfzOpKsLONYKFBcBU6e5+vwHZGEwdzWiOoEAAAAASUVORK5CYII=');
+	}
+
+	@include hamburger();
+
+	nav {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		height: $logo-height;
+		margin-top: -($logo-height / 2);
+
+		font-family: $font-verdana;
+		font-size: 13px;
+		font-weight: 400;
+
+		ul {
+			list-style-type: none;
+
+			li {
+				display: inline-block;
+				height: $logo-height;
+				line-height: $logo-height;
+				margin-right: $default-gutter-width;
+				margin-left: $menu-item-gutter;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: $white;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
+
+
+	// Mobile
+	@media only screen and (max-width: $mobile-breakpoint) {
+		.logo {
+			left: $default-gutter-width;
+		}
+
+		.hamburger {
+			right: $default-gutter-width;
+		}
+
+		nav {
+			// reset desktop values
+			width: $mobile-content-width;
+			height: auto;
+			margin-top: 0;
+
+			display: none; // hidden by default @ mobile screen size
+			position: absolute;
+			top: ($header-height / 2);
+			left: 0;
+			box-sizing: border-box;
+			padding: 0 $default-gutter-width $default-gutter-width;
+			z-index: 1; // at least 1 level higher than the content if something fishy happens
+
+			font-size: 14px;
+			font-weight: 600; // damn it looks ugly on mac
+			background-color: $tictrac-blue;
+			box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+
+			ul {
+				height: auto;
+
+				background-color: $nav-blue;
+
+				li {
+					display: block;
+					height: $large-block-height;
+					margin: 0;
+				}
+			}
+
+			a {
+				display: block;
+				height: $large-block-height;
+				line-height: $large-block-height;
+				padding-left: $default-gutter-width;
+
+				&:hover,
+				&:focus {
+					text-decoration: none;
+					background-color: $menu-item-blue-active;
+				}
+			}
+		}
+	}
+}

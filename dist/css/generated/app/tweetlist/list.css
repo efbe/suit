@@ -1,0 +1,55 @@
+.tweet {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef; }
+  .tweet::before, .tweet::after {
+    content: ' ';
+    display: table; }
+  .tweet::after {
+    clear: both; }
+  .tweet:last-child {
+    border-bottom: 0; }
+  .tweet .avatar {
+    display: block;
+    width: 48px;
+    height: 48px;
+    font-size: 10px;
+    float: left; }
+  .tweet .content {
+    width: 502px;
+    overflow: hidden;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    float: right; }
+  .tweet .item-header {
+    font-size: 13px;
+    line-height: 150%; }
+    .tweet .item-header::before, .tweet .item-header::after {
+      content: ' ';
+      display: table; }
+    .tweet .item-header::after {
+      clear: both; }
+    .tweet .item-header a {
+      text-decoration: none;
+      color: #777; }
+    .tweet .item-header .user-details {
+      float: left; }
+      .tweet .item-header .user-details:hover .user-screen-name {
+        text-decoration: underline; }
+    .tweet .item-header .user-screen-name {
+      font-weight: 600;
+      color: #222; }
+    .tweet .item-header .timestamp {
+      font-style: italic;
+      float: right; }
+      .tweet .item-header .timestamp:hover {
+        text-decoration: underline; }
+  .tweet .item-text {
+    font-size: 12px;
+    line-height: 150%;
+    color: #555; }
+
+@media only screen and (max-width: 640px) {
+  .tweet .content {
+    width: 220px; } }

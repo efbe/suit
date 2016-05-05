@@ -1,0 +1,38 @@
+// hamburger.scss
+// Tweet list hamburger button module
+// @author eFBe
+
+@import '../../../theme/tictrac/app/tweetlist/_config';
+
+
+@mixin hamburger {
+	.hamburger {
+		display: none; // hidden @ desktop screen size
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -($hamburger-height / 2);
+		width: $hamburger-width;
+		height: $hamburger-height;
+
+		&::before,
+		&::after,
+		.hamburger-inner {
+			display: block;
+			content: ' ';
+			height: round($hamburger-height / 6);
+			overflow: hidden;
+			text-indent: -999px;
+			margin-bottom: 4px; // my OCD says it should be 3 as well but the designers know it better
+
+			background-color: $white;
+		}
+	}
+
+	// Mobile
+	@media only screen and (max-width: $mobile-breakpoint) {
+		.hamburger {
+			display: block;
+		}
+	}
+}

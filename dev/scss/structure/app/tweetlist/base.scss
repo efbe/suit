@@ -1,0 +1,51 @@
+// base.scss
+// Tweet list core element rule set
+// @author eFBe
+
+@import '../../../theme/tictrac/app/tweetlist/_config';
+
+
+html,
+body {
+	background-color: $background-gray;
+}
+
+main {
+	border-top: $border-width solid $white;
+}
+
+// common section props
+section {
+	position: relative; // comes handy when the <nav> is absolute in mobile mode
+	max-width: $content-width;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+
+.list-content {
+	margin-top: -($header-height / 2 + 2); // don't forget the bottom borders!
+
+	background-color: $white;
+}
+
+
+// service classes
+
+// Sorry but has to be higher spec' than an ID
+// scss-lint:disable ImportantRule
+.visible {
+	display: block !important;
+}
+
+
+// Mobile
+@media only screen and (max-width: $mobile-breakpoint) {
+	section {
+		max-width: $mobile-content-width;
+	}
+
+	.list-content {
+		margin-bottom: $default-gutter-width;
+		border-bottom: $border-width solid $border-light-gray;
+	}
+}

@@ -69,6 +69,10 @@ module.exports = function (grunt) {
 					],
 					'dist/min/datasheet.min.css': [
 						'dist/css/config/datasheet.css'
+					],
+					// Tictrac recruiting exercise
+					'dist/min/tictrac.min.css': [
+						'dist/css/config/tictrac.css'
 					]
 				}
 			}

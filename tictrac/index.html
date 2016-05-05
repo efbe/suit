@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tictrac | Twitter Feed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" media="screen" href="../dist/min/tictrac.min.css">
+    </head>
+    <body>
+        <header>
+            <section class="header-bar">
+                <a class="logo" href="/">Tictrac</a>
+                <a href="#" class="hamburger js-toggle-menu" role="switch" aria-checked="false">
+                    <span class="hamburger-inner">Toggle menu</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                        <li><a href="#">Item 4</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main>
+            <section class="list-content">
+                <div class="tweet">
+                    <img class="avatar" src="https://pbs.twimg.com/profile_images/517713777244921856/2arKQr0d_bigger.jpeg" alt="Tictrac">
+
+                    <div class="content">
+                        <p class="item-header">
+                            <a href="#" class="user-details">
+                                <span class="user-screen-name">Tictrac</span>
+                                <span class="user-twitter-name">@Tictrac</span>
+                            </a>
+                            <a href="#" class="timestamp">6 July</a>
+                        </p>
+                        <p class="item-text">
+                            Yes, insurers want your health data - but not for the reason you think | #DigitalHealth #WearableTech https://t.co/hEOgQa2w7J
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tweet">
+                    <img class="avatar" src="https://pbs.twimg.com/profile_images/517713777244921856/2arKQr0d_bigger.jpeg" alt="Tictrac">
+
+                    <div class="content">
+                        <p class="item-header">
+                            <a href="#" class="user-details">
+                                <span class="user-screen-name">Tictrac</span>
+                                <span class="user-twitter-name">@Tictrac</span>
+                            </a>
+                            <a href="#" class="timestamp">6 July</a>
+                        </p>
+                        <p class="item-text">
+                            Patient power and technology 'changing medicine' | #DigitalHealth #BigData #WearableTech https://t.co/izvrRNw2kF
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tweet">
+                    <img class="avatar" src="https://pbs.twimg.com/profile_images/517713777244921856/2arKQr0d_bigger.jpeg" alt="Tictrac">
+
+                    <div class="content">
+                        <p class="item-header">
+                            <a href="#" class="user-details">
+                                <span class="user-screen-name">Tictrac</span>
+                                <span class="user-twitter-name">@Tictrac</span>
+                            </a>
+                            <a href="#" class="timestamp">6 July</a>
+                        </p>
+                        <p class="item-text">
+                            #WearableTech & #Nanotech: The Future of #Healthcare #DigitalHealth | https://t.co/v6SwS4ux9S
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tweet">
+                    <img class="avatar" src="https://pbs.twimg.com/profile_images/517713777244921856/2arKQr0d_bigger.jpeg" alt="Tictrac">
+
+                    <div class="content">
+                        <p class="item-header">
+                            <a href="#" class="user-details">
+                                <span class="user-screen-name">Tictrac</span>
+                                <span class="user-twitter-name">@Tictrac</span>
+                            </a>
+                            <a href="#" class="timestamp">6 July</a>
+                        </p>
+                        <p class="item-text">
+                            Baby Boomers and the Future of Health Care | #DigitalHealth #WearableTech https://t.co/WUCeuHL2Q5
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tweet">
+                    <img class="avatar" src="https://pbs.twimg.com/profile_images/517713777244921856/2arKQr0d_bigger.jpeg" alt="Tictrac">
+
+                    <div class="content">
+                        <p class="item-header">
+                            <a href="#" class="user-details">
+                                <span class="user-screen-name">Tictrac</span>
+                                <span class="user-twitter-name">@Tictrac</span>
+                            </a>
+                            <a href="#" class="timestamp">6 July</a>
+                        </p>
+                        <p class="item-text">
+                            Tictrac is hiring! Javascript Engineer: https://t.co/TYttVuk5Lh
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="jquery-1.7.1.min.js"><\/script>')</script>
+
+        <!-- Sorry for not using an external file, but I was in a hurry -->
+        <script>
+            $(document).ready(function() {
+                $('.js-toggle-menu').click(toggleMenu);
+
+                /**
+                 * Toggles the main menu and its Aria state in mobile mode
+                 * @method toggleMenu
+                 * @param {Object} elem
+                 */
+                function toggleMenu (elem) {
+                    var target = $(elem.target);
+                        button = target.closest('.js-toggle-menu');
+
+                    elem.preventDefault();
+
+                    if (button.attr('aria-checked') === 'false') {
+                        button.attr('aria-checked', true);
+                    } else {
+                        button.attr('aria-checked', false);
+                    }
+
+                    $('nav').toggleClass('visible');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+// list.scss
+// Tweet list list components
+// @author eFBe
+
+@import '../../../mixin/_float';
+@import '../../../theme/tictrac/app/tweetlist/_config';
+
+.tweet {
+	margin-right: $default-gutter-width;
+	margin-left: $default-gutter-width;
+	padding-top: $default-gutter-width;
+	padding-bottom: $default-gutter-width;
+
+	border-bottom: $border-width solid $border-gray;
+
+	@include clear();
+
+	&:last-child {
+		border-bottom: 0;
+	}
+
+	.avatar {
+		display: block;
+		width: 48px;
+		height: 48px;
+
+		font-size: 10px; // in case of the <img> tag would be broken
+
+		@include float-left();
+	}
+
+	.content {
+		width: $tweet-width;
+		overflow: hidden;
+
+		font-family: $font-arial;
+
+		@include float-right();
+	}
+
+	.item-header {
+		font-size: 13px;
+		line-height: $default-line-height;
+
+		@include clear();
+
+		a {
+			text-decoration: none;
+			color: $item-title-gray;
+		}
+
+		.user-details {
+			@include float-left;
+
+			&:hover .user-screen-name {
+				text-decoration: underline;
+			}
+		 }
+
+		.user-screen-name {
+			font-weight: 600;
+			color: $username-black;
+		}
+
+		.timestamp {
+			font-style: italic;
+
+			@include float-right;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.item-text {
+		font-size: 12px;
+		line-height: $default-line-height;
+		color: $text-gray;
+	}
+}
+
+// Mobile
+@media only screen and (max-width: $mobile-breakpoint) {
+	.tweet {
+		.content {
+			width: $tweet-width-mobile;
+		}
+	}
+}
