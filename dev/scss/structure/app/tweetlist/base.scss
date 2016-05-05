@@ -22,6 +22,7 @@ section {
 	box-sizing: border-box;
 }
 
+// tweet list wrapper
 .list-content {
 	margin-top: -($header-height / 2 + 2); // don't forget the bottom borders!
 
@@ -31,7 +32,7 @@ section {
 
 // service classes
 
-// Sorry but has to be higher spec' than an ID
+// Sorry but has to be higher spec'ed than other selectors
 // scss-lint:disable ImportantRule
 .visible {
 	display: block !important;

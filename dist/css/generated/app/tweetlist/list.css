@@ -52,4 +52,6 @@
 
 @media only screen and (max-width: 640px) {
   .tweet .content {
-    width: 220px; } }
+    width: 220px; }
+  .tweet .user-twitter-name {
+    display: none; } }
