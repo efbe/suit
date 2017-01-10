@@ -24,7 +24,7 @@
 		margin-bottom: $large-padding;
 
 		// some note under h5
-		& + .sub-note {
+		+ .sub-note {
 			margin-top: -$large-padding;
 			padding-bottom: $default-padding;
 		}
@@ -75,19 +75,19 @@
 			&:last-child {
 				padding-bottom: 0;
 			}
+
+			+ ul {
+				margin-top: -$default-padding;
+			}
 		}
 
 		ul {
 			padding-left: $xlarge-padding;
 			list-style-type: square;
-		}
 
-		ul li {
-			margin-bottom: $small-padding;
-		}
-
-		p + ul {
-			margin-top: -$default-padding;
+			li {
+				margin-bottom: $small-padding;
+			}
 		}
 
 		.code-panel {
@@ -106,7 +106,7 @@
 		h5 {
 			margin-bottom: $xsmall-padding;
 
-			& + .sub-note {
+			+ .sub-note {
 				margin-top: -$xsmall-padding;
 			}
 		}

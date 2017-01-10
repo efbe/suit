@@ -4,33 +4,33 @@
 
 @import '../essential/_global-variables';
 @import '../../../mixin/_color';
-@import '../essential/colors';
+@import '../essential/_colors';
 
 
 // Dimensions & percentages
 
 @mixin table {
-    font-size: $font-size-default;
+	font-size: $font-size-default;
 }
 
 @mixin table-head-cell {
-    padding: $default-padding;
-    color: $black;
-    background-color: tint($led-suit-white, 40%);
+	padding: $default-padding;
+	color: $black;
+	background-color: tint($led-suit-white, 40%);
 }
 
 @mixin table-row {
-    background-color: $white;
+	background-color: $white;
 }
 
 @mixin table-cell {
-    padding: $small-padding $default-padding;
-    color: $silky-black;
-    border-bottom: 1px solid $led-suit-white;
+	padding: $small-padding $default-padding;
+	color: $silky-black;
+	border-bottom: 1px solid $led-suit-white;
 }
 
 @mixin table-striped {
-    tr:nth-of-type(even) {
-        background-color: tint($led-suit-white, 60%);
+	tr:nth-of-type(even) {
+		background-color: tint($led-suit-white, 60%);
     }
 }

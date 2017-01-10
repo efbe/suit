@@ -29,13 +29,13 @@ main article p {
   padding-bottom: 24px; }
   main article p:last-child {
     padding-bottom: 0; }
+  main article p + ul {
+    margin-top: -12px; }
 main article ul {
   padding-left: 24px;
   list-style-type: square; }
-main article ul li {
-  margin-bottom: 8px; }
-main article p + ul {
-  margin-top: -12px; }
+  main article ul li {
+    margin-bottom: 8px; }
 main article .code-panel {
   margin-bottom: 24px; }
 main .tooltip {

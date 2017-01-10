@@ -3,9 +3,9 @@
 // @author eFBe
 
 @function split-half($value) {
-  @return round($value / 2);
+	@return round($value / 2);
 }
 
 @function split-quarter($value) {
-  @return round($value / 4);
+	@return round($value / 4);
 }

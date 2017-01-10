@@ -45,3 +45,6 @@ linters:
       #- background-color
       #- color
       - font
+  # Remove this when dropping some of the browser support
+  VendorPrefix:
+    enabled: false

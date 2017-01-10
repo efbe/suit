@@ -8,7 +8,7 @@
   .code-panel code {
     tab-size: 2;
     padding: 0;
-    border: none;
+    border: 0;
     box-shadow: none;
     white-space: pre-wrap;
     line-height: 130%;
