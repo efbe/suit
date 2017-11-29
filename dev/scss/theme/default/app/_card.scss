@@ -1,0 +1,130 @@
+// Card app design
+
+.card {
+	width: round($card-size / 2);
+	height: round($card-size / 2);
+	background-color: $color-white;
+
+	// Could be a design mixin as well - stolen from Material Design btw
+	&.box-shadow {
+		box-shadow: $panel-box-shadow;
+	}
+
+	a {
+		color: $color-white;
+		position: relative; // need this for the link, otherwise it's junk
+
+		@include animated-link(
+			$bottom-position: 0,
+			$height: $border-width-thin,
+			$background-color: $color-white
+		);
+	}
+
+	p {
+		margin-bottom: $gutter-xsmall;
+		font-size: $font-size-big;
+		color: $color-white;
+
+		@include text-ellipsis();
+	}
+
+	h6 {
+		margin-bottom: $gutter-xsmall;
+		font-size: $font-size-large;
+		color: $color-white;
+
+		@include text-ellipsis();
+
+		a {
+			&:before {
+				bottom: -$border-width-default;
+				height: $border-width-default;
+			}
+		}
+	}
+
+	.button {
+		color: $color-white;
+
+		&:before {
+			height: 0; // link underline reset
+		}
+	}
+
+	.overlay {
+		width: round($card-size / 2);
+		height: round($card-size / 2);
+		background-color: transparent;
+		transition: background-color $animation-ease-default;
+
+		&:before {
+			height: 0; // link underline reset
+		}
+	}
+
+	.info {
+		padding: $gutter-small;
+		background-color: rgba(0, 0, 0, $half-transparent);
+	}
+
+	.utilities {
+		padding: $gutter-xsmall 0;
+	}
+}
+
+// Tablet + up
+@media screen and (min-width: $breakpoint-desktop) {
+	.card {
+		width: $card-size;
+
+		a {
+			color: $color-silk;
+
+			&:before {
+				background-color: $color-silk;
+			}
+		}
+
+		h6 {
+			margin-bottom: 0;
+			font-size: $font-size-xlarge;
+			color: $color-silk;
+		}
+
+		.thumbnail {
+			float: left;
+			width: round($card-size / 2);
+		}
+
+		.overlay {
+			&:hover {
+				background-color: rgba(0, 0, 0, $half-transparent / 2);
+			}
+		}
+
+		.title {
+			margin-bottom: $gutter-small;
+			font-size: $font-size-large;
+			color: $color-silk;
+		}
+
+		.description {
+			font-size: $font-size-small;
+			color: $color-silk;
+		}
+
+		.info {
+			height: round($card-size / 2);
+			width: round($card-size / 2);
+			background-color: $color-white;
+		}
+
+		.utilities {
+			bottom: $gutter-small;
+			left: $gutter-small;
+			width: round($card-size / 2 - 2 * $gutter-small);
+			padding: 0;
+		}
+	}
+}

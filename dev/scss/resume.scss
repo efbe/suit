@@ -1,0 +1,24 @@
+// "resume" SCSS group config
+
+// Vars - this has to be the first
+@import 'theme/default/essential/_variables';
+
+// "Frame" essentials
+@import 'frame/essential/_mixins';
+@import 'frame/essential/_reset';
+@import 'frame/essential/_utilities';
+@import 'frame/essential/_button';
+
+// App structure
+@import 'frame/app/_resume';
+
+// "Theme" essentials
+@import 'theme/default/essential/_typo';
+@import 'theme/default/essential/_button';
+
+// Plugins
+@import 'theme/default/plugin/_icon';
+@import 'theme/default/plugin/_button-icon';
+
+// Apps design
+@import 'theme/default/app/_resume';

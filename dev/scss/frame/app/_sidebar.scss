@@ -1,0 +1,34 @@
+// Sidebar app structure
+
+.sidebar {
+	@include clear();
+}
+
+.content {
+	position: relative;
+}
+
+// Tablet + up
+@media screen and (min-width: $breakpoint-desktop) {
+	.sidebar,
+	.content {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		overflow-y: auto;
+	}
+
+	.sidebar {
+		&.left + .content {
+			right: 0;
+		}
+
+		&.right {
+			right: 0;
+
+			+ .content {
+				left: 0;
+			}
+		}
+	}
+}

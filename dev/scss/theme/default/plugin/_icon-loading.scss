@@ -1,0 +1,18 @@
+// Loading plugin for icons
+
+.icon {
+	&.loading {
+		display: block;
+		height: $icon-size;
+		width: $icon-size;
+		animation: icon-rotate $animation-linear-slow infinite;
+		border: $border-width-default solid $color-white;
+		border-right-color: transparent;
+		border-radius: 50%;
+	}
+}
+
+@keyframes icon-rotate {
+	0%   { transform: rotate(0deg);   }
+	100% { transform: rotate(360deg); }
+}

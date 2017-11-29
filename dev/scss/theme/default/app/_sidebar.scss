@@ -1,0 +1,143 @@
+// Sidebar app design including main elements + documentation
+
+body {
+	background-color: $color-white; // outside the viewport
+}
+
+.sidebar {
+	padding: $gutter-xsmall $gutter-small;
+	background-color: $color-green;
+	box-shadow: $panel-box-shadow;
+
+	h1 {
+		font-size: $font-size-xxlarge;
+		color: $color-white;
+	}
+
+	p {
+		padding-top: $gutter-small;
+		padding-bottom: $gutter-small;
+		line-height: round($font-size-default * $default-line-height-decimal);
+		font-size: $font-size-default;
+		color: $color-black;
+	}
+
+	.button {
+		float: left;
+	}
+
+	.utilities {
+		margin-left: $gutter-xsmall;
+		float: left;
+
+		.button {
+			float: left;
+			margin-right: $gutter-xsmall;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.content {
+	min-height: 60vh; // let's assume the header is not bigger than 40%
+	background-color: $color-white;
+
+	&.documentation {
+		padding: $gutter-small;
+	}
+
+	h2 {
+		margin: $gutter-default 0;
+		font-size: $font-size-large;
+	}
+
+	p {
+		margin-bottom: $gutter-default;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		margin-bottom: $gutter-default;
+		margin-left: $gutter-large;
+
+		li {
+			margin-bottom: $gutter-small;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		.description {
+			display: block;
+		}
+	}
+
+	.chapter {
+		padding-bottom: $gutter-large;
+	}
+}
+
+// Tablet + up
+@media screen and (min-width: $breakpoint-desktop) {
+	.sidebar {
+		padding: $gutter-large;
+		height: 100vh;
+		width: 20%;
+
+		h1 {
+			font-size: $font-size-xxxlarge;
+		}
+
+		p {
+			padding-top: $gutter-default;
+			padding-bottom: $gutter-xlarge;
+			font-size: $font-size-small;
+		}
+
+		.button {
+			float: none;
+		}
+
+		.utilities {
+			position: absolute;
+			bottom: $gutter-large;
+			float: none;
+			margin-left: 0;
+
+			.button {
+				margin-right: $gutter-small;
+			}
+		}
+	}
+
+	.content {
+		height: 100vh;
+		width: 80%;
+
+		&.documentation {
+			padding: $gutter-large;
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: $gutter-default;
+			line-height: round($font-size-xxxlarge * $default-line-height-decimal);
+			font-size: $font-size-xlarge;
+		}
+
+		.chapter {
+			padding-bottom: $gutter-xlarge;
+
+			&:last-of-type {
+				padding-bottom: $gutter-xsmall;
+			}
+		}
+	}
+}

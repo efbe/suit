@@ -1,0 +1,47 @@
+// Card app structure
+
+.card {
+	position: relative;
+
+	img {
+		@include stretch-image();
+	}
+
+	.thumbnail {
+		position: relative;
+		height: 100%; // keep the card structure when image is not loaded
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		display: block;
+	}
+
+	.info {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.utilities {
+		.button {
+			float: right; // this removes the size switching from icon-only to regular button
+		}
+	}
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-desktop) {
+	.card {
+		.info {
+			position: relative; // reset absolute position
+			bottom: auto;
+			float: left;
+		}
+
+		.utilities {
+			position: absolute;
+		}
+	}
+}

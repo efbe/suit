@@ -1,0 +1,179 @@
+// Resume app design
+
+
+.sidebar {
+	padding: $gutter-small;
+	background-color: $color-blue;
+	box-shadow: $panel-box-shadow;
+
+	h1 {
+		float: left;
+		font-weight: $text-medium;
+		color: $color-white;
+
+		a {
+			color: $color-white;
+		}
+	}
+
+	.button {
+		background-color: $color-blue;
+
+		&:hover {
+			background-color: transparent;
+		}
+
+		&:focus {
+			outline: none;
+			background-color: shade($color-blue, 10%);
+		}
+	}
+
+	.thumbnail {
+		display: block;
+		float: left;
+		max-width: $font-size-xxlarge;
+		margin-right: $gutter-small;
+		border-radius: $border-radius-circle;
+		box-shadow: $floating-action-box-shadow;
+		border: $border-width-default solid $color-white;
+	}
+
+	.utilities {
+		@include vertical-center();
+
+		right: $gutter-xsmall;
+		list-style-type: none;
+
+		li {
+			line-height: 1;
+			float: left;
+		}
+
+		.button {
+			margin-right: $gutter-xsmall;
+		}
+	}
+}
+
+.content {
+	margin-top: $gutter-xlarge; // sidebar height as a header;
+	background-color: $color-white;
+
+	h2 {
+		margin: $gutter-default 0;
+		font-size: $font-size-large;
+	}
+
+	h3 {
+		font-size: $font-size-big;
+	}
+
+	p {
+		margin-bottom: $gutter-default;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	a {
+		color: $color-blue;
+		position: relative; // need this for the link, otherwise it's junk
+
+		@include animated-link(
+				$bottom-position: 0,
+				$height: $border-width-thin,
+				$background-color: $color-blue
+		);
+	}
+
+	.chapter {
+		padding: $gutter-default;
+
+		&:nth-child(even) {
+			background-color: tint($color-silver, 70%);
+
+			h2 {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.sub-note {
+		font-size: $font-size-small;
+		color: tint($color-silk, 20%);
+	}
+}
+
+
+// Tablet + up
+@media screen and (min-width: $breakpoint-desktop) {
+	.sidebar {
+		padding: $gutter-large;
+		height: 100vh;
+
+		h1 {
+			float: none;
+			font-size: $font-size-xxlarge;
+		}
+
+		.thumbnail {
+			float: none;
+			margin: 0 auto $gutter-large;
+			max-width: round($card-size / 6);
+		}
+
+		.utilities {
+			right: auto;
+			top: auto;
+			transform: none;
+			bottom: $gutter-large;
+
+			li {
+				float: none;
+				margin-bottom: $gutter-xsmall;
+			}
+
+			.button {
+				margin-right: 0;
+
+				&:hover {
+					background-color: shade($color-blue, 10%);
+				}
+			}
+		}
+	}
+
+	.content {
+		margin-top: 0;
+		padding: $gutter-large;
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: $gutter-default;
+			font-size: $font-size-xlarge;
+		}
+
+		h3 {
+			font-size: $font-size-large;
+		}
+
+		.chapter {
+			padding: 0 0 $gutter-xlarge;
+
+			// About vs. Projects
+			&:first-of-type {
+				padding-bottom: $block-height-xxlarge;
+			}
+
+			&:last-of-type {
+				padding-bottom: $gutter-xsmall;
+			}
+
+			&:nth-child(even) {
+				background-color: transparent;
+			}
+		}
+	}
+}

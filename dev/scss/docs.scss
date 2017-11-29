@@ -1,0 +1,32 @@
+// "docs" SCSS group config
+// Modules should be added cascading! It's CSS after all
+
+// Vars - this has to be the first
+@import 'theme/default/essential/_variables';
+
+// "Frame" essentials
+@import 'frame/essential/_mixins';
+@import 'frame/essential/_reset';
+@import 'frame/essential/_utilities';
+@import 'frame/essential/_button';
+
+// App structure
+@import 'frame/app/_sidebar';
+@import 'frame/app/_card';
+
+// "Theme" essentials
+@import 'theme/default/essential/_typo';
+@import 'theme/default/essential/_button';
+
+// Plugins
+@import 'theme/default/plugin/_icon';
+@import 'theme/default/plugin/_button-icon';
+@import 'theme/default/plugin/_code';
+
+// Apps design
+@import 'theme/default/app/_sidebar';
+@import 'theme/default/app/_card';
+
+// Optional plugins
+@import 'theme/default/plugin/_card-loading';
+@import 'theme/default/plugin/_icon-loading';

@@ -1,0 +1,36 @@
+// Code module
+
+pre,
+code {
+	white-space: nowrap;
+	padding: round($gutter-xsmall / 2) $gutter-xsmall;
+	font-family: $font-monospace;
+	font-size: $font-size-xsmall;
+	color: $color-white;
+	border: $border-width-thin solid shade($color-green, 10%);
+	border-radius: $border-radius;
+	background-color: $color-green;
+}
+
+// code block
+pre {
+	margin-bottom: $gutter-default;
+	padding: $gutter-small;
+
+	code {
+		white-space: pre-wrap;
+		tab-size: 2;
+		padding: 0;
+		line-height: $default-line-height;
+		border: 0;
+		color: $color-white;
+	}
+
+	strong {
+		font-weight: $text-semi-bold;
+	}
+
+	.comment {
+		color: $color-silk;
+	}
+}

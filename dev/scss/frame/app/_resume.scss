@@ -1,0 +1,51 @@
+// Resume app structure
+
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1; // should be on top when page is scrolled
+
+	.thumbnail {
+		overflow: hidden;
+	}
+
+	.utilities {
+		position: absolute;
+	}
+}
+
+.content {
+	top: 0;
+	bottom: 0;
+	overflow-y: auto;
+}
+
+
+// Tablet + up
+@media screen and (min-width: $breakpoint-desktop) {
+	body {
+		display: flex;
+	}
+
+	.sidebar {
+		position: relative;
+		height: 100vh;
+		width: auto;
+
+		@include clear();
+
+		h1 {
+			white-space: nowrap;
+		}
+
+		img {
+			@include stretch-image();
+		}
+	}
+
+	.content {
+		height: 100vh;
+	}
+}

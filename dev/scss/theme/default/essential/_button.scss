@@ -1,0 +1,36 @@
+// Button design
+
+.button {
+	padding: $gutter-small;
+	font-size: $font-size-big;
+	font-weight: $text-extra-light;
+	color: $color-white;
+	background-color: $color-green;
+	border-radius: $border-radius;
+	transition: background-color $animation-linear-default;
+
+	&:hover {
+		color: $color-white; // default <a> override
+		background-color: shade($color-green, 10%);
+	}
+
+	// Sizes first
+	&.button-small {
+		margin-left: -$gutter-xsmall;
+		padding: $gutter-xsmall;
+		font-size: $font-size-default;
+	}
+
+	// Design afterwards
+	&.button-hollow {
+		background-color: transparent;
+
+		&:hover {
+			background-color: shade($color-green, 20%);
+		}
+	}
+
+	&.button-dark {
+		color: $color-black;
+	}
+}

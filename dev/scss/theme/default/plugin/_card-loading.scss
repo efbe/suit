@@ -1,0 +1,98 @@
+// Loading skeleton plugin for the card module
+// @requires _card.scss
+
+// these local vars can be moved to the global _variables.scss later on
+$silver-gradient: linear-gradient(90deg, rgba($color-silver, 0) 0, rgba($color-silver, $half-transparent) 90%, rgba($color-silver, 0) 100%);
+$white-gradient:  linear-gradient(90deg, rgba($color-white, 1) 0, rgba($color-white, 0.8) 80%, rgba($color-white, 1) 100%);
+
+$loader-infinite-animation: 2s infinite;
+
+$skeleton-text-width: 60%;
+$skeleton-text-width-decimal: 0.6;
+
+// Animation keyframes based on element width
+@keyframes loading-headline {
+	to {
+		background-position: round($card-size / 2 - $gutter-small * 2) 0;
+	}
+}
+
+@keyframes loading-text {
+	to {
+		background-position: round(round($card-size / 2 - $gutter-small * 2) * $skeleton-text-width-decimal) 0;
+	}
+}
+
+
+.card-loading {
+	background-color: $color-silver;
+
+	h6 {
+		width: 100%;
+		height: round($font-size-large * $default-line-height-decimal);
+		background-image: $white-gradient;
+		background-size: 100% 100%;
+		animation: loading-headline $loader-infinite-animation;
+		border-radius: $border-radius;
+
+		a {
+			display: none; // cheap emulation of async loading
+		}
+	}
+
+	.thumbnail {
+		picture {
+			display: none; // cheap emulation of async loading
+		}
+	}
+
+	.overlay {
+		display: none; // hide thumb link while image is loading
+	}
+
+	.title {
+		width: $skeleton-text-width;
+		height: round($font-size-big * $default-line-height-decimal);
+		background-image: $white-gradient;
+		background-size: 100% 100%;
+		animation: loading-text $loader-infinite-animation;
+		border-radius: $border-radius;
+
+		a {
+			display: none; // cheap emulation of async loading
+		}
+	}
+}
+
+
+// Desktop
+@media screen and (min-width: $breakpoint-desktop) {
+	.card-loading {
+		h6 {
+			height: round($font-size-xlarge * $default-line-height-decimal);
+			margin-bottom: $gutter-xsmall;
+			background-image: $silver-gradient;
+		}
+
+		.title {
+			height: round($font-size-large * $default-line-height-decimal);
+			margin-bottom: $gutter-xsmall;
+			background-image: $silver-gradient;
+		}
+
+		// only visible @ desktop view
+		.description {
+			width: $skeleton-text-width;
+			height: round($font-size-default * $default-line-height-decimal);
+			background-image: $silver-gradient;
+			background-size: 100% 100%;
+			animation: loading-text $loader-infinite-animation;
+			border-radius: $border-radius;
+
+			.label,
+			.release-date {
+				display: none; // cheap emulation of async loading
+			}
+		}
+	}
+}

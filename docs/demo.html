@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Suit</title>
+
+	<link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="../dist/min/docs.css">
+</head>
+<body>
+	<nav class="sidebar left">
+		<h1>Suit</h1>
+		<p>A dual layer, modular approach for creating easily maintainable, theme-based UI for the web.</p>
+		<a class="button button-small button-icon" href="../index.html">
+			<i title="See the documentation" class="icon material-icons handheld-only">assignment</i>
+			<span class="text">See the documentation</span>
+		</a>
+
+		<section class="utilities clear">
+			<a title="Suit on Github" class="button button-dark button-small button-icon" href="https://github.com/efbe/suit">
+				<svg class="icon" viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+					<path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+				</svg>
+				<span class="text">Suit on Github</span>
+			</a>
+			<a class="button button-dark button-small button-icon" href="https://efbe.github.io/resume">
+				<i title="About me" class="icon material-icons">face</i>
+				<span class="text">About me</span>
+			</a>
+		</section>
+	</nav>
+
+	<main class="content">
+		<section class="absolute-center">
+			<div class="card box-shadow card-loading" id="demo-card">
+				<section class="thumbnail">
+					<picture>
+						<source srcset="../assets/images/demo/leon_vynehall_rojus-600.jpg" media="(min-width: 420px)">
+						<img src="../assets/images/demo/leon_vynehall_rojus-300.jpg" alt="Leon Vynehall: Rojus">
+					</picture>
+					<a title="Leon Vynehall: Rojus" class="overlay" href="#"></a>
+				</section>
+				<section class="info">
+					<h6 class="author"><a href="#">Leon Vynehall</a></h6>
+					<p class="title"><a href="#">Rojus</a></p>
+					<p class="description desktop-only">
+						<span class="release-date">2016</span>
+						<a class="label" href="#">Running Back</a>
+					</p>
+					<div class="utilities text-right">
+						<a class="button button-icon icon-only" href="#">
+							<i id="demo-button-loader-icon" class="icon loading"></i>
+							<span id="demo-button-price" class="hidden">GBP 9.99</span>
+						</a>
+					</div>
+				</section>
+			</div>
+		</section>
+	</main>
+</body>
+
+<script>
+	// Prevent elements with # as href to "work"
+	function preventDefaultLink() {
+		var emptyLinks = document.querySelectorAll('a[href="#"]');
+
+		for (var i = 0; i < emptyLinks.length; i++) {
+			emptyLinks[i].addEventListener('click', function(event) {
+				event.preventDefault();
+			});
+		}
+	}
+
+	// Remove loading classes from demo card
+	// Easier with ID-s this time
+	function removeLoaders() {
+		setTimeout(function() {
+			document.getElementById('demo-card').classList.remove('card-loading');
+			document.getElementById('demo-button-loader-icon').classList.add('hidden');
+			document.getElementById('demo-button-price').classList.remove('hidden');
+		}, 3000);
+	}
+
+	preventDefaultLink();
+	removeLoaders();
+</script>
+</html>

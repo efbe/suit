@@ -1,0 +1,111 @@
+// Useful Mixin collection
+
+
+// Micro clear by @necolas
+// @info http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clear {
+	&::before,
+	&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+// Vertically centers the element inside of its first non-static parent
+// @info http://www.sitepoint.com/centering-with-sass/
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Horizontally centers the element inside of its first non-static parent
+// @info http://www.sitepoint.com/centering-with-sass/
+@mixin horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+// Absolutely centers the element inside of its first non-static parent
+// @info http://www.sitepoint.com/centering-with-sass/
+@mixin absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// Block behaviour mixin, good for buttons'n'stuff
+@mixin block {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+// Tint & Shade color functions
+// @info https://gist.github.com/benfrain/7545629
+$tint-color-base: #fff;
+$shade-color-base: #000;
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+	@return mix($tint-color-base, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+	@return mix($shade-color-base, $color, $percent);
+}
+
+// Some typo tweaks
+@mixin text-center {
+	text-align: center;
+}
+
+@mixin font-antialiased {
+	font-smoothing: antialiased;
+}
+
+@mixin user-select($value) {
+	user-select: $value;
+}
+
+// Stretches the image into the container
+@mixin stretch-image {
+	width: 100%;
+	height: auto;
+}
+
+// One line texts end with "…"
+@mixin text-ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Animated underline for links (LtR)
+@mixin animated-link($bottom-position, $height, $background-color) {
+	white-space: nowrap; // underline doesn't really work when chopped into 2 lines
+
+	&:before {
+		content: ' ';
+		position: absolute;
+		bottom: $bottom-position;
+		left: 0;
+		width: 0;
+		height: $height;
+		background-color: $background-color;
+		transition: width $animation-ease-default;
+	}
+
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}

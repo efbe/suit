@@ -1,0 +1,47 @@
+// Typograhic elements
+
+body {
+	font-family: $font-oswald;
+}
+
+p {
+	line-height: $default-line-height;
+	font-size: $font-size-default;
+	font-weight: $text-light;
+	color: $color-silk;
+}
+
+a {
+	color: $color-green;
+	text-decoration: none;
+	transition: color $animation-linear-default;
+
+	&:hover {
+		color: shade($color-green, 20%);
+	}
+}
+
+ul {
+	li {
+		line-height: $default-line-height;
+		font-size: $font-size-default;
+		font-weight: $text-light;
+		color: $color-silk;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: $default-line-height;
+	font-family: $font-fjalla-one;
+	color: $color-silk;
+}
+
+h6 {
+	font-weight: $text-extra-light;
+}
+
+strong {
+	font-weight: $text-medium;
+}
+

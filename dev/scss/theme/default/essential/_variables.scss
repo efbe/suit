@@ -1,0 +1,92 @@
+// Variables - colors, typo, units, etc...
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Oswald:300,500|Material+Icons');
+
+// Typo / Sizes
+// TODO: clean up what you don't use
+
+$font-size-xsmall:   12px !default;
+$font-size-small:    14px !default;
+$font-size-default:  16px !default;
+$font-size-big:      18px !default;
+$font-size-large:    24px !default;
+$font-size-xlarge:   30px !default;
+$font-size-xxlarge:  36px !default;
+$font-size-xxxlarge: 48px !default;
+
+
+// Typo / Weights
+// https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
+
+$text-extra-light: 200 !default;
+$text-light:       300 !default;
+$text-medium:      500 !default;
+$text-semi-bold:   600 !default;
+
+
+// Typo / Families
+
+$font-fjalla-one: "Fjalla One", sans-serif !default;
+$font-oswald:     "Oswald", sans-serif !default;
+$font-monospace:  "Menlo", "Monaco", Courier, monospace !default;
+
+
+// Typo / Misc
+
+$default-line-height: 150% !default;
+$default-line-height-decimal: 1.5 !default; // can be useful if you want to multiply a unit with 'px' value
+
+
+// Screen size breakpoints - taken from Zurb's Foundation
+
+$breakpoint-mobile:  40em !default;
+$breakpoint-desktop: 64em !default;
+
+
+// Colors & Transparency (alphabetically)
+
+$color-black:  rgb(0, 0, 0) !default;
+$color-blue:   rgb(41, 158, 207) !default;
+$color-green:  rgb(33, 210, 121) !default; // new american economy
+$color-silk:   rgb(37, 37, 37) !default;
+$color-silver: rgb(226, 226, 226) !default;
+$color-white:  rgb(255, 255, 255) !default;
+
+$half-transparent: 0.5 !default;
+
+
+// Gutters & Block heights - Need some list of rules otherwise no consistency
+
+$gutter-xsmall:   6px !default;
+$gutter-small:   12px !default;
+$gutter-default: 24px !default;
+$gutter-large:   32px !default;
+$gutter-xlarge:  48px !default;
+
+$block-height-small:   18px !default;
+$block-height-default: $gutter-default !default;
+$block-height-large:   $gutter-large !default;
+$block-height-xlarge:  $gutter-xlarge !default;
+$block-height-xxlarge: 72px !default;
+
+
+// Misc design stuff & dimensions
+
+$icon-size: 16px !default;
+$card-size: 600px !default;
+
+$border-radius: 2px !default;
+$border-radius-circle: 50% !default;
+$border-width-thin: 1px !default;
+$border-width-default: 2px !default;
+
+$animation-time-default: 200ms !default;
+$animation-time-slow:   1000ms !default;
+$animation-linear-default: $animation-time-default linear !default;
+$animation-linear-slow: $animation-time-slow linear !default;
+$animation-ease-default: $animation-time-default ease !default;
+$animation-ease-slow: $animation-time-slow ease !default;
+
+// taken from Material design
+$floating-action-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !default;
+$panel-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12) !default;

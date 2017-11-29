@@ -1,0 +1,62 @@
+// Icon plugin for button module
+// @requires _button.scss, _icon.scss
+
+.button-icon {
+	min-width: $font-size-xlarge; // icon only
+	min-height: $font-size-xlarge; // for svg icons
+
+	.material-icons {
+		color: $color-white;
+	}
+
+	.icon {
+		fill: $color-white;
+	}
+
+	.text {
+		display: none;
+	}
+
+	.icon-svg {
+		margin-bottom: 1px; // fix line-height for the button w/ svg icon only & no text
+	}
+
+	// dark button + icon
+	&.button-dark {
+		.material-icons {
+			color: $color-black;
+		}
+
+		.icon {
+			fill: $color-black;
+		}
+	}
+
+	&.icon-only {
+		min-height: 42px;
+	}
+}
+
+// Desktop
+@media screen and (min-width: $breakpoint-desktop) {
+	.button-icon {
+		.text {
+			display: inline-block;
+		}
+
+		.icon {
+			float: left;
+			margin-right: $gutter-xsmall;
+		}
+
+		.icon-svg {
+			margin-bottom: 0; // works well with text
+		}
+
+		&.icon-only {
+			.icon {
+				margin-right: 0;
+			}
+		}
+	}
+}
