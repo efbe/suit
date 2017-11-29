@@ -5,11 +5,6 @@
 # php storm
 .idea
 
-
-# wonder why does sass need a cache folder
-.sass-cache
-
-
 # personal stuff
 node_modules
 
