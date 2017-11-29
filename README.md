@@ -44,7 +44,7 @@ And here's a snippet of the design-related rules from the *theme* folder:
 The units, colors, typography properties, block sizes, etc... are stored in the theme specific `_variables.scss`.
 
 There's a config SCSS in the root folder for each site or application which is responsible to collect the two layers and merge them with the variables into the desired modules. For this small documentation
-you are reading right now check the [docs.scss](updateMe) where you can see the inclusion order and module separation.
+you are reading right now check the [docs.scss](https://github.com/efbe/suit/blob/master/dev/scss/docs.scss) where you can see the inclusion order and module separation.
 
 ## What about modularity?
 Suit is a combination of stand-alone modules using the popular "atomic design" approach. There are three categories based on the size and complexity of the elements:
