@@ -12,3 +12,7 @@
 
 # personal stuff
 node_modules
+
+# don't need to be on github at all
+resume.html
+design/
