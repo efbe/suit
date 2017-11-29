@@ -1,46 +1,75 @@
-var gulp     = require('gulp'),
-	clean    = require('gulp-clean'),
-	scsslint = require('gulp-scss-lint'),
-	tasks    = require('gulp-task-listing');
+'use strict';
+
+var gulp         = require('gulp'),
+    autoprefixer = require('gulp-autoprefixer'),
+    del          = require('del'),
+    cleanCSS     = require('gulp-clean-css'),
+    runSequence  = require('run-sequence'),
+    sass         = require('gulp-sass'),
+    scsslint     = require('gulp-scss-lint'),
+    tasks        = require('gulp-task-listing');
 
 var config = {
     distFolder: 'dist',
-    sassDir: 'dev/scss'
+    devFolder: 'dev'
 };
-
-// Cleans up the generated part of the dist folder
-gulp.task('clean-generated', function () {
-    return gulp.src(
-    	config.distFolder + '/css/generated/', {read: false})
-    .pipe(clean());
-});
-
-
-// Cleans up the min folder
-gulp.task('clean-min', function () {
-    return gulp.src(
-    	config.distFolder + 'min/*.css',
-    	{read: false})
-    .pipe(clean());
-});
-
-
-// Cleans up all of the generated folders
-gulp.task('clean-all', ['clean-generated', 'clean-min']);
 
 
 // Lists the available gulp tasks
 gulp.task('help', tasks);
 
 
-// Lints SCSS files
-gulp.task('lint', function() {
-    return gulp.src(config.sassDir + '/**/*.scss')
+// Clean generated CSS & min folder
+gulp.task('clean', function () {
+  return del([
+    config.devFolder + '/css/*',
+    config.distFolder + '/min/*'
+  ]);
+});
+
+
+// Lints SCSS files according to the custom config
+gulp.task('lint', function () {
+    return gulp.src(config.devFolder + '/**/*.scss')
         .pipe(scsslint({
             'config': '.scss-lint.yml'
         }));
 });
 
-gulp.task('default', function() {
+
+// Create CSS files from SCSS groups
+gulp.task('sass', function () {
+  return gulp.src(config.devFolder + '/scss/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(config.devFolder + '/css'));
+});
+
+
+// Minify CSS files & add autoprefixes
+gulp.task('minify', function () {
+  return gulp.src(config.devFolder + '/css/*.css')
+    .pipe(autoprefixer({
+        browsers: ['last 2 version', '> 5%']
+    }))
+    .pipe(cleanCSS({
+        compatibility: '*', // IE10+
+        level: {
+            2: {
+                restructureRules: true // This merges the "frame" & "theme" selector rules into one in the minified CSS
+            }
+        }
+    }))
+    .pipe(gulp.dest(config.distFolder + '/min'));
+});
+
+
+// Build sass with lint + minify
+gulp.task('dist', function () {
+    runSequence('lint', 'sass', 'minify');
+});
+
+
+// The de-facto default task
+gulp.task('default', function () {
   // place code for your default task here
 });

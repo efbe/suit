@@ -4,108 +4,140 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>suit</title>
+	<title>Suit</title>
 
 	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="dist/min/styleguide.min.css">
+	<link rel="stylesheet" href="dist/min/docs.css">
 </head>
 <body>
-	<header>
-		<div class="grid-row gutter stick-to-left">
-			<section class="column column-2"></section>
-			<section class="column column-10">
-				<h3>Introduction</h3>
-				<a class="button secondary" href="https://github.com/efbe/suit"><strong>suit</strong> on github</a>
-			</section>
-		</div>
-	</header>
+	<nav class="sidebar left">
+		<h1>Suit</h1>
+		<p>A dual layer, modular approach for creating easily maintainable, theme-based UI for the web.</p>
+		<a class="button button-small button-icon" href="docs/demo.html">
+			<i title="Check out the demo" class="icon material-icons handheld-only">build</i>
+			<span class="text">Check out the demo</span>
+		</a>
 
-	<main class="grid-row gutter stick-to-left">
-		<section class="column column-2">
-			<div class="side-menu">
-				<h3><a href="#">suit</a></h3>
-				<ul class="menu-list">
-					<li><a class="menu-item category active">Introduction</a></li>
-					<li><a href="docs/get-started.html" class="menu-item category">Get started</a></li>
-					<li><a class="menu-item category">Essential</a>
-						<ul>
-							<li><a class="menu-item" href="docs/essential/button.html">Button</a></li>
-							<li><a class="menu-item" href="docs/essential/grid.html">Grid</a></li>
-							<li><a class="menu-item" href="docs/essential/typography.html">Typography</a></li>
-							<!--
-							<li><a class="menu-item" href="docs/essential/utilities.html">Utilities</a></li>
-							-->
-						</ul>
-					</li>
-					<li><a class="menu-item category">Plugin</a>
-						<ul>
-							<li><a class="menu-item" href="docs/plugin/icon.html">Material icon</a></li>
-							<li><a class="menu-item" href="docs/plugin/pill.html">Pill</a></li>
-							<li><a class="menu-item" href="docs/plugin/table.html">Table</a></li>
-						</ul>
-					</li>
-					<li><a class="menu-item category">Extension</a>
-						<ul>
-							<li><a class="menu-item" href="docs/extension/button-hollow.html">Hollow button</a></li>
-							<li><a class="menu-item" href="docs/extension/button-icon.html">Icon in button</a></li>
-							<li><a class="menu-item" href="docs/extension/pill-icon.html">Pill with icon</a></li>
-							<li><a class="menu-item" href="docs/extension/button-pill.html">Pill in button</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+		<section class="utilities clear">
+			<a class="button button-dark button-small button-icon" href="https://github.com/efbe/suit">
+				<i title="Suit on Github" class="icon icon-svg icon-github"></i>
+				<span class="text">Suit on Github</span>
+			</a>
+			<a class="button button-dark button-small button-icon" href="https://efbe.github.io/resume">
+				<i title="About me" class="icon material-icons">face</i>
+				<span class="text">About me</span>
+			</a>
+
+		</section>
+	</nav>
+
+	<main class="content documentation">
+		<section class="chapter">
+			<h2 id="about-suit-in-a-nutshell">What is this about?</h2>
+			<p>Most of the CSS frameworks out there are awesome but definitely not built to be
+				redesigned at all. <a href="https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss">Bootstrap</a> and <a href="https://github.com/zurb/foundation-sites/blob/develop/scss/settings/_settings.scss">Foundation</a> both have a 800+ line config file.
+				This means you can change colors and border-radiuses but the design is wired into the structure
+				badly so you'll end up adding your code on the top of the existing codebase if you want another design.</p>
+			<p>Within Suit each module is separated into two layers. Each of them exclusively include the relevant
+				properties and values so when you want to build a different kind of design you just have to touch the <em>theme</em> SCSS file of a
+				module.</p>
 		</section>
 
-		<!-- this is the main content -->
-		<section class="column column-10">
-			<div class="grid-row">
-				<article>
-					<h2><strong>suit</strong> is a two-layered, modular UI library.</h2>
+		<section class="chapter">
+			<h2 id="suit-codewise">How does this work codewise?</h2>
+			<p>Each of Suit's modules are separated into two files and located in the <em>frame</em> and
+				<em>theme</em> folders. The structure part of the <code>_button.scss</code> including the core
+				properties looks something like this:
+			</p>
 
-					<h4>Structure apart from design</h4>
-					<p>While the structure part resets, sets
-						up and positions the elements or controls core units like the gutter width; the theme layer
-						handles the design related CSS properties like block heights, colors or border sizes. This way
-						you can easily redesign elements by keeping the basic rules in order and reduce the
-						divergence among UI units. The main reason behind the design layer nested into structure and not
-						laying on the top of it is to avoid rules getting overridden. The motto of <strong>suit</strong>
-						is <em>Extend, not overwrite</em>.
-					</p>
+			<pre><code><span class="comment">// Button structure</span>
 
-					<a class="button hollow" href="docs/get-started.html#structure-and-design">More about layers</a>
-				</article>
-				<br><br>
+.button {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+}			</code></pre>
 
-				<article>
-					<h4>Blasted into modules</h4>
-					<p>Modularity in <strong>suit</strong> means each and every component has its own compiled CSS. Building
-						from small standalone bricks like a single button to complex apps like an entire styleguide
-						<strong>suit</strong> allows you to only include what your page needs. However you can compile all
-						of the selected elements into one file as well which is available throughout your entire web page if you
-						are more of a cache fan.
-					</p>
+			<p>And here's a snippet of the design-related rules from the <code>theme</code> folder:</p>
 
-					<a class="button hollow" href="docs/get-started.html#pick-your-module">More about modules</a>
-				</article>
-			</div>
+			<pre><code><span class="comment">// Button design</span>
+
+.button {
+	padding: $gutter-small;
+	font-size: $font-size-big;
+	font-weight: $text-extra-light;
+	color: $color-white;
+	background-color: $color-green;
+	border-radius: $border-radius;
+	...
+}
+			</code></pre>
+
+			<p>The units, colors, typography properties, block sizes, etc... are stored in the theme specific
+				<code>_variables.scss</code>.
+			</p>
+			<p>There's a config SCSS in the root folder for each site or application which is responsible to collect
+				the two layers and merge them with the variables into the desired modules. For this small documentation
+				you can check the order of file inclusions in the <a href="insertLinkHere">docs.scss</a>.
+			</p>
+		</section>
+
+		<section class="chapter">
+			<h2 id="the-modularity-of-suit">What about modularity?</h2>
+			<p>Suit is a combination of stand-alone modules using the popular "atomic design" approach. There are three
+				categories based on the size and complexity of the elements:
+			</p>
+			<ul>
+				<li><code>essentials</code>
+					<span class="description">
+						small but mandatory snippets like the <em>reset</em> or the <em>typo</em> modules which cannot be left out
+					</span>
+				</li>
+				<li><code>plugins</code>
+					<span class="description">
+						can be used all by themselves or help to extend a basic module into a more complex one like the
+						<em>button-icon</em> plugin
+					</span>
+				</li>
+				<li><code>apps</code>
+					<span class="description">
+						the most complex entities of the Suit universe. They contain the rules of bigger UI chunks like
+						a <em>card</em> or <em>header</em>.
+					</span>
+				</li>
+			</ul>
+			<p>In the provided <a href="docs/demo.html">example</a> you can check out the card app using the custom theme
+				variables, essentials and plugins. Every module is built on the "mobile first" philosophy.
+			</p>
+		</section>
+
+		<section class="chapter">
+			<h2 id="under-the-hood-of-suit">Under the hood</h2>
+			<p>Suit's distribution files are built by <a href="https://gulpjs.com/">Gulp</a> tasks. The SCSS files are
+				linted via an external config file which can be <a href="https://github.com/brigade/scss-lint/blob/master/lib/scss_lint/linter/README.md">customized</a>
+				according to your code conventions. The CSS properties are <a href="https://github.com/postcss/autoprefixer">auto prefixed</a>. All files are minified.</p>
+		</section>
+
+		<section class="chapter">
+			<h2 id="suit-license">License</h2>
+			<p>Suit is under MIT License. You can take what you want but don't forget to mention where your ideas came from.</p>
 		</section>
 	</main>
-
-	<script>
-		// prevent elements with # as href to "work"
-		function preventDefaultLink() {
-			var emptyLinks = document.querySelectorAll('a[href="#"]');
-
-			for (var i = 0; i < emptyLinks.length; i++) {
-				emptyLinks[i].addEventListener('click', function(event) {
-					event.preventDefault();
-				});
-			}
-		}
-		preventDefaultLink();
-	</script>
-
 </body>
+
+<script>
+	// prevent elements with # as href to "work"
+	function preventDefaultLink() {
+		var emptyLinks = document.querySelectorAll('a[href="#"]');
+
+		for (var i = 0; i < emptyLinks.length; i++) {
+			emptyLinks[i].addEventListener('click', function(event) {
+				event.preventDefault();
+			});
+		}
+	}
+	preventDefaultLink();
+</script>
 </html>
