@@ -1,0 +1,35 @@
+# @info: https://github.com/sasstools/sass-lint/tree/master/docs/rules
+
+files:
+  include: '**/*.s+(a|c)ss'
+options:
+  formatter: stylish
+  merge-default-rules: false
+rules:
+  clean-import-paths:
+    - 1
+    - leading-underscore: true
+  extends-before-declarations: 0
+  extends-before-mixins: 0
+  final-newline: 0
+  hex-length:
+    - 1
+    - style: short
+  leading-zero:
+    - 1
+    - include: true
+  mixins-before-declarations: 0
+  nesting-depth:
+    - 1
+    - max-depth: 4
+  no-color-literals: 0
+  no-qualifying-elements: 0
+  no-vendor-prefixes: 0
+  property-sort-order: 0
+  single-line-per-selector: 0
+  space-after-colon: 1
+  space-before-brace: 1
+  variable-for-property:
+    - 1
+    - properties:
+        - font

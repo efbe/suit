@@ -6,7 +6,7 @@ var gulp         = require('gulp'),
     cleanCSS     = require('gulp-clean-css'),
     runSequence  = require('run-sequence'),
     sass         = require('gulp-sass'),
-    scsslint     = require('gulp-scss-lint'),
+    sassLint     = require('gulp-sass-lint'),
     tasks        = require('gulp-task-listing');
 
 var config = {
@@ -30,10 +30,12 @@ gulp.task('clean', function () {
 
 // Lints SCSS files according to the custom config
 gulp.task('lint', function () {
-    return gulp.src(config.devFolder + '/**/*.scss')
-        .pipe(scsslint({
-            'config': '.scss-lint.yml'
-        }));
+    return gulp.src(config.devFolder + '/**/*.s+(a|c)ss')
+        .pipe(sassLint({
+            'config': '.sass-lint.yml'
+        }))
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError())
 });
 
 
